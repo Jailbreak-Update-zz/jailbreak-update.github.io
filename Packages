@@ -1,0 +1,368 @@
+Package: com.Jailbreak-Update.flyjb
+Version: 0.3~alpha10
+Architecture: iphoneos-arm
+Maintainer: XsF1re
+Depends: mobilesubstrate, applist (>= 1.5.15~beta1), preferenceloader
+Filename: deb/com.Jailbreak-Update.flyjb_0.3_alpha10_iphoneos-arm.deb
+Section: Tweaks
+Description: You can HIDE Doing jailbreak your iDevice.
+Author: XsF1re
+Icon: file:///Library/PreferenceBundles/flyjbprefs.bundle/icon@2x.png
+Name: FlyJB Alfa
+Size: 641842
+MD5Sum: ec87f416554af285325f94a6c917c0b9
+SHA1: 9e001ee7ec54e776a3e2f58318b0f0103f271683
+SHA256: 07fcc0195acc752040777e59e8325f58b6482499dc333c743735957ee2eb4469
+
+Package: com.Jailbreak-Update.flyjbstable
+Name: FlyJB Stable
+Depends: mobilesubstrate, applist (>= 1.5.15~beta1), preferenceloader
+Architecture: iphoneos-arm
+Description: You can HIDE Doing jailbreak your iDevice.
+Maintainer: XsF1re
+Author: XsF1re
+Filename: deb/com.Jailbreak-Update.flyjbstable_0.2.5.6_iphoneos-arm.deb
+Section: Tweaks
+Icon: file:///Library/PreferenceBundles/flyjbprefs.bundle/icon@2x.png
+Version: 0.2.5.6
+Installed-Size: 1268
+Size: 630468
+MD5Sum: 1e2bb43f8d705d4a4482ac71df2d0465
+SHA1: a3549ebd7cd2e069bd3a00f0ebe8a6fc78170390
+SHA256: efdf7efe33b2a2d3cebd3bd46f2502733df93add6c44158b2f228dfce8f985b5
+
+Package: com.Jailbreak-Update.pikabulite
+Filename: deb/com.Jailbreak-Update.pikabulite_1.1.0_iphoneos-arm.deb
+Depends: mobilesubstrate, firmware (>= 10.0), preferenceloader
+Description: Minimalistic volume hud on the notch.
+Name: Pikabu Lite
+Version: 1.1.0
+Architecture: iphoneos-arm
+Description: Reboot, Shutdown, Respring, go into Safemode
+Maintainer: Jeffrey Chan
+Author: Jeffrey Chan
+Section: Tweaks
+Size: 230528
+MD5Sum: d27b0b6d9bce312bb7df1281feb3c874
+SHA1: 969d4c4b3d0a9c3b691613c0ae555727faff79c3
+SHA256: 72e0d1cb85f6205b35a941310ccde0d0c8f6d0555f7cb88938a47f1923b1eca
+
+Package: com.Jailbreak-Update.jbsetup
+Filename: deb/com.Jailbreak-Update.jbsetup_1.0.2_iphoneos-arm.deb
+Depends: mobilesubstrate
+Description: A setup UI to change the root and mobile password after jailbreaking.
+Maintainer: shiftcmdk
+Author: shiftcmdk
+Section: Tweaks
+Version: 1.0.2
+Name: jbsetup
+Architecture: iphoneos-arm
+Size: 112088
+MD5Sum: c6cc952dbc679ec7b9cd0a5a67bb6236
+SHA1: a472f24a9366b71e0477d306e18efcd262d88d5a
+SHA256: e0ad5a9d0fe2da46a8b94b83b613f98216c4764907a948a089bca89bfca48b2e
+
+Package: com.Jailbreak-Update.tsssaver2
+Pre-Depends: firmware (>=8.0)
+Filename: deb/com.Jailbreak-Update.tsssaver2_1.0-beta-4_iphoneos-arm.deb
+Depends: mobilesubstrate, net.limneos.libbulletin
+Description: A one-click tool to save blobs using TSSsaver.1conan.com, idea from @nullpixel's TSS Saver but entirely rewritten in Objective-C to support more features. Just install and leave the rest, this tool automatically saves SHSH blobs to TSSsaver.1conan.com.
+Maintainer: IArrays
+Author: IArrays
+Section: Tweaks
+Version: 1.0-beta-4
+Name: TSSSaver 2
+Architecture: iphoneos-arm
+Icon: file://Applications/TSSSaver.app/AppIcon40x40@2x.png
+Size: 423606
+MD5Sum: bc479af82421056f52a2775e52ed9359
+SHA1: 84b41b965db381de8aca54fa80d6c6defff112e7
+SHA256: 40b4cde06eaf9421a6b783dd981b5123b201a159b62044afb2e2af39d30aadd2
+
+Package: com.Jailbreak-Update.kernbypass
+Name: KernBypass
+Depends: mobilesubstrate, applist, preferenceloader, firmware(>=12.0)
+Architecture: iphoneos-arm
+Description: kernel level jailbreak detection bypass.
+Maintainer: akusio
+Author: akusio
+Section: Tweaks
+Version: 0.0.3
+Installed-Size: 544
+Filename: deb/com.Jailbreak-Update.kernbypass_0.0.3_iphoneos-arm.deb
+Size: 30120
+MD5Sum: c33799c66efbcd119072a0de64875d0c
+SHA1: 90aea8862d792ea51439aa7885ea6f2d0767e121
+SHA256: 07d40b3de7332a0e5255e791f0932437fdfca57779b28eb6e9f74d9b9d8ac5b8
+
+Package: com.Jailbreak-Update.activator
+Name: Activator
+Depends: mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2), com.a3tweaks.flipswitch (>= 1.0.16~rc3), com.rpetrich.rocketbootstrap (>= 1.0.9)
+Architecture: iphoneos-arm
+Description: Centralized gestures, button and shortcut management for iOS
+Maintainer: Ryan Petrich <rpetrich+activator@gmail.com>
+Author: Ryan Petrich <rpetrich+activator@gmail.com>
+Sponsor: Jailbreak-update <http://jailbreak-update.github.io>
+Section: Tweaks
+Version: 1.9.13~rc6
+Installed-Size: 5060
+Filename: deb/com.Jailbreak-Update.activator_1.9.13~rc6_iphoneos-arm.deb
+Size: 1511938
+MD5Sum: 8d7083e62527d6ccc8b3f6d3b2e6e94a
+SHA1: b7f222b68d29032b17e7e1607d6f65c129eb50c5
+SHA256: e99d463413057730f7d7f5b398a5917ee5f61d7ddfb392671022c54d6af88fce
+
+Package: com.Jailbreak-Update.wallpapers
+Name: Wallpapers
+Depends: firmware (>= 13.0), wallpaperloader, com.Jailbreak-Update.wallpapers1, com.Jailbreak-Update.wallpapers2, com.Jailbreak-Update.wallpapers3, com.Jailbreak-Update.wallpapers4, com.Jailbreak-Update.wallpapers5, com.Jailbreak-Update.wallpapers6, com.Jailbreak-Update.wallpapers7, com.Jailbreak-Update.wallpapers8, com.Jailbreak-Update.wallpapers9, com.Jailbreak-Update.wallpapers10, com.Jailbreak-Update.wallpapers11, com.Jailbreak-Update.wallpapers12
+Architecture: iphoneos-arm
+Description: Day/Night wallpapers your way in the native iOS 13 dark mode. Comes with over 50 OLED friendly and Full HD wallpapers that work with the native appearance aware feature. No settings required, simply install and select from the wallpaper section in the settings app.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://Jailbreak-update.github.io/img/wallpapers/com.Jailbreak-Update.wallpapers.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Tweaks
+Version: 1.0.1
+Filename: deb/deb wallpaper/com.Jailbreak-Update.wallpapers_1.0.1_iphoneos-arm.deb
+Size: 21026908
+MD5Sum: d55da1e6350e80b68169651458049a4a
+SHA1: 08195ee810efe291b74c9c67e0ad09f0815b63c9
+SHA256: 171785e899cae96139474888500677ed644839941a5862ac6f8978a8cfda4528
+
+Package: com.Jailbreak-Update.wallpapers1
+Name: Wallpapers Pack 1
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers1.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb/deb wallpaper/com.Jailbreak-Update.wallpapers1_1.0.0_iphoneos-arm.deb
+Size: 22005512
+MD5Sum: 167513fa7b503f8239b19fa00a8bcba3
+SHA1: 193960ba1b14da74d1581c0a2ed6e591ef905814
+SHA256: ad14259b463b0882aa1bcbbaf59455ba6472aec4c1b9556ed366465cfeddb95e
+
+Package: com.Jailbreak-Update.wallpapers2
+Name: Wallpapers Pack 2
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers2.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb/deb wallpaper/com.Jailbreak-Update.wallpapers2_1.0.0_iphoneos-arm.deb
+Size: 21039820
+MD5Sum: 9df58aba38cf89216bfbd141967b756d
+SHA1: becef7333cd245601fe87d95b4c5e052d6ef4b07
+SHA256: c2f20b0b5255eec1f900cb1b9171dbdcd1eb24cd4e4df9d2fa77821775ad5143
+
+Package: com.Jailbreak-Update.wallpapers3
+Name: Wallpapers Pack 3
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers3.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb/deb wallpaper/com.Jailbreak-Update.wallpapers3_1.0.0_iphoneos-arm.deb
+Size: 22995938
+MD5Sum: db106b20b0d76a1a7498ccb8df07fc13
+SHA1: be3c5200a979f90ac1747d26b5d370ebb417b3ab
+SHA256: 32c5b967cd951364ef25e8952bc08055e827bb2ab4836af94fd99733ffd5861e
+
+Package: com.Jailbreak-Update.wallpapers4
+Name: Wallpapers Pack 4
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com> 
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers4.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb/deb wallpaper/com.Jailbreak-Update.wallpapers4_1.0.0_iphoneos-arm.deb
+Size: 21458066
+MD5Sum: bfbc703889cc1df394e3a28e607c48ce
+SHA1: b62127f162f1a44b3595d73d56a294a244b36427
+SHA256: ce2c94818ead8c6899daf0538babf605b2cc03cd728a6d63f278b5ae711f4266
+
+Package: com.Jailbreak-Update.wallpapers5
+Name: Wallpapers Pack 5
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers5.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb\deb wallpaper\com.Jailbreak-Update.wallpapers5_1.0.0_iphoneos-arm.deb
+Size: 21990760
+MD5Sum: 979894f98ffac4527f8f7dd185125c58
+SHA1: d711ab533183bc159c80cc5bb81ff8312dd8dfb8
+SHA256: 12d14c81f7a3c812c15779f5db469e981b16c252ddc871aebce935bfe0cd8433
+
+Package: com.Jailbreak-Update.wallpapers6
+Name: Wallpapers Pack 6
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers6.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb\deb wallpaper\com.Jailbreak-Update.wallpapers6_1.0.0_iphoneos-arm.deb
+Size: 22426236
+MD5Sum: 2189ff16b2f6ba6b2f7e3035d205b46b
+SHA1: 3ceacacd93bfde2359ced555476af8971b39f1b1
+SHA256: b4281dda1acc1c9a497c673ed681741f818d68b346ef40b3efc7bfa1cf9c2a46
+
+Package: com.Jailbreak-Update.wallpapers7
+Name: Wallpapers Pack 7
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers7.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb\deb wallpaper\com.Jailbreak-Update.wallpapers7_1.0.0_iphoneos-arm.deb
+Size: 21000456
+MD5Sum: ad6db4eb6bb83ac8c1e17380d6fbe314
+SHA1: 752e79affb7fb58830788e1f3fdd9e15a76baf80
+SHA256: f3e8fb7ee3a3366f15afb37b2d3eea2f1874e9db3648ea184bbdd9b161b7e029
+
+Package: com.Jailbreak-Update.wallpapers8
+Name: Wallpapers Pack 8
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers8.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb\deb wallpaper\com.Jailbreak-Update.wallpapers8_1.0.0_iphoneos-arm.deb
+Size: 19405468
+MD5Sum: ae44e41f274903d01e3d0366a2ba5974
+SHA1: 690d327ad356a60c0a0f0b44adb7ba5f47baf209
+SHA256: ffc4c5755c57b47d704c03baca07a501263272e24feb2bd867cfadd2db08d3bc
+
+Package: com.Jailbreak-Update.wallpapers9
+Name: Wallpapers Pack 9
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers9.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb\deb wallpaper\com.Jailbreak-Update.wallpapers9_1.0.0_iphoneos-arm.deb
+Size: 19947328
+MD5Sum: 4eb57a9a5bbcc18e1c021a683696a7f7
+SHA1: d691d9ca14af5fafd8ae703e8c5811b487cce9ab
+SHA256: 2479454aa2fc0f936f3b0864105b3681f059a092d66cd60328e8652f444f1ba6
+
+Package: com.Jailbreak-Update.wallpapers10
+Name: Wallpapers Pack 10
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers10.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb\deb wallpaper\com.Jailbreak-Update.wallpapers10_1.0.0_iphoneos-arm.deb
+Size: 20029410
+MD5Sum: 233ad98d4397d37e414bda79d880b64d
+SHA1: 4cdb67145f9e2532a0e16074d7f47512a42d8bf3
+SHA256: da3ba62ed294e742cfc1bf12a9bd7fc080bce3f6b8639b282405788c5ed54a95
+
+Package: com.Jailbreak-Update.wallpapers11
+Name: Wallpapers Pack 11
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don�t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com> 
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers11.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb\deb wallpaper\com.Jailbreak-Update.wallpapers11_1.0.0_iphoneos-arm.deb
+Size: 19342018
+MD5Sum: 2231abecc097c25878a59407efc3bd58
+SHA1: 4953e37cd9ff96cbc2771b118ae354dc382b30fa
+SHA256: 57c891d5ca3860476ae149959a82b4c51d27d882ee9de83e05b4cfeeec3cb788
+
+Package: com.Jailbreak-Update.wallpapers12
+Name: Wallpapers Pack 12
+Depends: wallpaperloader
+Architecture: iphoneos-arm
+Description: This is an essential pack for the tweak Wallpapers. It can be installed without Wallpapers in case you don’t want the all-in-on package.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/com.Jailbreak-Update.wallpapers12.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/Wallpapers.png
+Section: Wallpaper
+Version: 1.0.0
+Filename: deb\deb wallpaper\com.Jailbreak-Update.wallpapers12_1.0.0_iphoneos-arm.deb
+Size: 6570336
+MD5Sum: 3b679db1c5e1c7606ef9fd8d74252ba7
+SHA1: ca505bbfc6603a86f9773d5db4eadb3b1b20ac63
+SHA256: 4620821b234bf20c14dd08b1b6df623fd56ecbc19a7f3ff04efa037c0e964cf4
+
+Package: com.Jailbreak-Update.shake2toggle
+Name: Shake3Toggle
+Depends: mobilesubstrate, applist
+Architecture: iphoneos-arm
+Description: Control your device with shakes.
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/img/wallpapers/com.Jailbreak-Update.shake2toggle.html
+Icon: https://jailbreak-update.github.io/img/wallpapers/2.png
+Section: Tweaks
+Version: 1.0
+Filename: deb\com.Jailbreak-Update.shake2toggle_1.0_iphoneos-arm.deb
+Size: 117150
+MD5Sum: 6e17fd41feaa5222ae0423b105171a51
+SHA1: 05dd83c0843519a85d22c890b274c3fb79f93ec1
+SHA256: a61d6864c570ac37f9f94048e1ee6d73a6904fac49e3245c7619923ccff1e395
+
+Package: com.Jailbreak-Update.cercube
+Name: Cercube for YouTube
+Depends: firmware (>= 12.0), mobilesubstrate, com.rpetrich.rocketbootstrap (>= 1.0.10~beta1)
+Conflicts: me.freemanrepo.cercube, com.unlimapps.ytpp, com.yourepo.goldcydia.cercube3ios789, com.yourepo.mohadu31.cercube3ios789, com.yourepo.canolli.cercube3ios789, com.repo.xarold.com.cercube3, com.hackyouriphone.cercube3, com.biteyourapple.net.cercube3, com.yourepo.arabicydia.cercube2, me.alfhaily.adblockforyoutube, me.alfhaily.cercube.lib, com.pulandres.cercubecrack, me.alfhaily.cercube
+Priority: optional
+Architecture: iphoneos-arm
+Description: Download YouTube videos and more!
+Maintainer: Jailbreak-Update <jaibreak14update@gmail.com>
+Author: Jailbreak-Update <jaibreak14update@gmail.com> 
+Section: Tweaks
+Version: 5.2.12
+Filename: deb\com.Jailbreak-Update.cercube_5.2.12_iphoneos-arm.deb
+Size: 5932254
+MD5Sum: ec9c03f681801349b9ff059457ca1bf4
+SHA1: 6126e6caa2f046304837badfd2b3e66d660558d1
+SHA256: 0134d6599ad4805a5fd946b68516bc6c9bfedb8506b496e497ea4750ba288aaf
