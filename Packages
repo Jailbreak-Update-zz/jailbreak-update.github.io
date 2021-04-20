@@ -95,23 +95,6 @@ MD5Sum: c33799c66efbcd119072a0de64875d0c
 SHA1: 90aea8862d792ea51439aa7885ea6f2d0767e121
 SHA256: 07d40b3de7332a0e5255e791f0932437fdfca57779b28eb6e9f74d9b9d8ac5b8
 
-Package: com.Jailbreak-Update.activator
-Name: Activator
-Depends: mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2), com.a3tweaks.flipswitch (>= 1.0.16~rc3), com.rpetrich.rocketbootstrap (>= 1.0.9)
-Architecture: iphoneos-arm
-Description: Centralized gestures, button and shortcut management for iOS
-Maintainer: Ryan Petrich <rpetrich+activator@gmail.com>
-Author: Ryan Petrich <rpetrich+activator@gmail.com>
-Sponsor: Jailbreak-update <http://jailbreak-update.github.io>
-Section: Tweaks
-Version: 1.9.13~rc6
-Installed-Size: 5060
-Filename: deb/com.Jailbreak-Update.activator_1.9.13~rc6_iphoneos-arm.deb
-Size: 1511938
-MD5Sum: 8d7083e62527d6ccc8b3f6d3b2e6e94a
-SHA1: b7f222b68d29032b17e7e1607d6f65c129eb50c5
-SHA256: e99d463413057730f7d7f5b398a5917ee5f61d7ddfb392671022c54d6af88fce
-
 Package: com.Jailbreak-Update.wallpapers
 Name: Wallpapers
 Depends: firmware (>= 13.0), wallpaperloader, com.Jailbreak-Update.wallpapers1, com.Jailbreak-Update.wallpapers2, com.Jailbreak-Update.wallpapers3, com.Jailbreak-Update.wallpapers4, com.Jailbreak-Update.wallpapers5, com.Jailbreak-Update.wallpapers6, com.Jailbreak-Update.wallpapers7, com.Jailbreak-Update.wallpapers8, com.Jailbreak-Update.wallpapers9, com.Jailbreak-Update.wallpapers10, com.Jailbreak-Update.wallpapers11, com.Jailbreak-Update.wallpapers12
