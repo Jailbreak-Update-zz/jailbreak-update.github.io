@@ -1,0 +1,16 @@
+Package: com.jailbreak-update.goodwifi
+Name: GoodWifi
+Depends: mobilesubstrate, preferenceloader
+Architecture: iphoneos-arm
+Description: Better Wifi Preferences
+Maintainer: Julio
+Author: julioverne
+Depiction: http://julioverne.github.io/description.html?id=com.julioverne.goodwifi
+Icon: file:///Library/PreferenceBundles/GoodWifiSettings.bundle/icon@2x.png
+Section: Julioverne´s Tweaks
+Version: 0.0~beta6
+Filename: repo cydia\deb\com.jailbreak-update.goodwifi_0.0~beta6_iphoneos-arm.deb
+Size: 155804
+MD5Sum: 8e69e41cdfb4d9edef72ac2ac838e4db
+SHA1: 90461caab378691e1923305628a31fa84e384b81
+SHA256: 1176cb058c34d7d9cc6b854de1d0777329ff0767d5d74582ae6b6fd022995f91
