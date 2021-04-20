@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jailbreak-Updates / buscador de dispositivos</title>
-    <link rel="stylesheet" href="css/estilos.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Jailbreak-Updates / buscador de dispositivos</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 <link rel="shortcut icon" href="img/logo.png">
 <link rel="stylesheet" type="text/css" href="css/animate.css"/>
-    
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
     
     <script src="js/jquery.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
@@ -18,7 +17,15 @@
 <script src="js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
 <link rel="stylesheet" href="css/v2.css">
 <meta keep-classes="cydia-body sileo-body">
-<style type="text/css">
+
+
+<style>
+		ins {
+    	background-color: transparent !important;
+		}
+	</style>
+	
+	<style type="text/css">
 			
 			* {
 				margin:0px;
@@ -71,32 +78,12 @@
 			}
 			
 		</style>
+	
 
-
-<style>
-		ins {
-    	background-color: transparent !important;
-		}
-		
-		a {
-		  color: blue;
-		  
-		}
-	</style>
   <link rel="stylesheet" href="css/v5.7.1.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
 </head>
-<!--body>
-<CENTER><b><big>MANTENIMIENTO</big></b></CENTER>
-<picture>
-<center><img src="img/Mantenimiento.jfif" alt="Mantenimiento"></center>
-</picture>
-<center><img src="img/logo.png" width="60" height="60"></center>
-<center><big>La Pagina Esta en MANTENIMIENTO</big></center>
-
-<center><p>VUELVE PRONTO</p></center-->
-
 <body  class="min-h-screen flex flex-col CYDIA_IS_PRESENT_CLASS SILEO_IS_PRESENT_CLASS">
+   
 <!--div data-test-web-navigation class="web-navigation "-->
 <div class="animated fadeInDown" id="topnavbar">
 <div id="supporticons">
@@ -109,38 +96,37 @@
 <header role="banner">
 <div class="container">
 
-        <input type="search" id="input-search" placeholder="Ej: iPhone 12">
+    <input type="search" id="input-search" placeholder="Ej: iPhone 12">    
     <img src="img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
 <span class="text-white">Jailbreak-Updates</span>
 <ul class="nav">
-
-                    <li><a href="">Home</a>
-					<ul>
-					    <li><a href="/index.html">Pagina Principal </a></li>
-						<li><a href="/Con-Computadora-ipa/index.html">Con Computadora / iso</a></li>
-						<li><a href="/Sin-computadora/index.html">Sin Computadora</a></li>
-						<!--li><a href="">Submenu3</a></li>
-						<li><a href="">Submenu4</a>
-							<ul>
-								<li><a href="">Submenu1</a></li>
-								<li><a href="">Submenu2</a></li>
-								<li><a href="">Submenu3</a></li>
-								<li><a href="">Submenu4</a></li>
-							</ul>
-						</li-->
-					</ul>
-				</li>
-				<li><a href="">Acerca de</a>
-					<ul>
-						<li><a href="/Reci-n-a-adidas/index.html">Novedades</a></li>
-						<li><a href="/Proximamente/index.html">Proximamente</a></li>
-						<!--li><a href="https://arirub850.github.io/buscador-de-dispositivos/index.html"> Buscador de Dispositivo</a></li-->
-						<li><a href="/Acerca-del-Jailbreak/index.html">Acerca del Jailbreak</a></li>
-						<li><a href="/Sugerencias/index.html">Sugerencias</a></li>
-					</ul>
-				</li>
+    <li><a href="">Home</a>
+        <ul>
+            <li><a href="/index.html">Pagina Principal </a></li>
+            <li><a href="/Con-Computadora-ipa/index.html">Con Computadora / iso</a></li>
+            <li><a href="/Sin-computadora/index.html">Sin Computadora</a></li>
+            <!--li><a href="">Submenu3</a></li>
+            <li><a href="">Submenu4</a>
+                <ul>
+                    <li><a href="">Submenu1</a></li>
+                    <li><a href="">Submenu2</a></li>
+                    <li><a href="">Submenu3</a></li>
+                    <li><a href="">Submenu4</a></li>
+                </ul>
+            </li-->
+        </ul>
+    </li>
+    <li><a href="">Acerca de</a>
+        <ul>
+            <li><a href="/Reci-n-a-adidas/index.html">Novedades</a></li>
+            <li><a href="/Proximamente/index.html">Proximamente</a></li>
+            <!--li><a href="https://arirub850.github.io/buscador-de-dispositivos/index.html"> Buscador de Dispositivo</a></li-->
+            <li><a href="/Acerca-del-Jailbreak/index.html">Acerca del Jailbreak</a></li>
+            <li><a href="/Sugerencias/index.html">Sugerencias</a></li>
+        </ul>
+    </li>
 				</ul>
-    
+				
     <div class="content-search">
         <div class="content-table">
             <table id="table">
@@ -205,6 +191,7 @@
                     
                     <tr>
                         <td><a href="A8.html">iPad Mini 4</a></td>
+                    </tr>
 					
 					<tr>
                         <td><a href="A10.html">iPhone 7</a></td>
@@ -268,14 +255,16 @@
             </table>
         </div>
     </div>
+</div>
 </header>
+
+
 
 <h2 class="text-3xl">Iphone 6s iPhone 6s+</h2>
 <section class="card mb-2">
 <div class="section-header">
 </div>
-<div style="width:100%; display: block; text-align: center; height: auto;">
-</div>
+
 <section class="card mb-2">
 <div class="section-header">
 </div>
@@ -285,561 +274,7 @@
 <P></P>
 <P><H1><CENTER>Jailbreak-Updates</CENTER></H1></P>
 <CENTER><img src="img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></CENTER>
-<!--a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/giphy (1).gif" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
 
-</div>
-</div>
-</a>
-<!--a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/ZtmK6B.gif" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/49251.gif" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPod
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone8,4.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone SE = iPhone8,4
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a-->
-<!--a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/6DD797E6BE16E6D6363D9ACF836613469BD28E939DC7CCD2138399F873D223464399D2CA9D639DC8130366CF56DA6603C9F523.jfif" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-Apple Tv
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/giphy (2).gif" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-Apple Watch
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<!--a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone9,3.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 7 (GSM) = iPhone9,3
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone9,4.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 7 Plus (GSM) = iPhone9,4
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone10,1.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 8 (Global) = iPhone10,1
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone10,1.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 8 (GSM) = iPhone10,4
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone10,1.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 8 Plus (GSM) = iPhone10,5
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone10,1.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 8 Plus (Global) = iPhone10,2
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone10,3.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone X (Global) = iPhone10,3
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone10,3.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone X (GSM) = iPhone10,6
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone11,6.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone XS Max = iPhone11,6
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone11,6.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone XS = iPhone11,2
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone11,6.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone XS Max (China) = iPhone11,4
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone11,6.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone XR = iPhone11,8
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone12,5.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 11 = iPhone12,1
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone12,5.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 11 Pro = iPhone12,3
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone12,5.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 11 Pro Max = iPhone12,5
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone12,8.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone SE (2020) = iPhone12,8
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-
-</div>
-</div>
-</a-->
-
-<!--/div-->
-
-                </div>
-				</div>
-                <!---->
-<!---->
-                <!---->
-				
-
-               
-                <!---->
-<!---->
-                <!---->
-                    <div></div>
-<!--nav class="web-navigation__navigation-container" id="web-navigation-container">
-<div class="web-navigation__scrollable" id="web-navigation-scrollable">
-<ul data-test-app-nav-container>
-
-                    <li data-test-nav-tab class="typography-subhead web-navigation__nav_list-item ">
-                        <a role="button" href="https://arirub850.github.io/Versiones-de-ios-iPhone/" id="ember5085742" class="active ember-view web-navigation__list-item-button button-reset" data-test-nav-tab-link="For You" aria-pressed="false">
-                            <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="99.3058488%" id="ForYoulinearGradient"><stop stop-color="#FE7E8B" offset="0%"/><stop stop-color="#F75668" offset="100%"/></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="f-u-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"/></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="for-you-path"/></defs><g id="ForYouLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="FUIcon"><g id="FUContainer"><use fill="#000" fill-opacity="1" filter="url(#f-u-filter)" xlink:href="#for-you-path"/><use fill="url(#ForYoulinearGradient)" fill-rule="evenodd" xlink:href="#for-you-path"/></g><path d="M12.003,7.998 C12.643,6.82 13.769,6 15.164,6 C17.394,6 19,7.686 19,9.995 C19,13.512 15.258,16.708 12.628,18.394 C12.214,18.655 11.785,18.655 11.371,18.394 C8.741,16.708 5,13.512 5,9.995 C5,7.686 6.605,6 8.836,6 C10.238,6 11.357,6.82 12.003,7.998" id="FUGlyph" fill="#FFF"/></g></g></svg-->
-                            <!--span data-test-nav-tab-name class="web-navigation__nav-label">
-							iPhone
-							</span>
-                        </a>
-                    </li>
-					<li data-test-nav-tab class="typography-subhead web-navigation__nav_list-item ">
-                        <a role="button" href="https://arirub850.github.io/Versiones-de-ios/" id="ember5085743" class="ember-view web-navigation__list-item-button button-reset" data-test-nav-tab-link="Browse" aria-pressed="false">
-                            <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="99.3058488%" id="browseLinearGradient"><stop stop-color="#F75668" offset="0%"/><stop stop-color="#EB4CA5" offset="100%"/></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="browse-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"/></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="browse-path"/></defs><g id="BrowseLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="BrowseIcon"><g id="BrowseContainer"><use fill="#000" fill-opacity="1" filter="url(#browse-filter)" xlink:href="#browse-path"/><use fill="url(#browseLinearGradient)" fill-rule="evenodd" xlink:href="#browse-path"/></g><path d="M8.864,6.51891473 C8.864,5.97691473 9.165,5.77291473 9.594,5.67491473 L16.87,4.05591473 C17.593,3.89791473 18,4.04791473 18,4.85391473 L18,15.5719147 C18,17.6809147 16.388,18.4119147 15.063,18.4119147 C13.903,18.4119147 13.022,17.5829147 13.022,16.4979147 C13.022,15.2179147 14.009,14.6379147 15.221,14.3599147 L16.305,14.1039147 C16.788,13.9909147 16.923,13.7349147 16.923,13.3049147 L16.931,8.48491473 C16.931,8.16091473 16.758,8.01791473 16.404,8.10091473 L10.408,9.40391473 C10.084,9.46391473 9.979,9.56991473 9.979,9.99791473 L9.979,17.2819147 C9.979,19.4059147 8.337,20.1589147 7.011,20.1589147 C5.844,20.1589147 5,19.3229147 5,18.2459147 C5,16.9509147 5.987,16.3709147 7.162,16.0769147 L8.299,15.8209147 C8.728,15.7069147 8.864,15.4819147 8.864,15.0599147 L8.864,6.51891473 Z" id="BrowseGlyph" fill="#FFF"/></g></g></svg-->
-                            <!--span data-test-nav-tab-name class="web-navigation__nav-label">
-                                iPod
-                            </span>
-                        </a>
-                    </li>
-					<li data-test-nav-tab class="typography-subhead web-navigation__nav_list-item ">
-                        <a role="button" href="https://arirub850.github.io/Versiones-de-ios/" id="ember5085744" class="ember-view web-navigation__list-item-button button-reset" data-test-nav-tab-link="Radio" aria-pressed="false">
-                            <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0.726027241%" x2="50%" y2="99.3058488%" id="RadiolinearGradient"><stop stop-color="#EB4CA5" offset="0%"/><stop stop-color="#EB4CBE" offset="100%"/></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="radio-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"/></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="radio-path"/></defs><g id="RadioLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="RadioIcon"><g id="RadioContainer"><use fill="#000" fill-opacity="1" filter="url(#radio-filter)" xlink:href="#radio-path"/><use fill="url(#RadiolinearGradient)" fill-rule="evenodd" xlink:href="#radio-path"/></g><path d="M17.4858,17.113 C20.5338,14.074 20.4558,9.058 17.4948,6.124 C17.1988,5.837 17.1638,5.453 17.4428,5.183 C17.7128,4.913 18.0868,4.948 18.3748,5.244 C21.8048,8.675 21.9438,14.423 18.3748,18.002 C18.0868,18.289 17.7128,18.324 17.4428,18.053 C17.1638,17.775 17.1988,17.4 17.4858,17.113 M15.6838,15.31 C17.7298,13.273 17.6688,9.921 15.6838,7.935 C15.4048,7.639 15.3608,7.264 15.6318,6.986 C15.9098,6.707 16.2928,6.751 16.5898,7.038 C19.0448,9.476 19.1578,13.63 16.5898,16.208 C16.3018,16.486 15.9188,16.53 15.6398,16.259 C15.3698,15.981 15.3958,15.598 15.6838,15.31 M13.8988,13.516 C14.9438,12.471 14.9258,10.757 13.8988,9.72 C13.6018,9.432 13.5678,9.058 13.8458,8.771 C14.1158,8.501 14.4988,8.536 14.7868,8.832 C16.3018,10.347 16.3448,12.864 14.7868,14.414 C14.4988,14.701 14.1248,14.736 13.8548,14.458 C13.5678,14.187 13.6108,13.804 13.8988,13.516 M10.7368,11.627 C10.7368,10.939 11.3028,10.356 11.9998,10.356 C12.6968,10.356 13.2718,10.939 13.2718,11.627 C13.2718,12.315 12.6968,12.889 11.9998,12.889 C11.3028,12.889 10.7368,12.315 10.7368,11.627 M9.2138,14.414 C7.6978,12.907 7.6638,10.382 9.2138,8.841 C9.5008,8.553 9.8748,8.509 10.1538,8.789 C10.4328,9.058 10.3888,9.441 10.1018,9.729 C9.0568,10.774 9.0738,12.498 10.1018,13.525 C10.3978,13.822 10.4328,14.187 10.1628,14.474 C9.8838,14.745 9.5008,14.71 9.2138,14.414 M7.4198,16.217 C4.9548,13.769 4.8418,9.616 7.4198,7.038 C7.6978,6.759 8.0898,6.716 8.3598,6.995 C8.6388,7.273 8.6038,7.656 8.3168,7.935 C6.2698,9.981 6.3398,13.325 8.3168,15.31 C8.6038,15.607 8.6478,15.981 8.3688,16.268 C8.0898,16.539 7.7158,16.495 7.4198,16.217 M5.6258,18.002 C2.1948,14.579 2.0558,8.823 5.6258,5.253 C5.9128,4.966 6.2968,4.922 6.5668,5.192 C6.8358,5.47 6.8008,5.854 6.5138,6.141 C3.4748,9.172 3.5448,14.187 6.5058,17.122 C6.8008,17.409 6.8358,17.793 6.5578,18.062 C6.2968,18.333 5.9128,18.298 5.6258,18.002" id="RadioGlyph" fill="#FFF"/></g></g></svg-->
-                            <!--span data-test-nav-tab-name class="web-navigation__nav-label">
-                                Apple Tv
-                            </span>
-                        </a>
-                    </li>
-					<li data-test-nav-tab class="typography-subhead web-navigation__nav_list-item ">
-                        <a role="button" href="https://arirub850.github.io/Versiones-de-ios/" id="ember5085744" class="ember-view web-navigation__list-item-button button-reset" data-test-nav-tab-link="Radio" aria-pressed="false">
-                            <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0.726027241%" x2="50%" y2="99.3058488%" id="RadiolinearGradient"><stop stop-color="#EB4CA5" offset="0%"/><stop stop-color="#EB4CBE" offset="100%"/></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="radio-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"/></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="radio-path"/></defs><g id="RadioLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="RadioIcon"><g id="RadioContainer"><use fill="#000" fill-opacity="1" filter="url(#radio-filter)" xlink:href="#radio-path"/><use fill="url(#RadiolinearGradient)" fill-rule="evenodd" xlink:href="#radio-path"/></g><path d="M17.4858,17.113 C20.5338,14.074 20.4558,9.058 17.4948,6.124 C17.1988,5.837 17.1638,5.453 17.4428,5.183 C17.7128,4.913 18.0868,4.948 18.3748,5.244 C21.8048,8.675 21.9438,14.423 18.3748,18.002 C18.0868,18.289 17.7128,18.324 17.4428,18.053 C17.1638,17.775 17.1988,17.4 17.4858,17.113 M15.6838,15.31 C17.7298,13.273 17.6688,9.921 15.6838,7.935 C15.4048,7.639 15.3608,7.264 15.6318,6.986 C15.9098,6.707 16.2928,6.751 16.5898,7.038 C19.0448,9.476 19.1578,13.63 16.5898,16.208 C16.3018,16.486 15.9188,16.53 15.6398,16.259 C15.3698,15.981 15.3958,15.598 15.6838,15.31 M13.8988,13.516 C14.9438,12.471 14.9258,10.757 13.8988,9.72 C13.6018,9.432 13.5678,9.058 13.8458,8.771 C14.1158,8.501 14.4988,8.536 14.7868,8.832 C16.3018,10.347 16.3448,12.864 14.7868,14.414 C14.4988,14.701 14.1248,14.736 13.8548,14.458 C13.5678,14.187 13.6108,13.804 13.8988,13.516 M10.7368,11.627 C10.7368,10.939 11.3028,10.356 11.9998,10.356 C12.6968,10.356 13.2718,10.939 13.2718,11.627 C13.2718,12.315 12.6968,12.889 11.9998,12.889 C11.3028,12.889 10.7368,12.315 10.7368,11.627 M9.2138,14.414 C7.6978,12.907 7.6638,10.382 9.2138,8.841 C9.5008,8.553 9.8748,8.509 10.1538,8.789 C10.4328,9.058 10.3888,9.441 10.1018,9.729 C9.0568,10.774 9.0738,12.498 10.1018,13.525 C10.3978,13.822 10.4328,14.187 10.1628,14.474 C9.8838,14.745 9.5008,14.71 9.2138,14.414 M7.4198,16.217 C4.9548,13.769 4.8418,9.616 7.4198,7.038 C7.6978,6.759 8.0898,6.716 8.3598,6.995 C8.6388,7.273 8.6038,7.656 8.3168,7.935 C6.2698,9.981 6.3398,13.325 8.3168,15.31 C8.6038,15.607 8.6478,15.981 8.3688,16.268 C8.0898,16.539 7.7158,16.495 7.4198,16.217 M5.6258,18.002 C2.1948,14.579 2.0558,8.823 5.6258,5.253 C5.9128,4.966 6.2968,4.922 6.5668,5.192 C6.8358,5.47 6.8008,5.854 6.5138,6.141 C3.4748,9.172 3.5448,14.187 6.5058,17.122 C6.8008,17.409 6.8358,17.793 6.5578,18.062 C6.2968,18.333 5.9128,18.298 5.6258,18.002" id="RadioGlyph" fill="#FFF"/></g></g></svg-->
-                            <!--span data-test-nav-tab-name class="web-navigation__nav-label">
-                                Apple Watch
-                            </span>
-                        </a>
-                    </li>
-					</u>
-										<!--h2 data-test-web-navigation-library-header="" id="ember12-library" class="web-navigation__header-text typ-label-small-em">
-                    Home
-                </h2>
-				<ul data-test-library-nav-container="" role="list" aria-labelledby="ember12-library">
-					<li data-test-library-tab="" role="listitem" aria-selected="false" class="typ-subhead typography-subhead web-navigation__nav_list-item ">
-                            <a role="button" href="https://arirub850.github.io/buscador-de-dispositivos/" id="ember16" class="ember-view web-navigation__list-item-button button-reset" data-test-library-tab-link="" aria-pressed="false">
-                                <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="99.0961659%" id="artistsLinearGradient"><stop stop-color="#9C45E6" offset="0%"></stop><stop stop-color="#8459ED" offset="100%"></stop></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="artist-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="artistShadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="artistShadowBlurOuter1"></feColorMatrix></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="artist-path"></path></defs><g id="ArtistsLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="ArtistIcon"><g id="ArtistContainer"><use fill="#000" fill-opacity="1" filter="url(#artist-filter)" xlink:href="#artist-path"></use><use fill="url(#artistsLinearGradient)" fill-rule="evenodd" xlink:href="#artist-path"></use></g><path d="M19.1038144,4.89664482 C20.3298144,6.12364482 20.2878144,7.76864482 19.0448144,9.01064482 L14.9898144,4.95664482 C16.2318144,3.71264482 17.8778144,3.67064482 19.1038144,4.89664482 L19.1038144,4.89664482 Z M7.63381443,16.9796448 L14.5278144,10.2876448 C14.3758144,10.1776448 14.2258144,10.0516448 14.0908144,9.90964482 C13.9478144,9.76664482 13.8218144,9.62464482 13.7128144,9.47264482 L7.00381443,16.3576448 L7.63381443,16.9796448 Z M18.1968144,9.85064482 C17.4078144,10.6486448 16.4508144,10.9506448 15.5438144,10.7496448 L13.3018144,12.8736448 L13.3688144,14.5016448 L13.3688144,19.3136448 C13.3688144,19.7586448 13.0168144,20.1026448 12.5708144,20.1026448 C12.1258144,20.1026448 11.7648144,19.7586448 11.7648144,19.3136448 L11.7648144,14.5016448 L11.7738144,14.3176448 L7.88581443,18.0036448 C7.66781443,18.2056448 7.30681443,18.1796448 7.12181443,17.9956448 L5.88781443,18.9106448 C5.71981443,19.0366448 5.50981443,19.0366448 5.35081443,18.8686448 L5.13181443,18.6586448 C4.96381443,18.4906448 4.96381443,18.2806448 5.08981443,18.1126448 L6.00481443,16.8786448 C5.82081443,16.6936448 5.77881443,16.3406448 5.99681443,16.1146448 L13.2508144,8.45764482 C13.0498144,7.54964482 13.3518144,6.59264482 14.1498144,5.79464482 L18.1968144,9.85064482 Z" id="ArtistGlyph" fill="#FFF"></path></g></g></svg-->
-                                <!--span data-test-library-tab-name="" class="web-navigation__nav-label">
-                                    Indentificador de iPhone
-                                </span>
-                            </a>
-                        </li>
-					
-                               <li data-test-library-tab="" role="listitem" aria-selected="false" class="typ-subhead typography-subhead web-navigation__nav_list-item ">
-                            <a role="button" href="https://arirub850.github.io/Reci-n-a-adidas/" id="ember14" class="ember-view web-navigation__list-item-button button-reset" data-test-library-tab-link="" aria-pressed="false">
-                                <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="99.3058488%" id="RAlinearGradient"><stop stop-color="#CC44F5" offset="0%"></stop><stop stop-color="#9C45E6" offset="100%"></stop></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="radio-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="ra-path"></path></defs><g id="RecentlyAddedLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="RadioIcon"><g id="RadioContainer"><use fill="#000" fill-opacity="1" filter="url(#radio-filter)" xlink:href="#ra-path"></use><use fill="url(#RAlinearGradient)" fill-rule="evenodd" xlink:href="#ra-path"></use></g><path d="M12.5,12 C12.5,12.276 12.276,12.5 12,12.5 L7.5,12.5 C7.224,12.5 7,12.276 7,12 C7,11.724 7.224,11.5 7.5,11.5 L11.5,11.5 L11.5,6.5 C11.5,6.224 11.724,6 12,6 C12.276,6 12.5,6.224 12.5,6.5 L12.5,12 Z M12,4.5 C7.858,4.5 4.5,7.858 4.5,12 C4.5,16.143 7.858,19.5 12,19.5 C16.142,19.5 19.5,16.143 19.5,12 C19.5,7.858 16.142,4.5 12,4.5 L12,4.5 Z" id="RadioGlyph" fill="#FFF"></path></g></g></svg-->
-                                <!--span data-test-library-tab-name="" class="web-navigation__nav-label">
-                                    Indentificador de iPad
-                                </span>
-                            </a>
-                        </li>
-
-                        <li data-test-library-tab="" role="listitem" aria-selected="false" class="typ-subhead typography-subhead web-navigation__nav_list-item ">
-                            <a role="button" href="https://arirub850.github.io/Proximamente/" id="ember16" class="ember-view web-navigation__list-item-button button-reset" data-test-library-tab-link="" aria-pressed="false">
-                                <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="99.0961659%" id="artistsLinearGradient"><stop stop-color="#9C45E6" offset="0%"></stop><stop stop-color="#8459ED" offset="100%"></stop></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="artist-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="artistShadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="artistShadowBlurOuter1"></feColorMatrix></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="artist-path"></path></defs><g id="ArtistsLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="ArtistIcon"><g id="ArtistContainer"><use fill="#000" fill-opacity="1" filter="url(#artist-filter)" xlink:href="#artist-path"></use><use fill="url(#artistsLinearGradient)" fill-rule="evenodd" xlink:href="#artist-path"></use></g><path d="M19.1038144,4.89664482 C20.3298144,6.12364482 20.2878144,7.76864482 19.0448144,9.01064482 L14.9898144,4.95664482 C16.2318144,3.71264482 17.8778144,3.67064482 19.1038144,4.89664482 L19.1038144,4.89664482 Z M7.63381443,16.9796448 L14.5278144,10.2876448 C14.3758144,10.1776448 14.2258144,10.0516448 14.0908144,9.90964482 C13.9478144,9.76664482 13.8218144,9.62464482 13.7128144,9.47264482 L7.00381443,16.3576448 L7.63381443,16.9796448 Z M18.1968144,9.85064482 C17.4078144,10.6486448 16.4508144,10.9506448 15.5438144,10.7496448 L13.3018144,12.8736448 L13.3688144,14.5016448 L13.3688144,19.3136448 C13.3688144,19.7586448 13.0168144,20.1026448 12.5708144,20.1026448 C12.1258144,20.1026448 11.7648144,19.7586448 11.7648144,19.3136448 L11.7648144,14.5016448 L11.7738144,14.3176448 L7.88581443,18.0036448 C7.66781443,18.2056448 7.30681443,18.1796448 7.12181443,17.9956448 L5.88781443,18.9106448 C5.71981443,19.0366448 5.50981443,19.0366448 5.35081443,18.8686448 L5.13181443,18.6586448 C4.96381443,18.4906448 4.96381443,18.2806448 5.08981443,18.1126448 L6.00481443,16.8786448 C5.82081443,16.6936448 5.77881443,16.3406448 5.99681443,16.1146448 L13.2508144,8.45764482 C13.0498144,7.54964482 13.3518144,6.59264482 14.1498144,5.79464482 L18.1968144,9.85064482 Z" id="ArtistGlyph" fill="#FFF"></path></g></g></svg-->
-                                <!--span data-test-library-tab-name="" class="web-navigation__nav-label">
-                                   Indentificador de iPod
-                                </span>
-                            </a>
-                        </li>
-						<li data-test-library-tab="" role="listitem" aria-selected="false" class="typ-subhead typography-subhead web-navigation__nav_list-item ">
-                            <a role="button" href="https://arirub850.github.io/Acerca-del-Jailbreak/" id="ember16" class="ember-view web-navigation__list-item-button button-reset" data-test-library-tab-link="" aria-pressed="false">
-                                <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="99.0961659%" id="artistsLinearGradient"><stop stop-color="#9C45E6" offset="0%"></stop><stop stop-color="#8459ED" offset="100%"></stop></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="artist-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="artistShadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="artistShadowBlurOuter1"></feColorMatrix></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="artist-path"></path></defs><g id="ArtistsLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="ArtistIcon"><g id="ArtistContainer"><use fill="#000" fill-opacity="1" filter="url(#artist-filter)" xlink:href="#artist-path"></use><use fill="url(#artistsLinearGradient)" fill-rule="evenodd" xlink:href="#artist-path"></use></g><path d="M19.1038144,4.89664482 C20.3298144,6.12364482 20.2878144,7.76864482 19.0448144,9.01064482 L14.9898144,4.95664482 C16.2318144,3.71264482 17.8778144,3.67064482 19.1038144,4.89664482 L19.1038144,4.89664482 Z M7.63381443,16.9796448 L14.5278144,10.2876448 C14.3758144,10.1776448 14.2258144,10.0516448 14.0908144,9.90964482 C13.9478144,9.76664482 13.8218144,9.62464482 13.7128144,9.47264482 L7.00381443,16.3576448 L7.63381443,16.9796448 Z M18.1968144,9.85064482 C17.4078144,10.6486448 16.4508144,10.9506448 15.5438144,10.7496448 L13.3018144,12.8736448 L13.3688144,14.5016448 L13.3688144,19.3136448 C13.3688144,19.7586448 13.0168144,20.1026448 12.5708144,20.1026448 C12.1258144,20.1026448 11.7648144,19.7586448 11.7648144,19.3136448 L11.7648144,14.5016448 L11.7738144,14.3176448 L7.88581443,18.0036448 C7.66781443,18.2056448 7.30681443,18.1796448 7.12181443,17.9956448 L5.88781443,18.9106448 C5.71981443,19.0366448 5.50981443,19.0366448 5.35081443,18.8686448 L5.13181443,18.6586448 C4.96381443,18.4906448 4.96381443,18.2806448 5.08981443,18.1126448 L6.00481443,16.8786448 C5.82081443,16.6936448 5.77881443,16.3406448 5.99681443,16.1146448 L13.2508144,8.45764482 C13.0498144,7.54964482 13.3518144,6.59264482 14.1498144,5.79464482 L18.1968144,9.85064482 Z" id="ArtistGlyph" fill="#FFF"></path></g></g></svg-->
-                                <!--span data-test-library-tab-name="" class="web-navigation__nav-label">
-                                    Indentificador de Apple Tv
-                                </span>
-                            </a>
-                        </li>
-						<li data-test-library-tab="" role="listitem" aria-selected="false" class="typ-subhead typography-subhead web-navigation__nav_list-item ">
-                            <a role="button" href="https://arirub850.github.io/buscador-de-dispositivos/" id="ember16" class="ember-view web-navigation__list-item-button button-reset" data-test-library-tab-link="" aria-pressed="false">
-                                <!--svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="web-navigation__nav-icon" aria-hidden="true"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="99.0961659%" id="artistsLinearGradient"><stop stop-color="#9C45E6" offset="0%"></stop><stop stop-color="#8459ED" offset="100%"></stop></linearGradient><filter x="-14.6%" y="-10.4%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="artist-filter"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="artistShadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="artistShadowBlurOuter1"></feColorMatrix></filter><path d="M5.1277704,-2.07168062e-16 L18.8722296,2.07168062e-16 C20.6552671,-1.2037061e-16 21.3018396,0.185651222 21.9536914,0.534265408 C22.6055433,0.882879593 23.1171204,1.39445674 23.4657346,2.04630859 C23.8143488,2.69816044 24,3.34473292 24,5.1277704 L24,18.8722296 C24,20.6552671 23.8143488,21.3018396 23.4657346,21.9536914 C23.1171204,22.6055433 22.6055433,23.1171204 21.9536914,23.4657346 C21.3018396,23.8143488 20.6552671,24 18.8722296,24 L5.1277704,24 C3.34473292,24 2.69816044,23.8143488 2.04630859,23.4657346 C1.39445674,23.1171204 0.882879593,22.6055433 0.534265408,21.9536914 C0.185651222,21.3018396 8.02470732e-17,20.6552671 -1.38112041e-16,18.8722296 L1.38112041e-16,5.1277704 C-8.02470732e-17,3.34473292 0.185651222,2.69816044 0.534265408,2.04630859 C0.882879593,1.39445674 1.39445674,0.882879593 2.04630859,0.534265408 C2.69816044,0.185651222 3.34473292,1.2037061e-16 5.1277704,-2.07168062e-16 Z" id="artist-path"></path></defs><g id="ArtistsLarge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="ArtistIcon"><g id="ArtistContainer"><use fill="#000" fill-opacity="1" filter="url(#artist-filter)" xlink:href="#artist-path"></use><use fill="url(#artistsLinearGradient)" fill-rule="evenodd" xlink:href="#artist-path"></use></g><path d="M19.1038144,4.89664482 C20.3298144,6.12364482 20.2878144,7.76864482 19.0448144,9.01064482 L14.9898144,4.95664482 C16.2318144,3.71264482 17.8778144,3.67064482 19.1038144,4.89664482 L19.1038144,4.89664482 Z M7.63381443,16.9796448 L14.5278144,10.2876448 C14.3758144,10.1776448 14.2258144,10.0516448 14.0908144,9.90964482 C13.9478144,9.76664482 13.8218144,9.62464482 13.7128144,9.47264482 L7.00381443,16.3576448 L7.63381443,16.9796448 Z M18.1968144,9.85064482 C17.4078144,10.6486448 16.4508144,10.9506448 15.5438144,10.7496448 L13.3018144,12.8736448 L13.3688144,14.5016448 L13.3688144,19.3136448 C13.3688144,19.7586448 13.0168144,20.1026448 12.5708144,20.1026448 C12.1258144,20.1026448 11.7648144,19.7586448 11.7648144,19.3136448 L11.7648144,14.5016448 L11.7738144,14.3176448 L7.88581443,18.0036448 C7.66781443,18.2056448 7.30681443,18.1796448 7.12181443,17.9956448 L5.88781443,18.9106448 C5.71981443,19.0366448 5.50981443,19.0366448 5.35081443,18.8686448 L5.13181443,18.6586448 C4.96381443,18.4906448 4.96381443,18.2806448 5.08981443,18.1126448 L6.00481443,16.8786448 C5.82081443,16.6936448 5.77881443,16.3406448 5.99681443,16.1146448 L13.2508144,8.45764482 C13.0498144,7.54964482 13.3518144,6.59264482 14.1498144,5.79464482 L18.1968144,9.85064482 Z" id="ArtistGlyph" fill="#FFF"></path></g></g></svg-->
-                                <!--span data-test-library-tab-name="" class="web-navigation__nav-label">
-                                    Indentificador de Apple Watch
-                                </span>
-                            </a>
-                        </li-->
-            
-            <!--/ul>
-			<div class="web-navigation__native-upsell">
-            <div class="native-upsell" data-test-native-upsell>
-</div>
-
-           
-            
-                    <p class="native-upsell__prompt"><small>Jailbreak-Versiones de IOS</small></p>
-                
-            
- 
-<center><img src="img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></center>
-
-        </div>
-		</div>
-    </nav-->
 
 <script src="js/search.js"></script>
 </body>
