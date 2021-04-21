@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jailbreak-update.github.io/</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
       <image:image>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -29,18 +29,8 @@
       </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/Proximamente/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/Proximamente/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-  </url>
-  <url>
     <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -49,18 +39,8 @@
       </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/Reci-n-a-adidas/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/Reci-n-a-adidas/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-  </url>
-  <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -77,30 +57,8 @@
       </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/add%20repo.html</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/img/apt_cydia.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/img/apt_sileo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/img/apt_zebra.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/img/apt_installer.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-  </url>
-  <url>
     <loc>https://jailbreak-update.github.io/Acerca-del-Jailbreak/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -110,7 +68,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -135,8 +93,14 @@
       </image:image>
   </url>
   <url>
+    <loc>https://jailbreak-update.github.io/repo%20cydia/add%20repo.html</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://jailbreak-update.github.io/Sugerencias/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -149,8 +113,20 @@
       </image:image>
   </url>
   <url>
+    <loc>https://jailbreak-update.github.io/repo%20cydia/img/apt_installer.png</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jailbreak-update.github.io/repo%20cydia/img/apt_sileo.png</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/A8.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -183,18 +159,8 @@
       </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/en/Acerca-del-Jailbreak/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Acerca-del-Jailbreak/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-  </url>
-  <url>
     <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/A13.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -211,8 +177,18 @@
       </image:image>
   </url>
   <url>
+    <loc>https://jailbreak-update.github.io/en/Acerca-del-Jailbreak/index.html</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>https://jailbreak-update.github.io/en/Acerca-del-Jailbreak/img/logo.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
     <loc>https://jailbreak-update.github.io/en/buscador-de-dispositivos/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -222,7 +198,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/solo%20para%20windows.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -272,7 +248,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/Cu%C3%A1nto%20tiempo%20admite%20Apple%20los%20modelos%20de%20iPhone.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -333,18 +309,30 @@
       </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/en/Reci-n-a-adidas/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/A14.html</loc>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Reci-n-a-adidas/img/logo.png</image:loc>
+        <image:loc>https://jailbreak-update.github.io/buscador-de-dispositivos/img/logo.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://jailbreak-update.github.io/buscador-de-dispositivos/img/iPhone13,2.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://jailbreak-update.github.io/buscador-de-dispositivos/img/iPhone13,1.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://jailbreak-update.github.io/buscador-de-dispositivos/img/iPhone13,3.png</image:loc>
         <image:title></image:title>
       </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -369,30 +357,8 @@
       </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/A14.html</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/buscador-de-dispositivos/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/buscador-de-dispositivos/img/iPhone13,2.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/buscador-de-dispositivos/img/iPhone13,1.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/buscador-de-dispositivos/img/iPhone13,3.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-  </url>
-  <url>
     <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/A9.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -406,7 +372,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/Cu%C3%A1nto%20tiempo%20admite%20Apple%20los%20modelos%20de%20iPhone.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -467,8 +433,14 @@
       </image:image>
   </url>
   <url>
+    <loc>https://jailbreak-update.github.io/repo%20cydia/img/apt_cydia.png</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/A10.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -502,7 +474,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/solo%20para%20linux.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -512,7 +484,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/solo%20para%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -549,8 +521,14 @@
       </image:image>
   </url>
   <url>
+    <loc>https://jailbreak-update.github.io/repo%20cydia/img/apt_zebra.png</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -564,7 +542,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sugerencias/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -578,7 +556,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/A12.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -592,7 +570,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -610,7 +588,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/buscador-de-dispositivos/A7.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -639,18 +617,8 @@
       </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/en/Proximamente/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Proximamente/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-  </url>
-  <url>
     <loc>https://jailbreak-update.github.io/en/buscador-de-dispositivos/A10.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -684,7 +652,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/iOS%2013%20compatibilidad%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -694,7 +662,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/Only%20for%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -732,7 +700,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/buscador-de-dispositivos/A12.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -746,13 +714,13 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/iOS%2014%20compatibilidad%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/buscador-de-dispositivos/A13.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -770,13 +738,13 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Alfhaily%20APT.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/Only%20for%20windows.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -826,7 +794,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/MacOS/MacOS%20W.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -844,13 +812,13 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/iOS%2014%20compatibilidad.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/buscador-de-dispositivos/A9.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -864,13 +832,13 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/cdn-cgi/apps/head/d8o44pYfcbQdfEC7lNlLKoa4lVw.js</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/How%20long%20does%20Apple%20support%20iPhone%20models.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -932,7 +900,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/iOS%2012%20compatibilidad.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -942,13 +910,9 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/index.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
       <image:image>
         <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/images.jpg</image:loc>
         <image:title></image:title>
@@ -961,14 +925,10 @@
         <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/julioverne-s-repo.png</image:loc>
         <image:title></image:title>
       </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
-        <image:title></image:title>
-      </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/bigboss.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -994,7 +954,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/Only%20for%20linux.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -1004,7 +964,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/How%20long%20does%20Apple%20support%20iPhone%20models.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -1066,13 +1026,13 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/iOS%2011%20compatibilidad%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/buscador-de-dispositivos/A7.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -1102,13 +1062,13 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Julioverne's.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/buscador-de-dispositivos/A14.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -1134,7 +1094,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/iOS%2012%20compatibilidad%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -1144,7 +1104,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/iOS%2013%20compatibilidad.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -1154,7 +1114,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/buscador-de-dispositivos/A8.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
       <image:image>
@@ -1188,47 +1148,37 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/iOS%2011%20compatibilidad.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Gesturesi11.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2014%20Compatibility.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Inevitable.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2011%20compatibilidad.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2013%20Compatibility.html</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/img/Odyssey3.png</image:loc>
-        <image:title></image:title>
-      </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Kodi-iOS%20(Legacy%2032-bit).html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
       <image:image>
@@ -1237,8 +1187,18 @@
       </image:image>
   </url>
   <url>
+    <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2013%20Compatibility.html</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/img/Odyssey3.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Volume%20Controller.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
       <image:image>
@@ -1248,39 +1208,51 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2014%20Compatibility%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/bigboss.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
       <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/image%20(2).png</image:loc>
         <image:title></image:title>
       </image:image>
       <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/com.captinc.batchomatic.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/image%20(3).png</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/image%20(4).png</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/image%20(5).png</image:loc>
         <image:title></image:title>
       </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2012%20Compatibility%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/filzadownload.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2013%20Compatibility%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
       <image:image>
@@ -1290,7 +1262,7 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Harbor%203.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
       <image:image>
@@ -1300,19 +1272,19 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Con-Computadora-ipa/html/MacOS/js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/MacOS/MacOS%20W.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/AppLibraryControllerdownload.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
       <image:image>
@@ -1322,57 +1294,49 @@
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/iCleanerdownload.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/App%20Thickening.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2011%20compatibilidad%20mac.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Gravity.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/RocketBootstrap.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/GoodWifi.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/Julioverne's.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
-        <image:title></image:title>
-      </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/TimeSeconds.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
       <image:image>
@@ -1381,123 +1345,111 @@
       </image:image>
   </url>
   <url>
+    <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Alt5tore.html</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/Cercube%20for%20YouTube.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/iOS%2012%20Compatibility.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/MusicSection.html</loc>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/Alfhaily%20APT.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
       <image:image>
         <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/majd-alfhaily.png</image:loc>
         <image:title></image:title>
       </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
-        <image:title></image:title>
-      </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/Sin-computadora/deb-Tweaks/MusicSection.html</loc>
-    <lastmod>2021-04-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/AppLibraryControllerdownload.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/Harbor%203.html</loc>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/image%20(5).png</image:loc>
         <image:title></image:title>
       </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/iCleanerdownload.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/AppLibraryControllerdownload.html</loc>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/image%20(2).png</image:loc>
         <image:title></image:title>
       </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/Volume%20Controller.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/image%20(4).png</image:loc>
         <image:title></image:title>
       </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/TimeSeconds.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/com.captinc.batchomatic.png</image:loc>
         <image:title></image:title>
       </image:image>
   </url>
   <url>
     <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/filzadownload.html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/Kodi-iOS%20(Legacy%2032-bit).html</loc>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
+        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/image%20(3).png</image:loc>
         <image:title></image:title>
       </image:image>
   </url>
   <url>
-    <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/Kodi-iOS%20(Legacy%2032-bit).html</loc>
-    <lastmod>2021-04-19</lastmod>
+    <loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/Gesturesi11.html</loc>
+    <lastmod>2021-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/logo.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://jailbreak-update.github.io/en/Sin-computadora/deb-Tweaks/img/flecha-gif-9.gif</image:loc>
-        <image:title></image:title>
-      </image:image>
+  </url>
+  <url>
+    <loc>https://jailbreak-update.github.io/en/Con-Computadora-ipa/html/img/Unc0verIcon11.png</loc>
+    <lastmod>2021-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
