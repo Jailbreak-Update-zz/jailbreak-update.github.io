@@ -14,3 +14,42 @@ Size: 155804
 MD5Sum: 8e69e41cdfb4d9edef72ac2ac838e4db
 SHA1: 90461caab378691e1923305628a31fa84e384b81
 SHA256: 1176cb058c34d7d9cc6b854de1d0777329ff0767d5d74582ae6b6fd022995f91
+
+Package: com.jailbreak-update.filza
+Name: Filza File Manager
+Depends: firmware (>= 7.0), zip, unzip, gzip, unrar, p7zip
+Conflicts: com.tigisoftware.filza64bit
+Architecture: iphoneos-arm
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 7+
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Author: thebigboss.org <http://thebigboss.org>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
+Icon: file:///Applications/Filza.app/AppIcon57x57.png
+Section: BigBoss Tweaks Utilities
+Tag: purpose::uikit
+Version: 3.8.1-29
+Filename: repo cydia\deb\com.jailbreak-update.filza_3.8.1-29_iphoneos-arm.deb
+Size: 12937316
+Installed-Size: 29112
+MD5Sum: ed936b9c32656995c09d3b50f9b2d0ac
+SHA1: 8a30276f28f9be5c502a6acd7a779942c8c60c76
+SHA256: 82233c67a5590f17356884b9e9050591ebdc94a577b8943d1c1b442f2f0bd8a5
+
+Package: com.jailbreak-update.timeseconds
+Name: TimeSeconds
+Depends: firmware (>= 11.0), mobilesubstrate (>= 0.9.5000)
+Architecture: iphoneos-arm
+Description: 为X状态栏时间添加秒，录屏时自动恢复默认时间，以免错位
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Author: Netskao <admin@initnil.com>
+Sponsor: thebigboss.org <http://thebigboss.org>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=timesecondsDp
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=timesecondsDp 
+Section: BigBoss Tweaks
+Tag: purpose::extension
+Version: 1.2-5
+Filename: repo cydia\deb\com.jailbreak-update.timeseconds_1.2-5_iphoneos-arm.deb
+Size: 14794
+MD5Sum: 48f6ec1d29811b379988b6c4ea1a6d1c
+SHA1: b75a247cf963c25d2e31f695f815ab9ea33ecd0c
+SHA256: 7ffe616e38fccc7aa3c0da2bd58517df2b8008277be5277748c91f23eee8831a
