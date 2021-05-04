@@ -1,0 +1,168 @@
+
+<!doctype html>
+<html style="font-size: 14px !important;">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login</title>
+<script src="https://repo.packix.com/cdn-cgi/apps/head/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script><style>
+    @font-face {
+      font-family: 'icomoon';
+      src: url('/assets/fonts/icomoon.ttf') format('truetype'),
+      url('/assets/fonts/icomoon.woff') format('woff'),
+      url('/assets/fonts/icomoon.svg') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+<style>
+		.btn {
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1.286rem;
+  line-height: 1.333333;
+  border-radius: 0.286rem;
+  transition: border 0.2s linear, color 0.2s linear, width 0.2s linear,
+  background-color 0.2s linear;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  letter-spacing: 0.75px;
+}
+
+.btn-tag {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, .15);
+  border-radius: .215rem 0 0 .215rem;
+  padding: .715rem 1rem;
+  margin-right: .5rem;
+}
+
+.btn .icon {
+  width: 1em;
+  text-align: center;
+  margin: -1px 3px 0;
+  line-height: inherit;
+}
+
+.facebook {
+  color: #fff;
+  background-color: #3b5998 !important;
+}
+
+.facebook .btn-tag {
+  text-align: center;
+  width: 18px;
+}
+
+.google {
+  color: #fff;
+  background-color: #de472f !important;
+}
+
+.patreon {
+  color: #fff;
+  background-color: #f96854 !important;
+}
+
+.discord {
+  color: #fff;
+  background-color: #7289da !important;
+}
+
+
+@media (max-width: 479px) {
+  .page-content {
+    padding:30px 20px
+  }
+
+  .panel {
+    width: auto;
+    padding: 10px
+  }
+
+  .panel .panel-body {
+    padding: 35px 25px 35px
+  }
+}
+
+.login-text {
+  margin-top: 0px;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.last {
+  margin-bottom:0px;
+}
+    .discord {
+      color: #fff;
+      background-color: #7289da !important;
+    }
+
+		.apple {
+  color: #fff;
+  background-color: black !important;
+}
+
+		.twitter {
+  color: #fff;
+  background-color: #1DA1F2 !important;
+}
+  </style>
+<link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet prefetch" href="https://repo.packix.com/assets/css/v2.css">
+</head>
+<body style="font-size: 14px !important; height: 100vh;">
+<main class="container" style="height: 100%; padding-top: 0; align-content:center;">
+<section class="card" style="max-width: 414px; margin: auto;">
+<div class="section-body p-4" style="border-radius: .35rem; margin-bottom: 0;">
+<div class="section-header" style="text-align: center; justify-items: center; align-items: center; align-content: center; padding-top:0;">
+<label style="font-size: 2rem;text-align: center;width: 100%;display: block;margin-bottom: 0.5rem;">
+Sign in with
+</label>
+</div>
+<a id="apple" href="https://repo.packix.com/api/auth/apple" style="text-decoration: none !important; display: block;">
+<button type="button" class="btn btn-tagged apple" style="display: block; pointer-events: none;">
+<span class="btn-tag">
+<i class="fab fa-apple" aria-hidden="true"></i>
+</span>
+<span>Apple</span>
+</button>
+</a>
+<a id="google" href="https://repo.packix.com/api/auth/google" style="text-decoration: none !important; display: block;">
+<button type="button" class="btn btn-tagged google" style="display: block; pointer-events: none;">
+<span class="btn-tag">
+<i class="fab fa-google" aria-hidden="true"></i>
+</span>
+<span>Google</span>
+</button>
+</a>
+<a id="facebook" href="https://repo.packix.com/api/auth/facebook" style="display: block; text-decoration: none !important;">
+<button type="button" class="btn btn-tagged facebook" style="pointer-events: none;">
+<span class="btn-tag" style="width: auto;">
+<i class="fab fa-facebook" aria-hidden="true"></i>
+</span>
+<span>Facebook</span>
+</button>
+</a>
+<a id="discord" href="https://repo.packix.com/api/auth/discord" style="display: block; text-decoration: none !important;">
+<button type="button" class="btn btn-tagged discord" style="pointer-events: none; margin-bottom: 0px;">
+<span class="btn-tag">
+<i class="fab fa-discord" aria-hidden="true"></i>
+</span>
+<span>Discord</span>
+</button>
+</a>
+</div>
+</section>
+</main>
+</body>
+</html>
