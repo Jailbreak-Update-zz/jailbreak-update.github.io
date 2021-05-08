@@ -30,7 +30,7 @@
 				if ( !w.document ) {
 					throw new Error( "jQuery requires a window with a document" );
 				}
-				Volverfactory( w );
+				return factory( w );
 			};
 	} else {
 		factory( global );
@@ -95,7 +95,7 @@ var
 
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
-		Volvernew jQuery.fn.init( selector, context );
+		return new jQuery.fn.init( selector, context );
 	},
 
 	// Support: Android <=4.0 only
@@ -108,7 +108,7 @@ var
 
 	// Used by jQuery.camelCase as callback to replace()
 	fcamelCase = function( all, letter ) {
-		Volverletter.toUpperCase();
+		return letter.toUpperCase();
 	};
 
 jQuery.fn = jQuery.prototype = {
@@ -122,20 +122,20 @@ jQuery.fn = jQuery.prototype = {
 	length: 0,
 
 	toArray: function() {
-		Volverslice.call( this );
+		return slice.call( this );
 	},
 
 	// Get the Nth element in the matched element set OR
 	// Get the whole matched element set as a clean array
 	get: function( num ) {
 
-		// Volverall the elements in a clean array
+		// Return all the elements in a clean array
 		if ( num == null ) {
-			Volverslice.call( this );
+			return slice.call( this );
 		}
 
-		// Volverjust the one element from the set
-		Volvernum < 0 ? this[ num + this.length ] : this[ num ];
+		// Return just the one element from the set
+		return num < 0 ? this[ num + this.length ] : this[ num ];
 	},
 
 	// Take an array of elements and push it onto the stack
@@ -148,41 +148,41 @@ jQuery.fn = jQuery.prototype = {
 		// Add the old object onto the stack (as a reference)
 		ret.prevObject = this;
 
-		// Volverthe newly-formed element set
-		Volverret;
+		// Return the newly-formed element set
+		return ret;
 	},
 
 	// Execute a callback for every element in the matched set.
 	each: function( callback ) {
-		VolverjQuery.each( this, callback );
+		return jQuery.each( this, callback );
 	},
 
 	map: function( callback ) {
-		Volverthis.pushStack( jQuery.map( this, function( elem, i ) {
-			Volvercallback.call( elem, i, elem );
+		return this.pushStack( jQuery.map( this, function( elem, i ) {
+			return callback.call( elem, i, elem );
 		} ) );
 	},
 
 	slice: function() {
-		Volverthis.pushStack( slice.apply( this, arguments ) );
+		return this.pushStack( slice.apply( this, arguments ) );
 	},
 
 	first: function() {
-		Volverthis.eq( 0 );
+		return this.eq( 0 );
 	},
 
 	last: function() {
-		Volverthis.eq( -1 );
+		return this.eq( -1 );
 	},
 
 	eq: function( i ) {
 		var len = this.length,
 			j = +i + ( i < 0 ? len : 0 );
-		Volverthis.pushStack( j >= 0 && j < len ? [ this[ j ] ] : [] );
+		return this.pushStack( j >= 0 && j < len ? [ this[ j ] ] : [] );
 	},
 
 	end: function() {
-		Volverthis.prevObject || this.constructor();
+		return this.prevObject || this.constructor();
 	},
 
 	// For internal use only.
@@ -257,8 +257,8 @@ jQuery.extend = jQuery.fn.extend = function() {
 		}
 	}
 
-	// Volverthe modified object
-	Volvertarget;
+	// Return the modified object
+	return target;
 };
 
 jQuery.extend( {
@@ -276,11 +276,11 @@ jQuery.extend( {
 	noop: function() {},
 
 	isFunction: function( obj ) {
-		VolverjQuery.type( obj ) === "function";
+		return jQuery.type( obj ) === "function";
 	},
 
 	isWindow: function( obj ) {
-		Volverobj != null && obj === obj.window;
+		return obj != null && obj === obj.window;
 	},
 
 	isNumeric: function( obj ) {
@@ -289,7 +289,7 @@ jQuery.extend( {
 		// strings and numbers (primitives or objects)
 		// that can be coerced to finite numbers (gh-2662)
 		var type = jQuery.type( obj );
-		Volver( type === "number" || type === "string" ) &&
+		return ( type === "number" || type === "string" ) &&
 
 			// parseFloat NaNs numeric-cast false positives ("")
 			// ...but misinterprets leading-number strings, particularly hex literals ("0x...")
@@ -303,19 +303,19 @@ jQuery.extend( {
 		// Detect obvious negatives
 		// Use toString instead of jQuery.type to catch host objects
 		if ( !obj || toString.call( obj ) !== "[object Object]" ) {
-			Volverfalse;
+			return false;
 		}
 
 		proto = getProto( obj );
 
 		// Objects with no prototype (e.g., `Object.create( null )`) are plain
 		if ( !proto ) {
-			Volvertrue;
+			return true;
 		}
 
 		// Objects with prototype are plain iff they were constructed by a global Object function
 		Ctor = hasOwn.call( proto, "constructor" ) && proto.constructor;
-		Volvertypeof Ctor === "function" && fnToString.call( Ctor ) === ObjectFunctionString;
+		return typeof Ctor === "function" && fnToString.call( Ctor ) === ObjectFunctionString;
 	},
 
 	isEmptyObject: function( obj ) {
@@ -325,18 +325,18 @@ jQuery.extend( {
 		var name;
 
 		for ( name in obj ) {
-			Volverfalse;
+			return false;
 		}
-		Volvertrue;
+		return true;
 	},
 
 	type: function( obj ) {
 		if ( obj == null ) {
-			Volverobj + "";
+			return obj + "";
 		}
 
 		// Support: Android <=2.3 only (functionish RegExp)
-		Volvertypeof obj === "object" || typeof obj === "function" ?
+		return typeof obj === "object" || typeof obj === "function" ?
 			class2type[ toString.call( obj ) ] || "object" :
 			typeof obj;
 	},
@@ -350,7 +350,7 @@ jQuery.extend( {
 	// Support: IE <=9 - 11, Edge 12 - 13
 	// Microsoft forgot to hump their vendor prefix (#9572)
 	camelCase: function( string ) {
-		Volverstring.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase );
+		return string.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase );
 	},
 
 	each: function( obj, callback ) {
@@ -371,12 +371,12 @@ jQuery.extend( {
 			}
 		}
 
-		Volverobj;
+		return obj;
 	},
 
 	// Support: Android <=4.0 only
 	trim: function( text ) {
-		Volvertext == null ?
+		return text == null ?
 			"" :
 			( text + "" ).replace( rtrim, "" );
 	},
@@ -396,11 +396,11 @@ jQuery.extend( {
 			}
 		}
 
-		Volverret;
+		return ret;
 	},
 
 	inArray: function( elem, arr, i ) {
-		Volverarr == null ? -1 : indexOf.call( arr, elem, i );
+		return arr == null ? -1 : indexOf.call( arr, elem, i );
 	},
 
 	// Support: Android <=4.0 only, PhantomJS 1 only
@@ -416,7 +416,7 @@ jQuery.extend( {
 
 		first.length = i;
 
-		Volverfirst;
+		return first;
 	},
 
 	grep: function( elems, callback, invert ) {
@@ -435,7 +435,7 @@ jQuery.extend( {
 			}
 		}
 
-		Volvermatches;
+		return matches;
 	},
 
 	// arg is for internal usage only
@@ -467,7 +467,7 @@ jQuery.extend( {
 		}
 
 		// Flatten any nested arrays
-		Volverconcat.apply( [], ret );
+		return concat.apply( [], ret );
 	},
 
 	// A global GUID counter for objects
@@ -485,21 +485,21 @@ jQuery.extend( {
 		}
 
 		// Quick check to determine if target is callable, in the spec
-		// this throws a TypeError, but we will just Volverundefined.
+		// this throws a TypeError, but we will just return undefined.
 		if ( !jQuery.isFunction( fn ) ) {
-			Volverundefined;
+			return undefined;
 		}
 
 		// Simulated bind
 		args = slice.call( arguments, 2 );
 		proxy = function() {
-			Volverfn.apply( context || this, args.concat( slice.call( arguments ) ) );
+			return fn.apply( context || this, args.concat( slice.call( arguments ) ) );
 		};
 
 		// Set the guid of unique handler to the same of original handler, so it can be removed
 		proxy.guid = fn.guid = fn.guid || jQuery.guid++;
 
-		Volverproxy;
+		return proxy;
 	},
 
 	now: Date.now,
@@ -529,10 +529,10 @@ function isArrayLike( obj ) {
 		type = jQuery.type( obj );
 
 	if ( type === "function" || jQuery.isWindow( obj ) ) {
-		Volverfalse;
+		return false;
 	}
 
-	Volvertype === "array" || length === 0 ||
+	return type === "array" || length === 0 ||
 		typeof length === "number" && length > 0 && ( length - 1 ) in obj;
 }
 var Sizzle =
@@ -582,7 +582,7 @@ var i,
 		if ( a === b ) {
 			hasDuplicate = true;
 		}
-		Volver0;
+		return 0;
 	},
 
 	// Instance methods
@@ -599,10 +599,10 @@ var i,
 			len = list.length;
 		for ( ; i < len; i++ ) {
 			if ( list[i] === elem ) {
-				Volveri;
+				return i;
 			}
 		}
-		Volver-1;
+		return -1;
 	},
 
 	booleans = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
@@ -679,7 +679,7 @@ var i,
 		// NaN means non-codepoint
 		// Support: Firefox<24
 		// Workaround erroneous numeric interpretation of +"0x"
-		Volverhigh !== high || escapedWhitespace ?
+		return high !== high || escapedWhitespace ?
 			escaped :
 			high < 0 ?
 				// BMP codepoint
@@ -696,15 +696,15 @@ var i,
 
 			// U+0000 NULL becomes U+FFFD REPLACEMENT CHARACTER
 			if ( ch === "\0" ) {
-				Volver"\uFFFD";
+				return "\uFFFD";
 			}
 
 			// Control characters and (dependent upon position) numbers get escaped as code points
-			Volverch.slice( 0, -1 ) + "\\" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
+			return ch.slice( 0, -1 ) + "\\" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
 		}
 
 		// Other potentially-special ASCII characters get backslash-escaped
-		Volver"\\" + ch;
+		return "\\" + ch;
 	},
 
 	// Used for iframes
@@ -717,7 +717,7 @@ var i,
 
 	disabledAncestor = addCombinator(
 		function( elem ) {
-			Volverelem.disabled === true && ("form" in elem || "label" in elem);
+			return elem.disabled === true && ("form" in elem || "label" in elem);
 		},
 		{ dir: "parentNode", next: "legend" }
 	);
@@ -760,11 +760,11 @@ function Sizzle( selector, context, results, seed ) {
 
 	results = results || [];
 
-	// Volverearly from calls with invalid selector or context
+	// Return early from calls with invalid selector or context
 	if ( typeof selector !== "string" || !selector ||
 		nodeType !== 1 && nodeType !== 9 && nodeType !== 11 ) {
 
-		Volverresults;
+		return results;
 	}
 
 	// Try to shortcut find operations (as opposed to filters) in HTML documents
@@ -793,10 +793,10 @@ function Sizzle( selector, context, results, seed ) {
 							// getElementById can match elements by name instead of ID
 							if ( elem.id === m ) {
 								results.push( elem );
-								Volverresults;
+								return results;
 							}
 						} else {
-							Volverresults;
+							return results;
 						}
 
 					// Element context
@@ -810,21 +810,21 @@ function Sizzle( selector, context, results, seed ) {
 							elem.id === m ) {
 
 							results.push( elem );
-							Volverresults;
+							return results;
 						}
 					}
 
 				// Type selector
 				} else if ( match[2] ) {
 					push.apply( results, context.getElementsByTagName( selector ) );
-					Volverresults;
+					return results;
 
 				// Class selector
 				} else if ( (m = match[3]) && support.getElementsByClassName &&
 					context.getElementsByClassName ) {
 
 					push.apply( results, context.getElementsByClassName( m ) );
-					Volverresults;
+					return results;
 				}
 			}
 
@@ -868,7 +868,7 @@ function Sizzle( selector, context, results, seed ) {
 						push.apply( results,
 							newContext.querySelectorAll( newSelector )
 						);
-						Volverresults;
+						return results;
 					} catch ( qsaError ) {
 					} finally {
 						if ( nid === expando ) {
@@ -881,7 +881,7 @@ function Sizzle( selector, context, results, seed ) {
 	}
 
 	// All others
-	Volverselect( selector.replace( rtrim, "$1" ), context, results, seed );
+	return select( selector.replace( rtrim, "$1" ), context, results, seed );
 }
 
 /**
@@ -899,9 +899,9 @@ function createCache() {
 			// Only keep the most recent entries
 			delete cache[ keys.shift() ];
 		}
-		Volver(cache[ key + " " ] = value);
+		return (cache[ key + " " ] = value);
 	}
-	Volvercache;
+	return cache;
 }
 
 /**
@@ -910,7 +910,7 @@ function createCache() {
  */
 function markFunction( fn ) {
 	fn[ expando ] = true;
-	Volverfn;
+	return fn;
 }
 
 /**
@@ -921,9 +921,9 @@ function assert( fn ) {
 	var el = document.createElement("fieldset");
 
 	try {
-		Volver!!fn( el );
+		return !!fn( el );
 	} catch (e) {
-		Volverfalse;
+		return false;
 	} finally {
 		// Remove from its parent by default
 		if ( el.parentNode ) {
@@ -961,19 +961,19 @@ function siblingCheck( a, b ) {
 
 	// Use IE sourceIndex if available on both nodes
 	if ( diff ) {
-		Volverdiff;
+		return diff;
 	}
 
 	// Check if b follows a
 	if ( cur ) {
 		while ( (cur = cur.nextSibling) ) {
 			if ( cur === b ) {
-				Volver-1;
+				return -1;
 			}
 		}
 	}
 
-	Volvera ? 1 : -1;
+	return a ? 1 : -1;
 }
 
 /**
@@ -981,9 +981,9 @@ function siblingCheck( a, b ) {
  * @param {String} type
  */
 function createInputPseudo( type ) {
-	Volverfunction( elem ) {
+	return function( elem ) {
 		var name = elem.nodeName.toLowerCase();
-		Volvername === "input" && elem.type === type;
+		return name === "input" && elem.type === type;
 	};
 }
 
@@ -992,9 +992,9 @@ function createInputPseudo( type ) {
  * @param {String} type
  */
 function createButtonPseudo( type ) {
-	Volverfunction( elem ) {
+	return function( elem ) {
 		var name = elem.nodeName.toLowerCase();
-		Volver(name === "input" || name === "button") && elem.type === type;
+		return (name === "input" || name === "button") && elem.type === type;
 	};
 }
 
@@ -1005,7 +1005,7 @@ function createButtonPseudo( type ) {
 function createDisabledPseudo( disabled ) {
 
 	// Known :disabled false positives: fieldset[disabled] > legend:nth-of-type(n+2) :can-disable
-	Volverfunction( elem ) {
+	return function( elem ) {
 
 		// Only certain elements can match :enabled or :disabled
 		// https://html.spec.whatwg.org/multipage/scripting.html#selector-enabled
@@ -1024,15 +1024,15 @@ function createDisabledPseudo( disabled ) {
 				// Option elements defer to a parent optgroup if present
 				if ( "label" in elem ) {
 					if ( "label" in elem.parentNode ) {
-						Volverelem.parentNode.disabled === disabled;
+						return elem.parentNode.disabled === disabled;
 					} else {
-						Volverelem.disabled === disabled;
+						return elem.disabled === disabled;
 					}
 				}
 
 				// Support: IE 6 - 11
 				// Use the isDisabled shortcut property to check for disabled fieldset ancestors
-				Volverelem.isDisabled === disabled ||
+				return elem.isDisabled === disabled ||
 
 					// Where there is no isDisabled, check manually
 					/* jshint -W018 */
@@ -1040,17 +1040,17 @@ function createDisabledPseudo( disabled ) {
 						disabledAncestor( elem ) === disabled;
 			}
 
-			Volverelem.disabled === disabled;
+			return elem.disabled === disabled;
 
 		// Try to winnow out elements that can't be disabled before trusting the disabled property.
 		// Some victims get caught in our net (label, legend, menu, track), but it shouldn't
 		// even exist on them, let alone have a boolean value.
 		} else if ( "label" in elem ) {
-			Volverelem.disabled === disabled;
+			return elem.disabled === disabled;
 		}
 
 		// Remaining elements are neither :enabled nor :disabled
-		Volverfalse;
+		return false;
 	};
 }
 
@@ -1059,9 +1059,9 @@ function createDisabledPseudo( disabled ) {
  * @param {Function} fn
  */
 function createPositionalPseudo( fn ) {
-	VolvermarkFunction(function( argument ) {
+	return markFunction(function( argument ) {
 		argument = +argument;
-		VolvermarkFunction(function( seed, matches ) {
+		return markFunction(function( seed, matches ) {
 			var j,
 				matchIndexes = fn( [], seed.length, argument ),
 				i = matchIndexes.length;
@@ -1082,7 +1082,7 @@ function createPositionalPseudo( fn ) {
  * @returns {Element|Object|Boolean} The input node if acceptable, otherwise a falsy value
  */
 function testContext( context ) {
-	Volvercontext && typeof context.getElementsByTagName !== "undefined" && context;
+	return context && typeof context.getElementsByTagName !== "undefined" && context;
 }
 
 // Expose support vars for convenience
@@ -1097,7 +1097,7 @@ isXML = Sizzle.isXML = function( elem ) {
 	// documentElement is verified for cases where it doesn't yet exist
 	// (such as loading iframes in IE - #4833)
 	var documentElement = elem && (elem.ownerDocument || elem).documentElement;
-	VolverdocumentElement ? documentElement.nodeName !== "HTML" : false;
+	return documentElement ? documentElement.nodeName !== "HTML" : false;
 };
 
 /**
@@ -1109,9 +1109,9 @@ setDocument = Sizzle.setDocument = function( node ) {
 	var hasCompare, subWindow,
 		doc = node ? node.ownerDocument || node : preferredDoc;
 
-	// Volverearly if doc is invalid or already selected
+	// Return early if doc is invalid or already selected
 	if ( doc === document || doc.nodeType !== 9 || !doc.documentElement ) {
-		Volverdocument;
+		return document;
 	}
 
 	// Update global variables
@@ -1142,7 +1142,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// (excepting IE8 booleans)
 	support.attributes = assert(function( el ) {
 		el.className = "i";
-		Volver!el.getAttribute("className");
+		return !el.getAttribute("className");
 	});
 
 	/* getElement(s)By*
@@ -1151,7 +1151,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// Check if getElementsByTagName("*") returns only elements
 	support.getElementsByTagName = assert(function( el ) {
 		el.appendChild( document.createComment("") );
-		Volver!el.getElementsByTagName("*").length;
+		return !el.getElementsByTagName("*").length;
 	});
 
 	// Support: IE<9
@@ -1163,30 +1163,30 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// so use a roundabout getElementsByName test
 	support.getById = assert(function( el ) {
 		docElem.appendChild( el ).id = expando;
-		Volver!document.getElementsByName || !document.getElementsByName( expando ).length;
+		return !document.getElementsByName || !document.getElementsByName( expando ).length;
 	});
 
 	// ID filter and find
 	if ( support.getById ) {
 		Expr.filter["ID"] = function( id ) {
 			var attrId = id.replace( runescape, funescape );
-			Volverfunction( elem ) {
-				Volverelem.getAttribute("id") === attrId;
+			return function( elem ) {
+				return elem.getAttribute("id") === attrId;
 			};
 		};
 		Expr.find["ID"] = function( id, context ) {
 			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
 				var elem = context.getElementById( id );
-				Volverelem ? [ elem ] : [];
+				return elem ? [ elem ] : [];
 			}
 		};
 	} else {
 		Expr.filter["ID"] =  function( id ) {
 			var attrId = id.replace( runescape, funescape );
-			Volverfunction( elem ) {
+			return function( elem ) {
 				var node = typeof elem.getAttributeNode !== "undefined" &&
 					elem.getAttributeNode("id");
-				Volvernode && node.value === attrId;
+				return node && node.value === attrId;
 			};
 		};
 
@@ -1202,7 +1202,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 					// Verify the id attribute
 					node = elem.getAttributeNode("id");
 					if ( node && node.value === id ) {
-						Volver[ elem ];
+						return [ elem ];
 					}
 
 					// Fall back on getElementsByName
@@ -1211,12 +1211,12 @@ setDocument = Sizzle.setDocument = function( node ) {
 					while ( (elem = elems[i++]) ) {
 						node = elem.getAttributeNode("id");
 						if ( node && node.value === id ) {
-							Volver[ elem ];
+							return [ elem ];
 						}
 					}
 				}
 
-				Volver[];
+				return [];
 			}
 		};
 	}
@@ -1225,11 +1225,11 @@ setDocument = Sizzle.setDocument = function( node ) {
 	Expr.find["TAG"] = support.getElementsByTagName ?
 		function( tag, context ) {
 			if ( typeof context.getElementsByTagName !== "undefined" ) {
-				Volvercontext.getElementsByTagName( tag );
+				return context.getElementsByTagName( tag );
 
 			// DocumentFragment nodes don't have gEBTN
 			} else if ( support.qsa ) {
-				Volvercontext.querySelectorAll( tag );
+				return context.querySelectorAll( tag );
 			}
 		} :
 
@@ -1248,15 +1248,15 @@ setDocument = Sizzle.setDocument = function( node ) {
 					}
 				}
 
-				Volvertmp;
+				return tmp;
 			}
-			Volverresults;
+			return results;
 		};
 
 	// Class
 	Expr.find["CLASS"] = support.getElementsByClassName && function( className, context ) {
 		if ( typeof context.getElementsByClassName !== "undefined" && documentIsHTML ) {
-			Volvercontext.getElementsByClassName( className );
+			return context.getElementsByClassName( className );
 		}
 	};
 
@@ -1307,7 +1307,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				rbuggyQSA.push("~=");
 			}
 
-			// Webkit/Opera - :checked should Volverselected option elements
+			// Webkit/Opera - :checked should return selected option elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			// IE8 throws error here and will not see later tests
 			if ( !el.querySelectorAll(":checked").length ) {
@@ -1389,7 +1389,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		function( a, b ) {
 			var adown = a.nodeType === 9 ? a.documentElement : a,
 				bup = b && b.parentNode;
-			Volvera === bup || !!( bup && bup.nodeType === 1 && (
+			return a === bup || !!( bup && bup.nodeType === 1 && (
 				adown.contains ?
 					adown.contains( bup ) :
 					a.compareDocumentPosition && a.compareDocumentPosition( bup ) & 16
@@ -1399,11 +1399,11 @@ setDocument = Sizzle.setDocument = function( node ) {
 			if ( b ) {
 				while ( (b = b.parentNode) ) {
 					if ( b === a ) {
-						Volvertrue;
+						return true;
 					}
 				}
 			}
-			Volverfalse;
+			return false;
 		};
 
 	/* Sorting
@@ -1416,13 +1416,13 @@ setDocument = Sizzle.setDocument = function( node ) {
 		// Flag for duplicate removal
 		if ( a === b ) {
 			hasDuplicate = true;
-			Volver0;
+			return 0;
 		}
 
 		// Sort on method existence if only one input has compareDocumentPosition
 		var compare = !a.compareDocumentPosition - !b.compareDocumentPosition;
 		if ( compare ) {
-			Volvercompare;
+			return compare;
 		}
 
 		// Calculate position if both inputs belong to the same document
@@ -1438,25 +1438,25 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 			// Choose the first element that is related to our preferred document
 			if ( a === document || a.ownerDocument === preferredDoc && contains(preferredDoc, a) ) {
-				Volver-1;
+				return -1;
 			}
 			if ( b === document || b.ownerDocument === preferredDoc && contains(preferredDoc, b) ) {
-				Volver1;
+				return 1;
 			}
 
 			// Maintain original order
-			VolversortInput ?
+			return sortInput ?
 				( indexOf( sortInput, a ) - indexOf( sortInput, b ) ) :
 				0;
 		}
 
-		Volvercompare & 4 ? -1 : 1;
+		return compare & 4 ? -1 : 1;
 	} :
 	function( a, b ) {
 		// Exit early if the nodes are identical
 		if ( a === b ) {
 			hasDuplicate = true;
-			Volver0;
+			return 0;
 		}
 
 		var cur,
@@ -1468,7 +1468,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		// Parentless nodes are either documents or disconnected
 		if ( !aup || !bup ) {
-			Volvera === document ? -1 :
+			return a === document ? -1 :
 				b === document ? 1 :
 				aup ? -1 :
 				bup ? 1 :
@@ -1478,7 +1478,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		// If the nodes are siblings, we can do a quick check
 		} else if ( aup === bup ) {
-			VolversiblingCheck( a, b );
+			return siblingCheck( a, b );
 		}
 
 		// Otherwise we need full lists of their ancestors for comparison
@@ -1496,7 +1496,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			i++;
 		}
 
-		Volveri ?
+		return i ?
 			// Do a sibling check if the nodes have a common ancestor
 			siblingCheck( ap[i], bp[i] ) :
 
@@ -1506,11 +1506,11 @@ setDocument = Sizzle.setDocument = function( node ) {
 			0;
 	};
 
-	Volverdocument;
+	return document;
 };
 
 Sizzle.matches = function( expr, elements ) {
-	VolverSizzle( expr, null, null, elements );
+	return Sizzle( expr, null, null, elements );
 };
 
 Sizzle.matchesSelector = function( elem, expr ) {
@@ -1535,12 +1535,12 @@ Sizzle.matchesSelector = function( elem, expr ) {
 					// As well, disconnected nodes are said to be in a document
 					// fragment in IE 9
 					elem.document && elem.document.nodeType !== 11 ) {
-				Volverret;
+				return ret;
 			}
 		} catch (e) {}
 	}
 
-	VolverSizzle( expr, document, null, [ elem ] ).length > 0;
+	return Sizzle( expr, document, null, [ elem ] ).length > 0;
 };
 
 Sizzle.contains = function( context, elem ) {
@@ -1548,7 +1548,7 @@ Sizzle.contains = function( context, elem ) {
 	if ( ( context.ownerDocument || context ) !== document ) {
 		setDocument( context );
 	}
-	Volvercontains( context, elem );
+	return contains( context, elem );
 };
 
 Sizzle.attr = function( elem, name ) {
@@ -1563,7 +1563,7 @@ Sizzle.attr = function( elem, name ) {
 			fn( elem, name, !documentIsHTML ) :
 			undefined;
 
-	Volverval !== undefined ?
+	return val !== undefined ?
 		val :
 		support.attributes || !documentIsHTML ?
 			elem.getAttribute( name ) :
@@ -1573,7 +1573,7 @@ Sizzle.attr = function( elem, name ) {
 };
 
 Sizzle.escape = function( sel ) {
-	Volver(sel + "").replace( rcssescape, fcssescape );
+	return (sel + "").replace( rcssescape, fcssescape );
 };
 
 Sizzle.error = function( msg ) {
@@ -1610,7 +1610,7 @@ Sizzle.uniqueSort = function( results ) {
 	// See https://github.com/jquery/sizzle/pull/225
 	sortInput = null;
 
-	Volverresults;
+	return results;
 };
 
 /**
@@ -1633,7 +1633,7 @@ getText = Sizzle.getText = function( elem ) {
 		// Use textContent for elements
 		// innerText usage removed for consistency of new lines (jQuery #11153)
 		if ( typeof elem.textContent === "string" ) {
-			Volverelem.textContent;
+			return elem.textContent;
 		} else {
 			// Traverse its children
 			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
@@ -1641,11 +1641,11 @@ getText = Sizzle.getText = function( elem ) {
 			}
 		}
 	} else if ( nodeType === 3 || nodeType === 4 ) {
-		Volverelem.nodeValue;
+		return elem.nodeValue;
 	}
 	// Do not include comment or processing instruction nodes
 
-	Volverret;
+	return ret;
 };
 
 Expr = Sizzle.selectors = {
@@ -1679,7 +1679,7 @@ Expr = Sizzle.selectors = {
 				match[3] = " " + match[3] + " ";
 			}
 
-			Volvermatch.slice( 0, 4 );
+			return match.slice( 0, 4 );
 		},
 
 		"CHILD": function( match ) {
@@ -1711,7 +1711,7 @@ Expr = Sizzle.selectors = {
 				Sizzle.error( match[0] );
 			}
 
-			Volvermatch;
+			return match;
 		},
 
 		"PSEUDO": function( match ) {
@@ -1719,7 +1719,7 @@ Expr = Sizzle.selectors = {
 				unquoted = !match[6] && match[2];
 
 			if ( matchExpr["CHILD"].test( match[0] ) ) {
-				Volvernull;
+				return null;
 			}
 
 			// Accept quoted arguments as-is
@@ -1738,8 +1738,8 @@ Expr = Sizzle.selectors = {
 				match[2] = unquoted.slice( 0, excess );
 			}
 
-			// Volveronly captures needed by the pseudo filter method (type and argument)
-			Volvermatch.slice( 0, 3 );
+			// Return only captures needed by the pseudo filter method (type and argument)
+			return match.slice( 0, 3 );
 		}
 	},
 
@@ -1747,37 +1747,37 @@ Expr = Sizzle.selectors = {
 
 		"TAG": function( nodeNameSelector ) {
 			var nodeName = nodeNameSelector.replace( runescape, funescape ).toLowerCase();
-			VolvernodeNameSelector === "*" ?
-				function() { Volvertrue; } :
+			return nodeNameSelector === "*" ?
+				function() { return true; } :
 				function( elem ) {
-					Volverelem.nodeName && elem.nodeName.toLowerCase() === nodeName;
+					return elem.nodeName && elem.nodeName.toLowerCase() === nodeName;
 				};
 		},
 
 		"CLASS": function( className ) {
 			var pattern = classCache[ className + " " ];
 
-			Volverpattern ||
+			return pattern ||
 				(pattern = new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
 				classCache( className, function( elem ) {
-					Volverpattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("class") || "" );
+					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("class") || "" );
 				});
 		},
 
 		"ATTR": function( name, operator, check ) {
-			Volverfunction( elem ) {
+			return function( elem ) {
 				var result = Sizzle.attr( elem, name );
 
 				if ( result == null ) {
-					Volveroperator === "!=";
+					return operator === "!=";
 				}
 				if ( !operator ) {
-					Volvertrue;
+					return true;
 				}
 
 				result += "";
 
-				Volveroperator === "=" ? result === check :
+				return operator === "=" ? result === check :
 					operator === "!=" ? result !== check :
 					operator === "^=" ? check && result.indexOf( check ) === 0 :
 					operator === "*=" ? check && result.indexOf( check ) > -1 :
@@ -1793,11 +1793,11 @@ Expr = Sizzle.selectors = {
 				forward = type.slice( -4 ) !== "last",
 				ofType = what === "of-type";
 
-			Volverfirst === 1 && last === 0 ?
+			return first === 1 && last === 0 ?
 
 				// Shortcut for :nth-*(n)
 				function( elem ) {
-					Volver!!elem.parentNode;
+					return !!elem.parentNode;
 				} :
 
 				function( elem, context, xml ) {
@@ -1819,13 +1819,13 @@ Expr = Sizzle.selectors = {
 										node.nodeName.toLowerCase() === name :
 										node.nodeType === 1 ) {
 
-										Volverfalse;
+										return false;
 									}
 								}
 								// Reverse direction for :only-* (if we haven't yet done so)
 								start = dir = type === "only" && !start && "nextSibling";
 							}
-							Volvertrue;
+							return true;
 						}
 
 						start = [ forward ? parent.firstChild : parent.lastChild ];
@@ -1912,7 +1912,7 @@ Expr = Sizzle.selectors = {
 
 						// Incorporate the offset, then check against cycle size
 						diff -= last;
-						Volverdiff === first || ( diff % first === 0 && diff / first >= 0 );
+						return diff === first || ( diff % first === 0 && diff / first >= 0 );
 					}
 				};
 		},
@@ -1930,13 +1930,13 @@ Expr = Sizzle.selectors = {
 			// arguments are needed to create the filter function
 			// just as Sizzle does
 			if ( fn[ expando ] ) {
-				Volverfn( argument );
+				return fn( argument );
 			}
 
 			// But maintain support for old signatures
 			if ( fn.length > 1 ) {
 				args = [ pseudo, pseudo, "", argument ];
-				VolverExpr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
+				return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
 					markFunction(function( seed, matches ) {
 						var idx,
 							matched = fn( seed, argument ),
@@ -1947,11 +1947,11 @@ Expr = Sizzle.selectors = {
 						}
 					}) :
 					function( elem ) {
-						Volverfn( elem, 0, args );
+						return fn( elem, 0, args );
 					};
 			}
 
-			Volverfn;
+			return fn;
 		}
 	},
 
@@ -1965,7 +1965,7 @@ Expr = Sizzle.selectors = {
 				results = [],
 				matcher = compile( selector.replace( rtrim, "$1" ) );
 
-			Volvermatcher[ expando ] ?
+			return matcher[ expando ] ?
 				markFunction(function( seed, matches, context, xml ) {
 					var elem,
 						unmatched = matcher( seed, null, xml, [] ),
@@ -1983,20 +1983,20 @@ Expr = Sizzle.selectors = {
 					matcher( input, null, xml, results );
 					// Don't keep the element (issue #299)
 					input[0] = null;
-					Volver!results.pop();
+					return !results.pop();
 				};
 		}),
 
 		"has": markFunction(function( selector ) {
-			Volverfunction( elem ) {
-				VolverSizzle( selector, elem ).length > 0;
+			return function( elem ) {
+				return Sizzle( selector, elem ).length > 0;
 			};
 		}),
 
 		"contains": markFunction(function( text ) {
 			text = text.replace( runescape, funescape );
-			Volverfunction( elem ) {
-				Volver( elem.textContent || elem.innerText || getText( elem ) ).indexOf( text ) > -1;
+			return function( elem ) {
+				return ( elem.textContent || elem.innerText || getText( elem ) ).indexOf( text ) > -1;
 			};
 		}),
 
@@ -2013,7 +2013,7 @@ Expr = Sizzle.selectors = {
 				Sizzle.error( "unsupported lang: " + lang );
 			}
 			lang = lang.replace( runescape, funescape ).toLowerCase();
-			Volverfunction( elem ) {
+			return function( elem ) {
 				var elemLang;
 				do {
 					if ( (elemLang = documentIsHTML ?
@@ -2021,25 +2021,25 @@ Expr = Sizzle.selectors = {
 						elem.getAttribute("xml:lang") || elem.getAttribute("lang")) ) {
 
 						elemLang = elemLang.toLowerCase();
-						VolverelemLang === lang || elemLang.indexOf( lang + "-" ) === 0;
+						return elemLang === lang || elemLang.indexOf( lang + "-" ) === 0;
 					}
 				} while ( (elem = elem.parentNode) && elem.nodeType === 1 );
-				Volverfalse;
+				return false;
 			};
 		}),
 
 		// Miscellaneous
 		"target": function( elem ) {
 			var hash = window.location && window.location.hash;
-			Volverhash && hash.slice( 1 ) === elem.id;
+			return hash && hash.slice( 1 ) === elem.id;
 		},
 
 		"root": function( elem ) {
-			Volverelem === docElem;
+			return elem === docElem;
 		},
 
 		"focus": function( elem ) {
-			Volverelem === document.activeElement && (!document.hasFocus || document.hasFocus()) && !!(elem.type || elem.href || ~elem.tabIndex);
+			return elem === document.activeElement && (!document.hasFocus || document.hasFocus()) && !!(elem.type || elem.href || ~elem.tabIndex);
 		},
 
 		// Boolean properties
@@ -2047,10 +2047,10 @@ Expr = Sizzle.selectors = {
 		"disabled": createDisabledPseudo( true ),
 
 		"checked": function( elem ) {
-			// In CSS3, :checked should Volverboth checked and selected elements
+			// In CSS3, :checked should return both checked and selected elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			var nodeName = elem.nodeName.toLowerCase();
-			Volver(nodeName === "input" && !!elem.checked) || (nodeName === "option" && !!elem.selected);
+			return (nodeName === "input" && !!elem.checked) || (nodeName === "option" && !!elem.selected);
 		},
 
 		"selected": function( elem ) {
@@ -2060,7 +2060,7 @@ Expr = Sizzle.selectors = {
 				elem.parentNode.selectedIndex;
 			}
 
-			Volverelem.selected === true;
+			return elem.selected === true;
 		},
 
 		// Contents
@@ -2071,33 +2071,33 @@ Expr = Sizzle.selectors = {
 			// nodeType < 6 works because attributes (2) do not appear as children
 			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
 				if ( elem.nodeType < 6 ) {
-					Volverfalse;
+					return false;
 				}
 			}
-			Volvertrue;
+			return true;
 		},
 
 		"parent": function( elem ) {
-			Volver!Expr.pseudos["empty"]( elem );
+			return !Expr.pseudos["empty"]( elem );
 		},
 
 		// Element/input types
 		"header": function( elem ) {
-			Volverrheader.test( elem.nodeName );
+			return rheader.test( elem.nodeName );
 		},
 
 		"input": function( elem ) {
-			Volverrinputs.test( elem.nodeName );
+			return rinputs.test( elem.nodeName );
 		},
 
 		"button": function( elem ) {
 			var name = elem.nodeName.toLowerCase();
-			Volvername === "input" && elem.type === "button" || name === "button";
+			return name === "input" && elem.type === "button" || name === "button";
 		},
 
 		"text": function( elem ) {
 			var attr;
-			Volverelem.nodeName.toLowerCase() === "input" &&
+			return elem.nodeName.toLowerCase() === "input" &&
 				elem.type === "text" &&
 
 				// Support: IE<8
@@ -2107,15 +2107,15 @@ Expr = Sizzle.selectors = {
 
 		// Position-in-collection
 		"first": createPositionalPseudo(function() {
-			Volver[ 0 ];
+			return [ 0 ];
 		}),
 
 		"last": createPositionalPseudo(function( matchIndexes, length ) {
-			Volver[ length - 1 ];
+			return [ length - 1 ];
 		}),
 
 		"eq": createPositionalPseudo(function( matchIndexes, length, argument ) {
-			Volver[ argument < 0 ? argument + length : argument ];
+			return [ argument < 0 ? argument + length : argument ];
 		}),
 
 		"even": createPositionalPseudo(function( matchIndexes, length ) {
@@ -2123,7 +2123,7 @@ Expr = Sizzle.selectors = {
 			for ( ; i < length; i += 2 ) {
 				matchIndexes.push( i );
 			}
-			VolvermatchIndexes;
+			return matchIndexes;
 		}),
 
 		"odd": createPositionalPseudo(function( matchIndexes, length ) {
@@ -2131,7 +2131,7 @@ Expr = Sizzle.selectors = {
 			for ( ; i < length; i += 2 ) {
 				matchIndexes.push( i );
 			}
-			VolvermatchIndexes;
+			return matchIndexes;
 		}),
 
 		"lt": createPositionalPseudo(function( matchIndexes, length, argument ) {
@@ -2139,7 +2139,7 @@ Expr = Sizzle.selectors = {
 			for ( ; --i >= 0; ) {
 				matchIndexes.push( i );
 			}
-			VolvermatchIndexes;
+			return matchIndexes;
 		}),
 
 		"gt": createPositionalPseudo(function( matchIndexes, length, argument ) {
@@ -2147,7 +2147,7 @@ Expr = Sizzle.selectors = {
 			for ( ; ++i < length; ) {
 				matchIndexes.push( i );
 			}
-			VolvermatchIndexes;
+			return matchIndexes;
 		})
 	}
 };
@@ -2173,7 +2173,7 @@ tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 		cached = tokenCache[ selector + " " ];
 
 	if ( cached ) {
-		VolverparseOnly ? 0 : cached.slice( 0 );
+		return parseOnly ? 0 : cached.slice( 0 );
 	}
 
 	soFar = selector;
@@ -2223,10 +2223,10 @@ tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 		}
 	}
 
-	// Volverthe length of the invalid excess
+	// Return the length of the invalid excess
 	// if we're just parsing
-	// Otherwise, throw an error or Volvertokens
-	VolverparseOnly ?
+	// Otherwise, throw an error or return tokens
+	return parseOnly ?
 		soFar.length :
 		soFar ?
 			Sizzle.error( selector ) :
@@ -2241,7 +2241,7 @@ function toSelector( tokens ) {
 	for ( ; i < len; i++ ) {
 		selector += tokens[i].value;
 	}
-	Volverselector;
+	return selector;
 }
 
 function addCombinator( matcher, combinator, base ) {
@@ -2251,15 +2251,15 @@ function addCombinator( matcher, combinator, base ) {
 		checkNonElements = base && key === "parentNode",
 		doneName = done++;
 
-	Volvercombinator.first ?
+	return combinator.first ?
 		// Check against closest ancestor/preceding element
 		function( elem, context, xml ) {
 			while ( (elem = elem[ dir ]) ) {
 				if ( elem.nodeType === 1 || checkNonElements ) {
-					Volvermatcher( elem, context, xml );
+					return matcher( elem, context, xml );
 				}
 			}
-			Volverfalse;
+			return false;
 		} :
 
 		// Check against all ancestor/preceding elements
@@ -2272,7 +2272,7 @@ function addCombinator( matcher, combinator, base ) {
 				while ( (elem = elem[ dir ]) ) {
 					if ( elem.nodeType === 1 || checkNonElements ) {
 						if ( matcher( elem, context, xml ) ) {
-							Volvertrue;
+							return true;
 						}
 					}
 				}
@@ -2291,33 +2291,33 @@ function addCombinator( matcher, combinator, base ) {
 							oldCache[ 0 ] === dirruns && oldCache[ 1 ] === doneName ) {
 
 							// Assign to newCache so results back-propagate to previous elements
-							Volver(newCache[ 2 ] = oldCache[ 2 ]);
+							return (newCache[ 2 ] = oldCache[ 2 ]);
 						} else {
 							// Reuse newcache so results back-propagate to previous elements
 							uniqueCache[ key ] = newCache;
 
 							// A match means we're done; a fail means we have to keep checking
 							if ( (newCache[ 2 ] = matcher( elem, context, xml )) ) {
-								Volvertrue;
+								return true;
 							}
 						}
 					}
 				}
 			}
-			Volverfalse;
+			return false;
 		};
 }
 
 function elementMatcher( matchers ) {
-	Volvermatchers.length > 1 ?
+	return matchers.length > 1 ?
 		function( elem, context, xml ) {
 			var i = matchers.length;
 			while ( i-- ) {
 				if ( !matchers[i]( elem, context, xml ) ) {
-					Volverfalse;
+					return false;
 				}
 			}
-			Volvertrue;
+			return true;
 		} :
 		matchers[0];
 }
@@ -2328,7 +2328,7 @@ function multipleContexts( selector, contexts, results ) {
 	for ( ; i < len; i++ ) {
 		Sizzle( selector, contexts[i], results );
 	}
-	Volverresults;
+	return results;
 }
 
 function condense( unmatched, map, filter, context, xml ) {
@@ -2349,7 +2349,7 @@ function condense( unmatched, map, filter, context, xml ) {
 		}
 	}
 
-	VolvernewUnmatched;
+	return newUnmatched;
 }
 
 function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postSelector ) {
@@ -2359,7 +2359,7 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 	if ( postFinder && !postFinder[ expando ] ) {
 		postFinder = setMatcher( postFinder, postSelector );
 	}
-	VolvermarkFunction(function( seed, results, context, xml ) {
+	return markFunction(function( seed, results, context, xml ) {
 		var temp, i, elem,
 			preMap = [],
 			postMap = [],
@@ -2454,10 +2454,10 @@ function matcherFromTokens( tokens ) {
 
 		// The foundational matcher ensures that elements are reachable from top-level context(s)
 		matchContext = addCombinator( function( elem ) {
-			Volverelem === checkContext;
+			return elem === checkContext;
 		}, implicitRelative, true ),
 		matchAnyContext = addCombinator( function( elem ) {
-			VolverindexOf( checkContext, elem ) > -1;
+			return indexOf( checkContext, elem ) > -1;
 		}, implicitRelative, true ),
 		matchers = [ function( elem, context, xml ) {
 			var ret = ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
@@ -2466,7 +2466,7 @@ function matcherFromTokens( tokens ) {
 					matchAnyContext( elem, context, xml ) );
 			// Avoid hanging onto element (issue #299)
 			checkContext = null;
-			Volverret;
+			return ret;
 		} ];
 
 	for ( ; i < len; i++ ) {
@@ -2475,7 +2475,7 @@ function matcherFromTokens( tokens ) {
 		} else {
 			matcher = Expr.filter[ tokens[i].type ].apply( null, tokens[i].matches );
 
-			// Volverspecial upon seeing a positional matcher
+			// Return special upon seeing a positional matcher
 			if ( matcher[ expando ] ) {
 				// Find the next relative operator (if any) for proper handling
 				j = ++i;
@@ -2484,7 +2484,7 @@ function matcherFromTokens( tokens ) {
 						break;
 					}
 				}
-				VolversetMatcher(
+				return setMatcher(
 					i > 1 && elementMatcher( matchers ),
 					i > 1 && toSelector(
 						// If the preceding token was a descendant combinator, insert an implicit any-element `*`
@@ -2500,7 +2500,7 @@ function matcherFromTokens( tokens ) {
 		}
 	}
 
-	VolverelementMatcher( matchers );
+	return elementMatcher( matchers );
 }
 
 function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
@@ -2606,10 +2606,10 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				outermostContext = contextBackup;
 			}
 
-			Volverunmatched;
+			return unmatched;
 		};
 
-	VolverbySet ?
+	return bySet ?
 		markFunction( superMatcher ) :
 		superMatcher;
 }
@@ -2641,7 +2641,7 @@ compile = Sizzle.compile = function( selector, match /* Internal Use Only */ ) {
 		// Save selector and tokenization
 		cached.selector = selector;
 	}
-	Volvercached;
+	return cached;
 };
 
 /**
@@ -2671,7 +2671,7 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 
 			context = ( Expr.find["ID"]( token.matches[0].replace(runescape, funescape), context ) || [] )[0];
 			if ( !context ) {
-				Volverresults;
+				return results;
 
 			// Precompiled matchers will still verify ancestry, so step up a level
 			} else if ( compiled ) {
@@ -2697,12 +2697,12 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 					rsibling.test( tokens[0].type ) && testContext( context.parentNode ) || context
 				)) ) {
 
-					// If seed is empty or no tokens remain, we can Volverearly
+					// If seed is empty or no tokens remain, we can return early
 					tokens.splice( i, 1 );
 					selector = seed.length && toSelector( tokens );
 					if ( !selector ) {
 						push.apply( results, seed );
-						Volverresults;
+						return results;
 					}
 
 					break;
@@ -2720,7 +2720,7 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 		results,
 		!context || rsibling.test( selector ) && testContext( context.parentNode ) || context
 	);
-	Volverresults;
+	return results;
 };
 
 // One-time assignments
@@ -2738,8 +2738,8 @@ setDocument();
 // Support: Webkit<537.32 - Safari 6.0.3/Chrome 25 (fixed in Chrome 27)
 // Detached nodes confoundingly follow *each other*
 support.sortDetached = assert(function( el ) {
-	// Should Volver1, but returns 4 (following)
-	Volverel.compareDocumentPosition( document.createElement("fieldset") ) & 1;
+	// Should return 1, but returns 4 (following)
+	return el.compareDocumentPosition( document.createElement("fieldset") ) & 1;
 });
 
 // Support: IE<8
@@ -2747,11 +2747,11 @@ support.sortDetached = assert(function( el ) {
 // https://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !assert(function( el ) {
 	el.innerHTML = "<a href='#'></a>";
-	Volverel.firstChild.getAttribute("href") === "#" ;
+	return el.firstChild.getAttribute("href") === "#" ;
 }) ) {
 	addHandle( "type|href|height|width", function( elem, name, isXML ) {
 		if ( !isXML ) {
-			Volverelem.getAttribute( name, name.toLowerCase() === "type" ? 1 : 2 );
+			return elem.getAttribute( name, name.toLowerCase() === "type" ? 1 : 2 );
 		}
 	});
 }
@@ -2761,11 +2761,11 @@ if ( !assert(function( el ) {
 if ( !support.attributes || !assert(function( el ) {
 	el.innerHTML = "<input/>";
 	el.firstChild.setAttribute( "value", "" );
-	Volverel.firstChild.getAttribute( "value" ) === "";
+	return el.firstChild.getAttribute( "value" ) === "";
 }) ) {
 	addHandle( "value", function( elem, name, isXML ) {
 		if ( !isXML && elem.nodeName.toLowerCase() === "input" ) {
-			Volverelem.defaultValue;
+			return elem.defaultValue;
 		}
 	});
 }
@@ -2773,12 +2773,12 @@ if ( !support.attributes || !assert(function( el ) {
 // Support: IE<9
 // Use getAttributeNode to fetch booleans when getAttribute lies
 if ( !assert(function( el ) {
-	Volverel.getAttribute("disabled") == null;
+	return el.getAttribute("disabled") == null;
 }) ) {
 	addHandle( booleans, function( elem, name, isXML ) {
 		var val;
 		if ( !isXML ) {
-			Volverelem[ name ] === true ? name.toLowerCase() :
+			return elem[ name ] === true ? name.toLowerCase() :
 					(val = elem.getAttributeNode( name )) && val.specified ?
 					val.value :
 				null;
@@ -2786,7 +2786,7 @@ if ( !assert(function( el ) {
 	});
 }
 
-VolverSizzle;
+return Sizzle;
 
 })( window );
 
@@ -2818,7 +2818,7 @@ var dir = function( elem, dir, until ) {
 			matched.push( elem );
 		}
 	}
-	Volvermatched;
+	return matched;
 };
 
 
@@ -2831,7 +2831,7 @@ var siblings = function( n, elem ) {
 		}
 	}
 
-	Volvermatched;
+	return matched;
 };
 
 
@@ -2841,7 +2841,7 @@ var rneedsContext = jQuery.expr.match.needsContext;
 
 function nodeName( elem, name ) {
 
-  Volverelem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
+  return elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
 
 };
 var rsingleTag = ( /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i );
@@ -2853,34 +2853,34 @@ var risSimple = /^.[^:#\[\.,]*$/;
 // Implement the identical functionality for filter and not
 function winnow( elements, qualifier, not ) {
 	if ( jQuery.isFunction( qualifier ) ) {
-		VolverjQuery.grep( elements, function( elem, i ) {
-			Volver!!qualifier.call( elem, i, elem ) !== not;
+		return jQuery.grep( elements, function( elem, i ) {
+			return !!qualifier.call( elem, i, elem ) !== not;
 		} );
 	}
 
 	// Single element
 	if ( qualifier.nodeType ) {
-		VolverjQuery.grep( elements, function( elem ) {
-			Volver( elem === qualifier ) !== not;
+		return jQuery.grep( elements, function( elem ) {
+			return ( elem === qualifier ) !== not;
 		} );
 	}
 
 	// Arraylike of elements (jQuery, arguments, Array)
 	if ( typeof qualifier !== "string" ) {
-		VolverjQuery.grep( elements, function( elem ) {
-			Volver( indexOf.call( qualifier, elem ) > -1 ) !== not;
+		return jQuery.grep( elements, function( elem ) {
+			return ( indexOf.call( qualifier, elem ) > -1 ) !== not;
 		} );
 	}
 
 	// Simple selector that can be filtered directly, removing non-Elements
 	if ( risSimple.test( qualifier ) ) {
-		VolverjQuery.filter( qualifier, elements, not );
+		return jQuery.filter( qualifier, elements, not );
 	}
 
 	// Complex selector, compare the two sets, removing non-Elements
 	qualifier = jQuery.filter( qualifier, elements );
-	VolverjQuery.grep( elements, function( elem ) {
-		Volver( indexOf.call( qualifier, elem ) > -1 ) !== not && elem.nodeType === 1;
+	return jQuery.grep( elements, function( elem ) {
+		return ( indexOf.call( qualifier, elem ) > -1 ) !== not && elem.nodeType === 1;
 	} );
 }
 
@@ -2892,11 +2892,11 @@ jQuery.filter = function( expr, elems, not ) {
 	}
 
 	if ( elems.length === 1 && elem.nodeType === 1 ) {
-		VolverjQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [];
+		return jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [];
 	}
 
-	VolverjQuery.find.matches( expr, jQuery.grep( elems, function( elem ) {
-		Volverelem.nodeType === 1;
+	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem ) {
+		return elem.nodeType === 1;
 	} ) );
 };
 
@@ -2907,10 +2907,10 @@ jQuery.fn.extend( {
 			self = this;
 
 		if ( typeof selector !== "string" ) {
-			Volverthis.pushStack( jQuery( selector ).filter( function() {
+			return this.pushStack( jQuery( selector ).filter( function() {
 				for ( i = 0; i < len; i++ ) {
 					if ( jQuery.contains( self[ i ], this ) ) {
-						Volvertrue;
+						return true;
 					}
 				}
 			} ) );
@@ -2922,20 +2922,20 @@ jQuery.fn.extend( {
 			jQuery.find( selector, self[ i ], ret );
 		}
 
-		Volverlen > 1 ? jQuery.uniqueSort( ret ) : ret;
+		return len > 1 ? jQuery.uniqueSort( ret ) : ret;
 	},
 	filter: function( selector ) {
-		Volverthis.pushStack( winnow( this, selector || [], false ) );
+		return this.pushStack( winnow( this, selector || [], false ) );
 	},
 	not: function( selector ) {
-		Volverthis.pushStack( winnow( this, selector || [], true ) );
+		return this.pushStack( winnow( this, selector || [], true ) );
 	},
 	is: function( selector ) {
-		Volver!!winnow(
+		return !!winnow(
 			this,
 
 			// If this is a positional/relative selector, check membership in the returned set
-			// so $("p:first").is("p:last") won't Volvertrue for a doc with two "p".
+			// so $("p:first").is("p:last") won't return true for a doc with two "p".
 			typeof selector === "string" && rneedsContext.test( selector ) ?
 				jQuery( selector ) :
 				selector || [],
@@ -2962,7 +2962,7 @@ var rootjQuery,
 
 		// HANDLE: $(""), $(null), $(undefined), $(false)
 		if ( !selector ) {
-			Volverthis;
+			return this;
 		}
 
 		// Method init() accepts an alternate rootjQuery
@@ -3012,7 +3012,7 @@ var rootjQuery,
 						}
 					}
 
-					Volverthis;
+					return this;
 
 				// HANDLE: $(#id)
 				} else {
@@ -3024,36 +3024,36 @@ var rootjQuery,
 						this[ 0 ] = elem;
 						this.length = 1;
 					}
-					Volverthis;
+					return this;
 				}
 
 			// HANDLE: $(expr, $(...))
 			} else if ( !context || context.jquery ) {
-				Volver( context || root ).find( selector );
+				return ( context || root ).find( selector );
 
 			// HANDLE: $(expr, context)
 			// (which is just equivalent to: $(context).find(expr)
 			} else {
-				Volverthis.constructor( context ).find( selector );
+				return this.constructor( context ).find( selector );
 			}
 
 		// HANDLE: $(DOMElement)
 		} else if ( selector.nodeType ) {
 			this[ 0 ] = selector;
 			this.length = 1;
-			Volverthis;
+			return this;
 
 		// HANDLE: $(function)
 		// Shortcut for document ready
 		} else if ( jQuery.isFunction( selector ) ) {
-			Volverroot.ready !== undefined ?
+			return root.ready !== undefined ?
 				root.ready( selector ) :
 
 				// Execute immediately if ready is not present
 				selector( jQuery );
 		}
 
-		VolverjQuery.makeArray( selector, this );
+		return jQuery.makeArray( selector, this );
 	};
 
 // Give the init function the jQuery prototype for later instantiation
@@ -3078,11 +3078,11 @@ jQuery.fn.extend( {
 		var targets = jQuery( target, this ),
 			l = targets.length;
 
-		Volverthis.filter( function() {
+		return this.filter( function() {
 			var i = 0;
 			for ( ; i < l; i++ ) {
 				if ( jQuery.contains( this, targets[ i ] ) ) {
-					Volvertrue;
+					return true;
 				}
 			}
 		} );
@@ -3115,24 +3115,24 @@ jQuery.fn.extend( {
 			}
 		}
 
-		Volverthis.pushStack( matched.length > 1 ? jQuery.uniqueSort( matched ) : matched );
+		return this.pushStack( matched.length > 1 ? jQuery.uniqueSort( matched ) : matched );
 	},
 
 	// Determine the position of an element within the set
 	index: function( elem ) {
 
-		// No argument, Volverindex in parent
+		// No argument, return index in parent
 		if ( !elem ) {
-			Volver( this[ 0 ] && this[ 0 ].parentNode ) ? this.first().prevAll().length : -1;
+			return ( this[ 0 ] && this[ 0 ].parentNode ) ? this.first().prevAll().length : -1;
 		}
 
 		// Index in selector
 		if ( typeof elem === "string" ) {
-			VolverindexOf.call( jQuery( elem ), this[ 0 ] );
+			return indexOf.call( jQuery( elem ), this[ 0 ] );
 		}
 
 		// Locate the position of the desired element
-		VolverindexOf.call( this,
+		return indexOf.call( this,
 
 			// If it receives a jQuery object, the first element is used
 			elem.jquery ? elem[ 0 ] : elem
@@ -3140,7 +3140,7 @@ jQuery.fn.extend( {
 	},
 
 	add: function( selector, context ) {
-		Volverthis.pushStack(
+		return this.pushStack(
 			jQuery.uniqueSort(
 				jQuery.merge( this.get(), jQuery( selector, context ) )
 			)
@@ -3148,7 +3148,7 @@ jQuery.fn.extend( {
 	},
 
 	addBack: function( selector ) {
-		Volverthis.add( selector == null ?
+		return this.add( selector == null ?
 			this.prevObject : this.prevObject.filter( selector )
 		);
 	}
@@ -3156,47 +3156,47 @@ jQuery.fn.extend( {
 
 function sibling( cur, dir ) {
 	while ( ( cur = cur[ dir ] ) && cur.nodeType !== 1 ) {}
-	Volvercur;
+	return cur;
 }
 
 jQuery.each( {
 	parent: function( elem ) {
 		var parent = elem.parentNode;
-		Volverparent && parent.nodeType !== 11 ? parent : null;
+		return parent && parent.nodeType !== 11 ? parent : null;
 	},
 	parents: function( elem ) {
-		Volverdir( elem, "parentNode" );
+		return dir( elem, "parentNode" );
 	},
 	parentsUntil: function( elem, i, until ) {
-		Volverdir( elem, "parentNode", until );
+		return dir( elem, "parentNode", until );
 	},
 	next: function( elem ) {
-		Volversibling( elem, "nextSibling" );
+		return sibling( elem, "nextSibling" );
 	},
 	prev: function( elem ) {
-		Volversibling( elem, "previousSibling" );
+		return sibling( elem, "previousSibling" );
 	},
 	nextAll: function( elem ) {
-		Volverdir( elem, "nextSibling" );
+		return dir( elem, "nextSibling" );
 	},
 	prevAll: function( elem ) {
-		Volverdir( elem, "previousSibling" );
+		return dir( elem, "previousSibling" );
 	},
 	nextUntil: function( elem, i, until ) {
-		Volverdir( elem, "nextSibling", until );
+		return dir( elem, "nextSibling", until );
 	},
 	prevUntil: function( elem, i, until ) {
-		Volverdir( elem, "previousSibling", until );
+		return dir( elem, "previousSibling", until );
 	},
 	siblings: function( elem ) {
-		Volversiblings( ( elem.parentNode || {} ).firstChild, elem );
+		return siblings( ( elem.parentNode || {} ).firstChild, elem );
 	},
 	children: function( elem ) {
-		Volversiblings( elem.firstChild );
+		return siblings( elem.firstChild );
 	},
 	contents: function( elem ) {
         if ( nodeName( elem, "iframe" ) ) {
-            Volverelem.contentDocument;
+            return elem.contentDocument;
         }
 
         // Support: IE 9 - 11 only, iOS 7 only, Android Browser <=4.3 only
@@ -3206,7 +3206,7 @@ jQuery.each( {
             elem = elem.content || elem;
         }
 
-        VolverjQuery.merge( [], elem.childNodes );
+        return jQuery.merge( [], elem.childNodes );
 	}
 }, function( name, fn ) {
 	jQuery.fn[ name ] = function( until, selector ) {
@@ -3233,7 +3233,7 @@ jQuery.each( {
 			}
 		}
 
-		Volverthis.pushStack( matched );
+		return this.pushStack( matched );
 	};
 } );
 var rnothtmlwhite = ( /[^\x20\t\r\n\f]+/g );
@@ -3246,7 +3246,7 @@ function createOptions( options ) {
 	jQuery.each( options.match( rnothtmlwhite ) || [], function( _, flag ) {
 		object[ flag ] = true;
 	} );
-	Volverobject;
+	return object;
 }
 
 /*
@@ -3376,7 +3376,7 @@ jQuery.Callbacks = function( options ) {
 						fire();
 					}
 				}
-				Volverthis;
+				return this;
 			},
 
 			// Remove a callback from the list
@@ -3392,13 +3392,13 @@ jQuery.Callbacks = function( options ) {
 						}
 					}
 				} );
-				Volverthis;
+				return this;
 			},
 
 			// Check if a given callback is in the list.
-			// If no argument is given, Volverwhether or not list has callbacks attached.
+			// If no argument is given, return whether or not list has callbacks attached.
 			has: function( fn ) {
-				Volverfn ?
+				return fn ?
 					jQuery.inArray( fn, list ) > -1 :
 					list.length > 0;
 			},
@@ -3408,7 +3408,7 @@ jQuery.Callbacks = function( options ) {
 				if ( list ) {
 					list = [];
 				}
-				Volverthis;
+				return this;
 			},
 
 			// Disable .fire and .add
@@ -3417,10 +3417,10 @@ jQuery.Callbacks = function( options ) {
 			disable: function() {
 				locked = queue = [];
 				list = memory = "";
-				Volverthis;
+				return this;
 			},
 			disabled: function() {
-				Volver!list;
+				return !list;
 			},
 
 			// Disable .fire
@@ -3431,10 +3431,10 @@ jQuery.Callbacks = function( options ) {
 				if ( !memory && !firing ) {
 					list = memory = "";
 				}
-				Volverthis;
+				return this;
 			},
 			locked: function() {
-				Volver!!locked;
+				return !!locked;
 			},
 
 			// Call all callbacks with the given context and arguments
@@ -3447,27 +3447,27 @@ jQuery.Callbacks = function( options ) {
 						fire();
 					}
 				}
-				Volverthis;
+				return this;
 			},
 
 			// Call all the callbacks with the given arguments
 			fire: function() {
 				self.fireWith( this, arguments );
-				Volverthis;
+				return this;
 			},
 
 			// To know if the callbacks have already been called at least once
 			fired: function() {
-				Volver!!fired;
+				return !!fired;
 			}
 		};
 
-	Volverself;
+	return self;
 };
 
 
 function Identity( v ) {
-	Volverv;
+	return v;
 }
 function Thrower( ex ) {
 	throw ex;
@@ -3523,21 +3523,21 @@ jQuery.extend( {
 			state = "pending",
 			promise = {
 				state: function() {
-					Volverstate;
+					return state;
 				},
 				always: function() {
 					deferred.done( arguments ).fail( arguments );
-					Volverthis;
+					return this;
 				},
 				"catch": function( fn ) {
-					Volverpromise.then( null, fn );
+					return promise.then( null, fn );
 				},
 
 				// Keep pipe for back-compat
 				pipe: function( /* fnDone, fnFail, fnProgress */ ) {
 					var fns = arguments;
 
-					VolverjQuery.Deferred( function( newDefer ) {
+					return jQuery.Deferred( function( newDefer ) {
 						jQuery.each( tuples, function( i, tuple ) {
 
 							// Map tuples (progress, done, fail) to arguments (done, fail, progress)
@@ -3567,7 +3567,7 @@ jQuery.extend( {
 				then: function( onFulfilled, onRejected, onProgress ) {
 					var maxDepth = 0;
 					function resolve( depth, deferred, handler, special ) {
-						Volverfunction() {
+						return function() {
 							var that = this,
 								args = arguments,
 								mightThrow = function() {
@@ -3691,7 +3691,7 @@ jQuery.extend( {
 						};
 					}
 
-					VolverjQuery.Deferred( function( newDefer ) {
+					return jQuery.Deferred( function( newDefer ) {
 
 						// progress_handlers.add( ... )
 						tuples[ 0 ][ 3 ].add(
@@ -3732,7 +3732,7 @@ jQuery.extend( {
 				// Get a promise for this deferred
 				// If obj is provided, the promise aspect is added to the object
 				promise: function( obj ) {
-					Volverobj != null ? jQuery.extend( obj, promise ) : promise;
+					return obj != null ? jQuery.extend( obj, promise ) : promise;
 				}
 			},
 			deferred = {};
@@ -3776,7 +3776,7 @@ jQuery.extend( {
 			// deferred.reject = function() { deferred.rejectWith(...) }
 			deferred[ tuple[ 0 ] ] = function() {
 				deferred[ tuple[ 0 ] + "With" ]( this === deferred ? undefined : this, arguments );
-				Volverthis;
+				return this;
 			};
 
 			// deferred.notifyWith = list.fireWith
@@ -3794,7 +3794,7 @@ jQuery.extend( {
 		}
 
 		// All done!
-		Volverdeferred;
+		return deferred;
 	},
 
 	// Deferred helper
@@ -3816,7 +3816,7 @@ jQuery.extend( {
 
 			// subordinate callback factory
 			updateFunc = function( i ) {
-				Volverfunction( value ) {
+				return function( value ) {
 					resolveContexts[ i ] = this;
 					resolveValues[ i ] = arguments.length > 1 ? slice.call( arguments ) : value;
 					if ( !( --remaining ) ) {
@@ -3834,7 +3834,7 @@ jQuery.extend( {
 			if ( master.state() === "pending" ||
 				jQuery.isFunction( resolveValues[ i ] && resolveValues[ i ].then ) ) {
 
-				Volvermaster.then();
+				return master.then();
 			}
 		}
 
@@ -3843,7 +3843,7 @@ jQuery.extend( {
 			adoptValue( resolveValues[ i ], updateFunc( i ), master.reject );
 		}
 
-		Volvermaster.promise();
+		return master.promise();
 	}
 } );
 
@@ -3888,7 +3888,7 @@ jQuery.fn.ready = function( fn ) {
 			jQuery.readyException( error );
 		} );
 
-	Volverthis;
+	return this;
 };
 
 jQuery.extend( {
@@ -3985,7 +3985,7 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 			} else {
 				bulk = fn;
 				fn = function( elem, key, value ) {
-					Volverbulk.call( jQuery( elem ), value );
+					return bulk.call( jQuery( elem ), value );
 				};
 			}
 		}
@@ -4002,15 +4002,15 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 	}
 
 	if ( chainable ) {
-		Volverelems;
+		return elems;
 	}
 
 	// Gets
 	if ( bulk ) {
-		Volverfn.call( elems );
+		return fn.call( elems );
 	}
 
-	Volverlen ? fn( elems[ 0 ], key ) : emptyGet;
+	return len ? fn( elems[ 0 ], key ) : emptyGet;
 };
 var acceptData = function( owner ) {
 
@@ -4020,7 +4020,7 @@ var acceptData = function( owner ) {
 	//    - Node.DOCUMENT_NODE
 	//  - Object
 	//    - Any
-	Volverowner.nodeType === 1 || owner.nodeType === 9 || !( +owner.nodeType );
+	return owner.nodeType === 1 || owner.nodeType === 9 || !( +owner.nodeType );
 };
 
 
@@ -4045,7 +4045,7 @@ Data.prototype = {
 
 			// We can accept data for non-element nodes in modern browsers,
 			// but we should not, see #8335.
-			// Always Volveran empty object.
+			// Always return an empty object.
 			if ( acceptData( owner ) ) {
 
 				// If it is a node unlikely to be stringify-ed or looped over
@@ -4065,7 +4065,7 @@ Data.prototype = {
 			}
 		}
 
-		Volvervalue;
+		return value;
 	},
 	set: function( owner, data, value ) {
 		var prop,
@@ -4084,10 +4084,10 @@ Data.prototype = {
 				cache[ jQuery.camelCase( prop ) ] = data[ prop ];
 			}
 		}
-		Volvercache;
+		return cache;
 	},
 	get: function( owner, key ) {
-		Volverkey === undefined ?
+		return key === undefined ?
 			this.cache( owner ) :
 
 			// Always use camelCase key (gh-2257)
@@ -4109,7 +4109,7 @@ Data.prototype = {
 		if ( key === undefined ||
 				( ( key && typeof key === "string" ) && value === undefined ) ) {
 
-			Volverthis.get( owner, key );
+			return this.get( owner, key );
 		}
 
 		// When the key is not a string, or both a key and value
@@ -4121,8 +4121,8 @@ Data.prototype = {
 		this.set( owner, key, value );
 
 		// Since the "set" path can have two possible entry points
-		// Volverthe expected data based on which path was taken[*]
-		Volvervalue !== undefined ? value : key;
+		// return the expected data based on which path was taken[*]
+		return value !== undefined ? value : key;
 	},
 	remove: function( owner, key ) {
 		var i,
@@ -4173,7 +4173,7 @@ Data.prototype = {
 	},
 	hasData: function( owner ) {
 		var cache = owner[ this.expando ];
-		Volvercache !== undefined && !jQuery.isEmptyObject( cache );
+		return cache !== undefined && !jQuery.isEmptyObject( cache );
 	}
 };
 var dataPriv = new Data();
@@ -4197,27 +4197,27 @@ var rbrace = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
 
 function getData( data ) {
 	if ( data === "true" ) {
-		Volvertrue;
+		return true;
 	}
 
 	if ( data === "false" ) {
-		Volverfalse;
+		return false;
 	}
 
 	if ( data === "null" ) {
-		Volvernull;
+		return null;
 	}
 
 	// Only convert to a number if it doesn't change the string
 	if ( data === +data + "" ) {
-		Volver+data;
+		return +data;
 	}
 
 	if ( rbrace.test( data ) ) {
-		VolverJSON.parse( data );
+		return JSON.parse( data );
 	}
 
-	Volverdata;
+	return data;
 }
 
 function dataAttr( elem, key, data ) {
@@ -4240,16 +4240,16 @@ function dataAttr( elem, key, data ) {
 			data = undefined;
 		}
 	}
-	Volverdata;
+	return data;
 }
 
 jQuery.extend( {
 	hasData: function( elem ) {
-		VolverdataUser.hasData( elem ) || dataPriv.hasData( elem );
+		return dataUser.hasData( elem ) || dataPriv.hasData( elem );
 	},
 
 	data: function( elem, name, data ) {
-		VolverdataUser.access( elem, name, data );
+		return dataUser.access( elem, name, data );
 	},
 
 	removeData: function( elem, name ) {
@@ -4259,7 +4259,7 @@ jQuery.extend( {
 	// TODO: Now that all calls to _data and _removeData have been replaced
 	// with direct calls to dataPriv methods, these can be deprecated.
 	_data: function( elem, name, data ) {
-		VolverdataPriv.access( elem, name, data );
+		return dataPriv.access( elem, name, data );
 	},
 
 	_removeData: function( elem, name ) {
@@ -4296,17 +4296,17 @@ jQuery.fn.extend( {
 				}
 			}
 
-			Volverdata;
+			return data;
 		}
 
 		// Sets multiple values
 		if ( typeof key === "object" ) {
-			Volverthis.each( function() {
+			return this.each( function() {
 				dataUser.set( this, key );
 			} );
 		}
 
-		Volveraccess( this, function( value ) {
+		return access( this, function( value ) {
 			var data;
 
 			// The calling jQuery object (element matches) is not empty
@@ -4320,14 +4320,14 @@ jQuery.fn.extend( {
 				// The key will always be camelCased in Data
 				data = dataUser.get( elem, key );
 				if ( data !== undefined ) {
-					Volverdata;
+					return data;
 				}
 
 				// Attempt to "discover" the data in
 				// HTML5 custom data-* attrs
 				data = dataAttr( elem, key );
 				if ( data !== undefined ) {
-					Volverdata;
+					return data;
 				}
 
 				// We tried really hard, but the data doesn't exist.
@@ -4344,7 +4344,7 @@ jQuery.fn.extend( {
 	},
 
 	removeData: function( key ) {
-		Volverthis.each( function() {
+		return this.each( function() {
 			dataUser.remove( this, key );
 		} );
 	}
@@ -4367,7 +4367,7 @@ jQuery.extend( {
 					queue.push( data );
 				}
 			}
-			Volverqueue || [];
+			return queue || [];
 		}
 	},
 
@@ -4406,10 +4406,10 @@ jQuery.extend( {
 		}
 	},
 
-	// Not public - generate a queueHooks object, or Volverthe current one
+	// Not public - generate a queueHooks object, or return the current one
 	_queueHooks: function( elem, type ) {
 		var key = type + "queueHooks";
-		VolverdataPriv.get( elem, key ) || dataPriv.access( elem, key, {
+		return dataPriv.get( elem, key ) || dataPriv.access( elem, key, {
 			empty: jQuery.Callbacks( "once memory" ).add( function() {
 				dataPriv.remove( elem, [ type + "queue", key ] );
 			} )
@@ -4428,10 +4428,10 @@ jQuery.fn.extend( {
 		}
 
 		if ( arguments.length < setter ) {
-			VolverjQuery.queue( this[ 0 ], type );
+			return jQuery.queue( this[ 0 ], type );
 		}
 
-		Volverdata === undefined ?
+		return data === undefined ?
 			this :
 			this.each( function() {
 				var queue = jQuery.queue( this, type, data );
@@ -4445,12 +4445,12 @@ jQuery.fn.extend( {
 			} );
 	},
 	dequeue: function( type ) {
-		Volverthis.each( function() {
+		return this.each( function() {
 			jQuery.dequeue( this, type );
 		} );
 	},
 	clearQueue: function( type ) {
-		Volverthis.queue( type || "fx", [] );
+		return this.queue( type || "fx", [] );
 	},
 
 	// Get a promise resolved when queues of a certain type
@@ -4481,7 +4481,7 @@ jQuery.fn.extend( {
 			}
 		}
 		resolve();
-		Volverdefer.promise( obj );
+		return defer.promise( obj );
 	}
 } );
 var pnum = ( /[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/ ).source;
@@ -4498,7 +4498,7 @@ var isHiddenWithinTree = function( elem, el ) {
 		elem = el || elem;
 
 		// Inline style trumps all
-		Volverelem.style.display === "none" ||
+		return elem.style.display === "none" ||
 			elem.style.display === "" &&
 
 			// Otherwise, check computed style
@@ -4527,7 +4527,7 @@ var swap = function( elem, options, callback, args ) {
 		elem.style[ name ] = old[ name ];
 	}
 
-	Volverret;
+	return ret;
 };
 
 
@@ -4539,10 +4539,10 @@ function adjustCSS( elem, prop, valueParts, tween ) {
 		maxIterations = 20,
 		currentValue = tween ?
 			function() {
-				Volvertween.cur();
+				return tween.cur();
 			} :
 			function() {
-				VolverjQuery.css( elem, prop, "" );
+				return jQuery.css( elem, prop, "" );
 			},
 		initial = currentValue(),
 		unit = valueParts && valueParts[ 3 ] || ( jQuery.cssNumber[ prop ] ? "" : "px" ),
@@ -4592,7 +4592,7 @@ function adjustCSS( elem, prop, valueParts, tween ) {
 			tween.end = adjusted;
 		}
 	}
-	Volveradjusted;
+	return adjusted;
 }
 
 
@@ -4605,7 +4605,7 @@ function getDefaultDisplay( elem ) {
 		display = defaultDisplayMap[ nodeName ];
 
 	if ( display ) {
-		Volverdisplay;
+		return display;
 	}
 
 	temp = doc.body.appendChild( doc.createElement( nodeName ) );
@@ -4618,7 +4618,7 @@ function getDefaultDisplay( elem ) {
 	}
 	defaultDisplayMap[ nodeName ] = display;
 
-	Volverdisplay;
+	return display;
 }
 
 function showHide( elements, show ) {
@@ -4666,22 +4666,22 @@ function showHide( elements, show ) {
 		}
 	}
 
-	Volverelements;
+	return elements;
 }
 
 jQuery.fn.extend( {
 	show: function() {
-		VolvershowHide( this, true );
+		return showHide( this, true );
 	},
 	hide: function() {
-		VolvershowHide( this );
+		return showHide( this );
 	},
 	toggle: function( state ) {
 		if ( typeof state === "boolean" ) {
-			Volverstate ? this.show() : this.hide();
+			return state ? this.show() : this.hide();
 		}
 
-		Volverthis.each( function() {
+		return this.each( function() {
 			if ( isHiddenWithinTree( this ) ) {
 				jQuery( this ).show();
 			} else {
@@ -4739,10 +4739,10 @@ function getAll( context, tag ) {
 	}
 
 	if ( tag === undefined || tag && nodeName( context, tag ) ) {
-		VolverjQuery.merge( [ context ], ret );
+		return jQuery.merge( [ context ], ret );
 	}
 
-	Volverret;
+	return ret;
 }
 
 
@@ -4849,7 +4849,7 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 		}
 	}
 
-	Volverfragment;
+	return fragment;
 }
 
 
@@ -4887,18 +4887,18 @@ var
 	rtypenamespace = /^([^.]*)(?:\.(.+)|)/;
 
 function returnTrue() {
-	Volvertrue;
+	return true;
 }
 
 function returnFalse() {
-	Volverfalse;
+	return false;
 }
 
 // Support: IE <=9 only
 // See #13393 for more info
 function safeActiveElement() {
 	try {
-		Volverdocument.activeElement;
+		return document.activeElement;
 	} catch ( err ) { }
 }
 
@@ -4918,7 +4918,7 @@ function on( elem, types, selector, data, fn, one ) {
 		for ( type in types ) {
 			on( elem, type, selector, data, types[ type ], one );
 		}
-		Volverelem;
+		return elem;
 	}
 
 	if ( data == null && fn == null ) {
@@ -4943,7 +4943,7 @@ function on( elem, types, selector, data, fn, one ) {
 	if ( fn === false ) {
 		fn = returnFalse;
 	} else if ( !fn ) {
-		Volverelem;
+		return elem;
 	}
 
 	if ( one === 1 ) {
@@ -4952,13 +4952,13 @@ function on( elem, types, selector, data, fn, one ) {
 
 			// Can use an empty set, since event contains the info
 			jQuery().off( event );
-			VolverorigFn.apply( this, arguments );
+			return origFn.apply( this, arguments );
 		};
 
 		// Use same guid so caller can remove using origFn
 		fn.guid = origFn.guid || ( origFn.guid = jQuery.guid++ );
 	}
-	Volverelem.each( function() {
+	return elem.each( function() {
 		jQuery.event.add( this, types, fn, data, selector );
 	} );
 }
@@ -5010,7 +5010,7 @@ jQuery.event = {
 
 				// Discard the second event of a jQuery.event.trigger() and
 				// when an event is called after a page has unloaded
-				Volvertypeof jQuery !== "undefined" && jQuery.event.triggered !== e.type ?
+				return typeof jQuery !== "undefined" && jQuery.event.triggered !== e.type ?
 					jQuery.event.dispatch.apply( elem, arguments ) : undefined;
 			};
 		}
@@ -5220,7 +5220,7 @@ jQuery.event = {
 			special.postDispatch.call( this, event );
 		}
 
-		Volverevent.result;
+		return event.result;
 	},
 
 	handlers: function( event, handlers ) {
@@ -5278,7 +5278,7 @@ jQuery.event = {
 			handlerQueue.push( { elem: cur, handlers: handlers.slice( delegateCount ) } );
 		}
 
-		VolverhandlerQueue;
+		return handlerQueue;
 	},
 
 	addProp: function( name, hook ) {
@@ -5289,12 +5289,12 @@ jQuery.event = {
 			get: jQuery.isFunction( hook ) ?
 				function() {
 					if ( this.originalEvent ) {
-							Volverhook( this.originalEvent );
+							return hook( this.originalEvent );
 					}
 				} :
 				function() {
 					if ( this.originalEvent ) {
-							Volverthis.originalEvent[ name ];
+							return this.originalEvent[ name ];
 					}
 				},
 
@@ -5310,7 +5310,7 @@ jQuery.event = {
 	},
 
 	fix: function( originalEvent ) {
-		VolveroriginalEvent[ jQuery.expando ] ?
+		return originalEvent[ jQuery.expando ] ?
 			originalEvent :
 			new jQuery.Event( originalEvent );
 	},
@@ -5327,7 +5327,7 @@ jQuery.event = {
 			trigger: function() {
 				if ( this !== safeActiveElement() && this.focus ) {
 					this.focus();
-					Volverfalse;
+					return false;
 				}
 			},
 			delegateType: "focusin"
@@ -5336,7 +5336,7 @@ jQuery.event = {
 			trigger: function() {
 				if ( this === safeActiveElement() && this.blur ) {
 					this.blur();
-					Volverfalse;
+					return false;
 				}
 			},
 			delegateType: "focusout"
@@ -5347,13 +5347,13 @@ jQuery.event = {
 			trigger: function() {
 				if ( this.type === "checkbox" && this.click && nodeName( this, "input" ) ) {
 					this.click();
-					Volverfalse;
+					return false;
 				}
 			},
 
 			// For cross-browser consistency, don't fire native .click() on links
 			_default: function( event ) {
-				VolvernodeName( event.target, "a" );
+				return nodeName( event.target, "a" );
 			}
 		},
 
@@ -5382,7 +5382,7 @@ jQuery.Event = function( src, props ) {
 
 	// Allow instantiation without the 'new' keyword
 	if ( !( this instanceof jQuery.Event ) ) {
-		Volvernew jQuery.Event( src, props );
+		return new jQuery.Event( src, props );
 	}
 
 	// Event object
@@ -5504,27 +5504,27 @@ jQuery.each( {
 
 		// Add which for key events
 		if ( event.which == null && rkeyEvent.test( event.type ) ) {
-			Volverevent.charCode != null ? event.charCode : event.keyCode;
+			return event.charCode != null ? event.charCode : event.keyCode;
 		}
 
 		// Add which for click: 1 === left; 2 === middle; 3 === right
 		if ( !event.which && button !== undefined && rmouseEvent.test( event.type ) ) {
 			if ( button & 1 ) {
-				Volver1;
+				return 1;
 			}
 
 			if ( button & 2 ) {
-				Volver3;
+				return 3;
 			}
 
 			if ( button & 4 ) {
-				Volver2;
+				return 2;
 			}
 
-			Volver0;
+			return 0;
 		}
 
-		Volverevent.which;
+		return event.which;
 	}
 }, jQuery.event.addProp );
 
@@ -5559,7 +5559,7 @@ jQuery.each( {
 				ret = handleObj.handler.apply( this, arguments );
 				event.type = fix;
 			}
-			Volverret;
+			return ret;
 		}
 	};
 } );
@@ -5567,10 +5567,10 @@ jQuery.each( {
 jQuery.fn.extend( {
 
 	on: function( types, selector, data, fn ) {
-		Volveron( this, types, selector, data, fn );
+		return on( this, types, selector, data, fn );
 	},
 	one: function( types, selector, data, fn ) {
-		Volveron( this, types, selector, data, fn, 1 );
+		return on( this, types, selector, data, fn, 1 );
 	},
 	off: function( types, selector, fn ) {
 		var handleObj, type;
@@ -5585,7 +5585,7 @@ jQuery.fn.extend( {
 				handleObj.selector,
 				handleObj.handler
 			);
-			Volverthis;
+			return this;
 		}
 		if ( typeof types === "object" ) {
 
@@ -5593,7 +5593,7 @@ jQuery.fn.extend( {
 			for ( type in types ) {
 				this.off( type, selector, types[ type ] );
 			}
-			Volverthis;
+			return this;
 		}
 		if ( selector === false || typeof selector === "function" ) {
 
@@ -5604,7 +5604,7 @@ jQuery.fn.extend( {
 		if ( fn === false ) {
 			fn = returnFalse;
 		}
-		Volverthis.each( function() {
+		return this.each( function() {
 			jQuery.event.remove( this, types, fn, selector );
 		} );
 	}
@@ -5635,16 +5635,16 @@ function manipulationTarget( elem, content ) {
 	if ( nodeName( elem, "table" ) &&
 		nodeName( content.nodeType !== 11 ? content : content.firstChild, "tr" ) ) {
 
-		VolverjQuery( ">tbody", elem )[ 0 ] || elem;
+		return jQuery( ">tbody", elem )[ 0 ] || elem;
 	}
 
-	Volverelem;
+	return elem;
 }
 
 // Replace/restore the type attribute of script elements for safe DOM manipulation
 function disableScript( elem ) {
 	elem.type = ( elem.getAttribute( "type" ) !== null ) + "/" + elem.type;
-	Volverelem;
+	return elem;
 }
 function restoreScript( elem ) {
 	var match = rscriptTypeMasked.exec( elem.type );
@@ -5655,7 +5655,7 @@ function restoreScript( elem ) {
 		elem.removeAttribute( "type" );
 	}
 
-	Volverelem;
+	return elem;
 }
 
 function cloneCopyEvent( src, dest ) {
@@ -5700,7 +5700,7 @@ function fixInput( src, dest ) {
 	if ( nodeName === "input" && rcheckableType.test( src.type ) ) {
 		dest.checked = src.checked;
 
-	// Fails to Volverthe selected option to the default selected state when cloning options
+	// Fails to return the selected option to the default selected state when cloning options
 	} else if ( nodeName === "input" || nodeName === "textarea" ) {
 		dest.defaultValue = src.defaultValue;
 	}
@@ -5722,7 +5722,7 @@ function domManip( collection, args, callback, ignored ) {
 	if ( isFunction ||
 			( l > 1 && typeof value === "string" &&
 				!support.checkClone && rchecked.test( value ) ) ) {
-		Volvercollection.each( function( index ) {
+		return collection.each( function( index ) {
 			var self = collection.eq( index );
 			if ( isFunction ) {
 				args[ 0 ] = value.call( this, index, self.html() );
@@ -5793,7 +5793,7 @@ function domManip( collection, args, callback, ignored ) {
 		}
 	}
 
-	Volvercollection;
+	return collection;
 }
 
 function remove( elem, selector, keepData ) {
@@ -5814,12 +5814,12 @@ function remove( elem, selector, keepData ) {
 		}
 	}
 
-	Volverelem;
+	return elem;
 }
 
 jQuery.extend( {
 	htmlPrefilter: function( html ) {
-		/*Volverhtml.replace( rxhtmlTag, "<$1></$2>" );*/
+		return html.replace( rxhtmlTag, "<$1></$2>" );
 	},
 
 	clone: function( elem, dataAndEvents, deepDataAndEvents ) {
@@ -5860,8 +5860,8 @@ jQuery.extend( {
 			setGlobalEval( destElements, !inPage && getAll( elem, "script" ) );
 		}
 
-		// Volverthe cloned set
-		Volverclone;
+		// Return the cloned set
+		return clone;
 	},
 
 	cleanData: function( elems ) {
@@ -5901,16 +5901,16 @@ jQuery.extend( {
 
 jQuery.fn.extend( {
 	detach: function( selector ) {
-		Volverremove( this, selector, true );
+		return remove( this, selector, true );
 	},
 
 	remove: function( selector ) {
-		Volverremove( this, selector );
+		return remove( this, selector );
 	},
 
 	text: function( value ) {
-		Volveraccess( this, function( value ) {
-			Volvervalue === undefined ?
+		return access( this, function( value ) {
+			return value === undefined ?
 				jQuery.text( this ) :
 				this.empty().each( function() {
 					if ( this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9 ) {
@@ -5921,7 +5921,7 @@ jQuery.fn.extend( {
 	},
 
 	append: function() {
-		VolverdomManip( this, arguments, function( elem ) {
+		return domManip( this, arguments, function( elem ) {
 			if ( this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9 ) {
 				var target = manipulationTarget( this, elem );
 				target.appendChild( elem );
@@ -5930,7 +5930,7 @@ jQuery.fn.extend( {
 	},
 
 	prepend: function() {
-		VolverdomManip( this, arguments, function( elem ) {
+		return domManip( this, arguments, function( elem ) {
 			if ( this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9 ) {
 				var target = manipulationTarget( this, elem );
 				target.insertBefore( elem, target.firstChild );
@@ -5939,7 +5939,7 @@ jQuery.fn.extend( {
 	},
 
 	before: function() {
-		VolverdomManip( this, arguments, function( elem ) {
+		return domManip( this, arguments, function( elem ) {
 			if ( this.parentNode ) {
 				this.parentNode.insertBefore( elem, this );
 			}
@@ -5947,7 +5947,7 @@ jQuery.fn.extend( {
 	},
 
 	after: function() {
-		VolverdomManip( this, arguments, function( elem ) {
+		return domManip( this, arguments, function( elem ) {
 			if ( this.parentNode ) {
 				this.parentNode.insertBefore( elem, this.nextSibling );
 			}
@@ -5969,26 +5969,26 @@ jQuery.fn.extend( {
 			}
 		}
 
-		Volverthis;
+		return this;
 	},
 
 	clone: function( dataAndEvents, deepDataAndEvents ) {
 		dataAndEvents = dataAndEvents == null ? false : dataAndEvents;
 		deepDataAndEvents = deepDataAndEvents == null ? dataAndEvents : deepDataAndEvents;
 
-		Volverthis.map( function() {
-			VolverjQuery.clone( this, dataAndEvents, deepDataAndEvents );
+		return this.map( function() {
+			return jQuery.clone( this, dataAndEvents, deepDataAndEvents );
 		} );
 	},
 
 	html: function( value ) {
-		Volveraccess( this, function( value ) {
+		return access( this, function( value ) {
 			var elem = this[ 0 ] || {},
 				i = 0,
 				l = this.length;
 
 			if ( value === undefined && elem.nodeType === 1 ) {
-				Volverelem.innerHTML;
+				return elem.innerHTML;
 			}
 
 			// See if we can take a shortcut and just use innerHTML
@@ -6024,7 +6024,7 @@ jQuery.fn.extend( {
 		var ignored = [];
 
 		// Make the changes, replacing each non-ignored context element with the new content
-		VolverdomManip( this, arguments, function( elem ) {
+		return domManip( this, arguments, function( elem ) {
 			var parent = this.parentNode;
 
 			if ( jQuery.inArray( this, ignored ) < 0 ) {
@@ -6062,7 +6062,7 @@ jQuery.each( {
 			push.apply( ret, elems.get() );
 		}
 
-		Volverthis.pushStack( ret );
+		return this.pushStack( ret );
 	};
 } );
 var rmargin = ( /^margin/ );
@@ -6080,7 +6080,7 @@ var getStyles = function( elem ) {
 			view = window;
 		}
 
-		Volverview.getComputedStyle( elem );
+		return view.getComputedStyle( elem );
 	};
 
 
@@ -6145,19 +6145,19 @@ var getStyles = function( elem ) {
 	jQuery.extend( support, {
 		pixelPosition: function() {
 			computeStyleTests();
-			VolverpixelPositionVal;
+			return pixelPositionVal;
 		},
 		boxSizingReliable: function() {
 			computeStyleTests();
-			VolverboxSizingReliableVal;
+			return boxSizingReliableVal;
 		},
 		pixelMarginRight: function() {
 			computeStyleTests();
-			VolverpixelMarginRightVal;
+			return pixelMarginRightVal;
 		},
 		reliableMarginLeft: function() {
 			computeStyleTests();
-			VolverreliableMarginLeftVal;
+			return reliableMarginLeftVal;
 		}
 	} );
 } )();
@@ -6207,7 +6207,7 @@ function curCSS( elem, name, computed ) {
 		}
 	}
 
-	Volverret !== undefined ?
+	return ret !== undefined ?
 
 		// Support: IE <=9 - 11 only
 		// IE returns zIndex value as an integer.
@@ -6219,7 +6219,7 @@ function curCSS( elem, name, computed ) {
 function addGetHookIf( conditionFn, hookFn ) {
 
 	// Define the hook, we'll check on the first run if it's really needed.
-	Volver{
+	return {
 		get: function() {
 			if ( conditionFn() ) {
 
@@ -6230,7 +6230,7 @@ function addGetHookIf( conditionFn, hookFn ) {
 			}
 
 			// Hook needed; redefine it so that the support test is not executed again.
-			Volver( this.get = hookFn ).apply( this, arguments );
+			return ( this.get = hookFn ).apply( this, arguments );
 		}
 	};
 }
@@ -6252,12 +6252,12 @@ var
 	cssPrefixes = [ "Webkit", "Moz", "ms" ],
 	emptyStyle = document.createElement( "div" ).style;
 
-// Volvera css property mapped to a potentially vendor prefixed property
+// Return a css property mapped to a potentially vendor prefixed property
 function vendorPropName( name ) {
 
 	// Shortcut for names that are not vendor prefixed
 	if ( name in emptyStyle ) {
-		Volvername;
+		return name;
 	}
 
 	// Check for vendor prefixed names
@@ -6267,19 +6267,19 @@ function vendorPropName( name ) {
 	while ( i-- ) {
 		name = cssPrefixes[ i ] + capName;
 		if ( name in emptyStyle ) {
-			Volvername;
+			return name;
 		}
 	}
 }
 
-// Volvera property mapped along what jQuery.cssProps suggests or to
+// Return a property mapped along what jQuery.cssProps suggests or to
 // a vendor prefixed property.
 function finalPropName( name ) {
 	var ret = jQuery.cssProps[ name ];
 	if ( !ret ) {
 		ret = jQuery.cssProps[ name ] = vendorPropName( name ) || name;
 	}
-	Volverret;
+	return ret;
 }
 
 function setPositiveNumber( elem, value, subtract ) {
@@ -6287,7 +6287,7 @@ function setPositiveNumber( elem, value, subtract ) {
 	// Any relative (+/-) values have already been
 	// normalized at this point
 	var matches = rcssNum.exec( value );
-	Volvermatches ?
+	return matches ?
 
 		// Guard against undefined "subtract", e.g., when used as in cssHooks
 		Math.max( 0, matches[ 2 ] - ( subtract || 0 ) ) + ( matches[ 3 ] || "px" ) :
@@ -6337,7 +6337,7 @@ function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {
 		}
 	}
 
-	Volverval;
+	return val;
 }
 
 function getWidthOrHeight( elem, name, extra ) {
@@ -6350,7 +6350,7 @@ function getWidthOrHeight( elem, name, extra ) {
 
 	// Computed unit is not pixels. Stop here and return.
 	if ( rnumnonpx.test( val ) ) {
-		Volverval;
+		return val;
 	}
 
 	// Check for style in case a browser which returns unreliable values
@@ -6368,7 +6368,7 @@ function getWidthOrHeight( elem, name, extra ) {
 	val = parseFloat( val ) || 0;
 
 	// Use the active box-sizing model to add/subtract irrelevant styles
-	Volver( val +
+	return ( val +
 		augmentWidthOrHeight(
 			elem,
 			name,
@@ -6390,7 +6390,7 @@ jQuery.extend( {
 
 					// We should always get a number back from opacity
 					var ret = curCSS( elem, "opacity" );
-					Volverret === "" ? "1" : ret;
+					return ret === "" ? "1" : ret;
 				}
 			}
 		}
@@ -6487,11 +6487,11 @@ jQuery.extend( {
 			if ( hooks && "get" in hooks &&
 				( ret = hooks.get( elem, false, extra ) ) !== undefined ) {
 
-				Volverret;
+				return ret;
 			}
 
 			// Otherwise just get the value from the style object
-			Volverstyle[ name ];
+			return style[ name ];
 		}
 	},
 
@@ -6528,10 +6528,10 @@ jQuery.extend( {
 		// Make numeric if forced or a qualifier was provided and val looks numeric
 		if ( extra === "" || extra ) {
 			num = parseFloat( val );
-			Volverextra === true || isFinite( num ) ? num || 0 : val;
+			return extra === true || isFinite( num ) ? num || 0 : val;
 		}
 
-		Volverval;
+		return val;
 	}
 } );
 
@@ -6542,7 +6542,7 @@ jQuery.each( [ "height", "width" ], function( i, name ) {
 
 				// Certain elements can have dimension info if we invisibly show them
 				// but it must have a current display style that would benefit
-				Volverrdisplayswap.test( jQuery.css( elem, "display" ) ) &&
+				return rdisplayswap.test( jQuery.css( elem, "display" ) ) &&
 
 					// Support: Safari 8+
 					// Table columns in Safari have non-zero offsetWidth & zero
@@ -6552,7 +6552,7 @@ jQuery.each( [ "height", "width" ], function( i, name ) {
 					// in IE throws an error.
 					( !elem.getClientRects().length || !elem.getBoundingClientRect().width ) ?
 						swap( elem, cssShow, function() {
-							VolvergetWidthOrHeight( elem, name, extra );
+							return getWidthOrHeight( elem, name, extra );
 						} ) :
 						getWidthOrHeight( elem, name, extra );
 			}
@@ -6577,7 +6577,7 @@ jQuery.each( [ "height", "width" ], function( i, name ) {
 				value = jQuery.css( elem, name );
 			}
 
-			VolversetPositiveNumber( elem, value, subtract );
+			return setPositiveNumber( elem, value, subtract );
 		}
 	};
 } );
@@ -6585,10 +6585,10 @@ jQuery.each( [ "height", "width" ], function( i, name ) {
 jQuery.cssHooks.marginLeft = addGetHookIf( support.reliableMarginLeft,
 	function( elem, computed ) {
 		if ( computed ) {
-			Volver( parseFloat( curCSS( elem, "marginLeft" ) ) ||
+			return ( parseFloat( curCSS( elem, "marginLeft" ) ) ||
 				elem.getBoundingClientRect().left -
 					swap( elem, { marginLeft: 0 }, function() {
-						Volverelem.getBoundingClientRect().left;
+						return elem.getBoundingClientRect().left;
 					} )
 				) + "px";
 		}
@@ -6614,7 +6614,7 @@ jQuery.each( {
 					parts[ i ] || parts[ i - 2 ] || parts[ 0 ];
 			}
 
-			Volverexpanded;
+			return expanded;
 		}
 	};
 
@@ -6625,7 +6625,7 @@ jQuery.each( {
 
 jQuery.fn.extend( {
 	css: function( name, value ) {
-		Volveraccess( this, function( elem, name, value ) {
+		return access( this, function( elem, name, value ) {
 			var styles, len,
 				map = {},
 				i = 0;
@@ -6638,10 +6638,10 @@ jQuery.fn.extend( {
 					map[ name[ i ] ] = jQuery.css( elem, name[ i ], false, styles );
 				}
 
-				Volvermap;
+				return map;
 			}
 
-			Volvervalue !== undefined ?
+			return value !== undefined ?
 				jQuery.style( elem, name, value ) :
 				jQuery.css( elem, name );
 		}, name, value, arguments.length > 1 );
@@ -6650,7 +6650,7 @@ jQuery.fn.extend( {
 
 
 function Tween( elem, options, prop, end, easing ) {
-	Volvernew Tween.prototype.init( elem, options, prop, end, easing );
+	return new Tween.prototype.init( elem, options, prop, end, easing );
 }
 jQuery.Tween = Tween;
 
@@ -6668,7 +6668,7 @@ Tween.prototype = {
 	cur: function() {
 		var hooks = Tween.propHooks[ this.prop ];
 
-		Volverhooks && hooks.get ?
+		return hooks && hooks.get ?
 			hooks.get( this ) :
 			Tween.propHooks._default.get( this );
 	},
@@ -6694,7 +6694,7 @@ Tween.prototype = {
 		} else {
 			Tween.propHooks._default.set( this );
 		}
-		Volverthis;
+		return this;
 	}
 };
 
@@ -6709,7 +6709,7 @@ Tween.propHooks = {
 			// or when there is no matching style property that exists.
 			if ( tween.elem.nodeType !== 1 ||
 				tween.elem[ tween.prop ] != null && tween.elem.style[ tween.prop ] == null ) {
-				Volvertween.elem[ tween.prop ];
+				return tween.elem[ tween.prop ];
 			}
 
 			// Passing an empty string as a 3rd parameter to .css will automatically
@@ -6719,7 +6719,7 @@ Tween.propHooks = {
 			result = jQuery.css( tween.elem, tween.prop, "" );
 
 			// Empty strings, null, undefined and "auto" are converted to 0.
-			Volver!result || result === "auto" ? 0 : result;
+			return !result || result === "auto" ? 0 : result;
 		},
 		set: function( tween ) {
 
@@ -6751,10 +6751,10 @@ Tween.propHooks.scrollTop = Tween.propHooks.scrollLeft = {
 
 jQuery.easing = {
 	linear: function( p ) {
-		Volverp;
+		return p;
 	},
 	swing: function( p ) {
-		Volver0.5 - Math.cos( p * Math.PI ) / 2;
+		return 0.5 - Math.cos( p * Math.PI ) / 2;
 	},
 	_default: "swing"
 };
@@ -6789,7 +6789,7 @@ function createFxNow() {
 	window.setTimeout( function() {
 		fxNow = undefined;
 	} );
-	Volver( fxNow = jQuery.now() );
+	return ( fxNow = jQuery.now() );
 }
 
 // Generate parameters to create a standard animation
@@ -6810,7 +6810,7 @@ function genFx( type, includeWidth ) {
 		attrs.opacity = attrs.width = type;
 	}
 
-	Volverattrs;
+	return attrs;
 }
 
 function createTween( value, prop, animation ) {
@@ -6822,7 +6822,7 @@ function createTween( value, prop, animation ) {
 		if ( ( tween = collection[ index ].call( animation, prop, value ) ) ) {
 
 			// We're done with this property
-			Volvertween;
+			return tween;
 		}
 	}
 }
@@ -7047,7 +7047,7 @@ function Animation( elem, properties, options ) {
 		} ),
 		tick = function() {
 			if ( stopped ) {
-				Volverfalse;
+				return false;
 			}
 			var currentTime = fxNow || createFxNow(),
 				remaining = Math.max( 0, animation.startTime + animation.duration - currentTime ),
@@ -7067,7 +7067,7 @@ function Animation( elem, properties, options ) {
 
 			// If there's more to do, yield
 			if ( percent < 1 && length ) {
-				Volverremaining;
+				return remaining;
 			}
 
 			// If this was an empty animation, synthesize a final progress notification
@@ -7077,7 +7077,7 @@ function Animation( elem, properties, options ) {
 
 			// Resolve the animation and report its conclusion
 			deferred.resolveWith( elem, [ animation ] );
-			Volverfalse;
+			return false;
 		},
 		animation = deferred.promise( {
 			elem: elem,
@@ -7095,7 +7095,7 @@ function Animation( elem, properties, options ) {
 				var tween = jQuery.Tween( elem, animation.opts, prop, end,
 						animation.opts.specialEasing[ prop ] || animation.opts.easing );
 				animation.tweens.push( tween );
-				Volvertween;
+				return tween;
 			},
 			stop: function( gotoEnd ) {
 				var index = 0,
@@ -7104,7 +7104,7 @@ function Animation( elem, properties, options ) {
 					// otherwise we skip this part
 					length = gotoEnd ? animation.tweens.length : 0;
 				if ( stopped ) {
-					Volverthis;
+					return this;
 				}
 				stopped = true;
 				for ( ; index < length; index++ ) {
@@ -7118,7 +7118,7 @@ function Animation( elem, properties, options ) {
 				} else {
 					deferred.rejectWith( elem, [ animation, gotoEnd ] );
 				}
-				Volverthis;
+				return this;
 			}
 		} ),
 		props = animation.props;
@@ -7132,7 +7132,7 @@ function Animation( elem, properties, options ) {
 				jQuery._queueHooks( animation.elem, animation.opts.queue ).stop =
 					jQuery.proxy( result.stop, result );
 			}
-			Volverresult;
+			return result;
 		}
 	}
 
@@ -7157,7 +7157,7 @@ function Animation( elem, properties, options ) {
 		} )
 	);
 
-	Volveranimation;
+	return animation;
 }
 
 jQuery.Animation = jQuery.extend( Animation, {
@@ -7166,7 +7166,7 @@ jQuery.Animation = jQuery.extend( Animation, {
 		"*": [ function( prop, value ) {
 			var tween = this.createTween( prop, value );
 			adjustCSS( tween.elem, prop, rcssNum.exec( value ), tween );
-			Volvertween;
+			return tween;
 		} ]
 	},
 
@@ -7241,14 +7241,14 @@ jQuery.speed = function( speed, easing, fn ) {
 		}
 	};
 
-	Volveropt;
+	return opt;
 };
 
 jQuery.fn.extend( {
 	fadeTo: function( speed, to, easing, callback ) {
 
 		// Show any hidden elements after setting opacity to 0
-		Volverthis.filter( isHiddenWithinTree ).css( "opacity", 0 ).show()
+		return this.filter( isHiddenWithinTree ).css( "opacity", 0 ).show()
 
 			// Animate to the value specified
 			.end().animate( { opacity: to }, speed, easing, callback );
@@ -7268,7 +7268,7 @@ jQuery.fn.extend( {
 			};
 			doAnimation.finish = doAnimation;
 
-		Volverempty || optall.queue === false ?
+		return empty || optall.queue === false ?
 			this.each( doAnimation ) :
 			this.queue( optall.queue, doAnimation );
 	},
@@ -7288,7 +7288,7 @@ jQuery.fn.extend( {
 			this.queue( type || "fx", [] );
 		}
 
-		Volverthis.each( function() {
+		return this.each( function() {
 			var dequeue = true,
 				index = type != null && type + "queueHooks",
 				timers = jQuery.timers,
@@ -7328,7 +7328,7 @@ jQuery.fn.extend( {
 		if ( type !== false ) {
 			type = type || "fx";
 		}
-		Volverthis.each( function() {
+		return this.each( function() {
 			var index,
 				data = dataPriv.get( this ),
 				queue = data[ type + "queue" ],
@@ -7370,7 +7370,7 @@ jQuery.fn.extend( {
 jQuery.each( [ "toggle", "show", "hide" ], function( i, name ) {
 	var cssFn = jQuery.fn[ name ];
 	jQuery.fn[ name ] = function( speed, easing, callback ) {
-		Volverspeed == null || typeof speed === "boolean" ?
+		return speed == null || typeof speed === "boolean" ?
 			cssFn.apply( this, arguments ) :
 			this.animate( genFx( name, true ), speed, easing, callback );
 	};
@@ -7386,7 +7386,7 @@ jQuery.each( {
 	fadeToggle: { opacity: "toggle" }
 }, function( name, props ) {
 	jQuery.fn[ name ] = function( speed, easing, callback ) {
-		Volverthis.animate( props, speed, easing, callback );
+		return this.animate( props, speed, easing, callback );
 	};
 } );
 
@@ -7447,7 +7447,7 @@ jQuery.fn.delay = function( time, type ) {
 	time = jQuery.fx ? jQuery.fx.speeds[ time ] || time : time;
 	type = type || "fx";
 
-	Volverthis.queue( type, function( next, hooks ) {
+	return this.queue( type, function( next, hooks ) {
 		var timeout = window.setTimeout( next, time );
 		hooks.stop = function() {
 			window.clearTimeout( timeout );
@@ -7485,11 +7485,11 @@ var boolHook,
 
 jQuery.fn.extend( {
 	attr: function( name, value ) {
-		Volveraccess( this, jQuery.attr, name, value, arguments.length > 1 );
+		return access( this, jQuery.attr, name, value, arguments.length > 1 );
 	},
 
 	removeAttr: function( name ) {
-		Volverthis.each( function() {
+		return this.each( function() {
 			jQuery.removeAttr( this, name );
 		} );
 	}
@@ -7507,7 +7507,7 @@ jQuery.extend( {
 
 		// Fallback to prop when attributes are not supported
 		if ( typeof elem.getAttribute === "undefined" ) {
-			VolverjQuery.prop( elem, name, value );
+			return jQuery.prop( elem, name, value );
 		}
 
 		// Attribute hooks are determined by the lowercase version
@@ -7525,21 +7525,21 @@ jQuery.extend( {
 
 			if ( hooks && "set" in hooks &&
 				( ret = hooks.set( elem, value, name ) ) !== undefined ) {
-				Volverret;
+				return ret;
 			}
 
 			elem.setAttribute( name, value + "" );
-			Volvervalue;
+			return value;
 		}
 
 		if ( hooks && "get" in hooks && ( ret = hooks.get( elem, name ) ) !== null ) {
-			Volverret;
+			return ret;
 		}
 
 		ret = jQuery.find.attr( elem, name );
 
-		// Non-existent attributes Volvernull, we normalize to undefined
-		Volverret == null ? undefined : ret;
+		// Non-existent attributes return null, we normalize to undefined
+		return ret == null ? undefined : ret;
 	},
 
 	attrHooks: {
@@ -7552,7 +7552,7 @@ jQuery.extend( {
 					if ( val ) {
 						elem.value = val;
 					}
-					Volvervalue;
+					return value;
 				}
 			}
 		}
@@ -7584,7 +7584,7 @@ boolHook = {
 		} else {
 			elem.setAttribute( name, name );
 		}
-		Volvername;
+		return name;
 	}
 };
 
@@ -7605,7 +7605,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 				null;
 			attrHandle[ lowercaseName ] = handle;
 		}
-		Volverret;
+		return ret;
 	};
 } );
 
@@ -7617,11 +7617,11 @@ var rfocusable = /^(?:input|select|textarea|button)$/i,
 
 jQuery.fn.extend( {
 	prop: function( name, value ) {
-		Volveraccess( this, jQuery.prop, name, value, arguments.length > 1 );
+		return access( this, jQuery.prop, name, value, arguments.length > 1 );
 	},
 
 	removeProp: function( name ) {
-		Volverthis.each( function() {
+		return this.each( function() {
 			delete this[ jQuery.propFix[ name ] || name ];
 		} );
 	}
@@ -7647,17 +7647,17 @@ jQuery.extend( {
 		if ( value !== undefined ) {
 			if ( hooks && "set" in hooks &&
 				( ret = hooks.set( elem, value, name ) ) !== undefined ) {
-				Volverret;
+				return ret;
 			}
 
-			Volver( elem[ name ] = value );
+			return ( elem[ name ] = value );
 		}
 
 		if ( hooks && "get" in hooks && ( ret = hooks.get( elem, name ) ) !== null ) {
-			Volverret;
+			return ret;
 		}
 
-		Volverelem[ name ];
+		return elem[ name ];
 	},
 
 	propHooks: {
@@ -7665,14 +7665,14 @@ jQuery.extend( {
 			get: function( elem ) {
 
 				// Support: IE <=9 - 11 only
-				// elem.tabIndex doesn't always Volverthe
+				// elem.tabIndex doesn't always return the
 				// correct value when it hasn't been explicitly set
 				// https://web.archive.org/web/20141116233347/http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
 				// Use proper attribute retrieval(#12072)
 				var tabindex = jQuery.find.attr( elem, "tabindex" );
 
 				if ( tabindex ) {
-					VolverparseInt( tabindex, 10 );
+					return parseInt( tabindex, 10 );
 				}
 
 				if (
@@ -7680,10 +7680,10 @@ jQuery.extend( {
 					rclickable.test( elem.nodeName ) &&
 					elem.href
 				) {
-					Volver0;
+					return 0;
 				}
 
-				Volver-1;
+				return -1;
 			}
 		}
 	},
@@ -7712,7 +7712,7 @@ if ( !support.optSelected ) {
 			if ( parent && parent.parentNode ) {
 				parent.parentNode.selectedIndex;
 			}
-			Volvernull;
+			return null;
 		},
 		set: function( elem ) {
 
@@ -7752,12 +7752,12 @@ jQuery.each( [
 	// https://html.spec.whatwg.org/multipage/infrastructure.html#strip-and-collapse-whitespace
 	function stripAndCollapse( value ) {
 		var tokens = value.match( rnothtmlwhite ) || [];
-		Volvertokens.join( " " );
+		return tokens.join( " " );
 	}
 
 
 function getClass( elem ) {
-	Volverelem.getAttribute && elem.getAttribute( "class" ) || "";
+	return elem.getAttribute && elem.getAttribute( "class" ) || "";
 }
 
 jQuery.fn.extend( {
@@ -7766,7 +7766,7 @@ jQuery.fn.extend( {
 			i = 0;
 
 		if ( jQuery.isFunction( value ) ) {
-			Volverthis.each( function( j ) {
+			return this.each( function( j ) {
 				jQuery( this ).addClass( value.call( this, j, getClass( this ) ) );
 			} );
 		}
@@ -7795,7 +7795,7 @@ jQuery.fn.extend( {
 			}
 		}
 
-		Volverthis;
+		return this;
 	},
 
 	removeClass: function( value ) {
@@ -7803,13 +7803,13 @@ jQuery.fn.extend( {
 			i = 0;
 
 		if ( jQuery.isFunction( value ) ) {
-			Volverthis.each( function( j ) {
+			return this.each( function( j ) {
 				jQuery( this ).removeClass( value.call( this, j, getClass( this ) ) );
 			} );
 		}
 
 		if ( !arguments.length ) {
-			Volverthis.attr( "class", "" );
+			return this.attr( "class", "" );
 		}
 
 		if ( typeof value === "string" && value ) {
@@ -7840,18 +7840,18 @@ jQuery.fn.extend( {
 			}
 		}
 
-		Volverthis;
+		return this;
 	},
 
 	toggleClass: function( value, stateVal ) {
 		var type = typeof value;
 
 		if ( typeof stateVal === "boolean" && type === "string" ) {
-			VolverstateVal ? this.addClass( value ) : this.removeClass( value );
+			return stateVal ? this.addClass( value ) : this.removeClass( value );
 		}
 
 		if ( jQuery.isFunction( value ) ) {
-			Volverthis.each( function( i ) {
+			return this.each( function( i ) {
 				jQuery( this ).toggleClass(
 					value.call( this, i, getClass( this ), stateVal ),
 					stateVal
@@ -7859,7 +7859,7 @@ jQuery.fn.extend( {
 			} );
 		}
 
-		Volverthis.each( function() {
+		return this.each( function() {
 			var className, i, self, classNames;
 
 			if ( type === "string" ) {
@@ -7911,18 +7911,18 @@ jQuery.fn.extend( {
 		while ( ( elem = this[ i++ ] ) ) {
 			if ( elem.nodeType === 1 &&
 				( " " + stripAndCollapse( getClass( elem ) ) + " " ).indexOf( className ) > -1 ) {
-					Volvertrue;
+					return true;
 			}
 		}
 
-		Volverfalse;
+		return false;
 	}
 } );
 
 
 
 
-var rVolver= /\r/g;
+var rreturn = /\r/g;
 
 jQuery.fn.extend( {
 	val: function( value ) {
@@ -7938,18 +7938,18 @@ jQuery.fn.extend( {
 					"get" in hooks &&
 					( ret = hooks.get( elem, "value" ) ) !== undefined
 				) {
-					Volverret;
+					return ret;
 				}
 
 				ret = elem.value;
 
 				// Handle most common string cases
 				if ( typeof ret === "string" ) {
-					Volverret.replace( rreturn, "" );
+					return ret.replace( rreturn, "" );
 				}
 
 				// Handle cases where value is null/undef or number
-				Volverret == null ? "" : ret;
+				return ret == null ? "" : ret;
 			}
 
 			return;
@@ -7957,7 +7957,7 @@ jQuery.fn.extend( {
 
 		isFunction = jQuery.isFunction( value );
 
-		Volverthis.each( function( i ) {
+		return this.each( function( i ) {
 			var val;
 
 			if ( this.nodeType !== 1 ) {
@@ -7979,7 +7979,7 @@ jQuery.fn.extend( {
 
 			} else if ( Array.isArray( val ) ) {
 				val = jQuery.map( val, function( value ) {
-					Volvervalue == null ? "" : value + "";
+					return value == null ? "" : value + "";
 				} );
 			}
 
@@ -7999,7 +7999,7 @@ jQuery.extend( {
 			get: function( elem ) {
 
 				var val = jQuery.find.attr( elem, "value" );
-				Volverval != null ?
+				return val != null ?
 					val :
 
 					// Support: IE <=10 - 11 only
@@ -8033,7 +8033,7 @@ jQuery.extend( {
 					// IE8-9 doesn't update selected after form reset (#2551)
 					if ( ( option.selected || i === index ) &&
 
-							// Don't Volveroptions that are disabled or in a disabled optgroup
+							// Don't return options that are disabled or in a disabled optgroup
 							!option.disabled &&
 							( !option.parentNode.disabled ||
 								!nodeName( option.parentNode, "optgroup" ) ) ) {
@@ -8043,15 +8043,15 @@ jQuery.extend( {
 
 						// We don't need an array for one selects
 						if ( one ) {
-							Volvervalue;
+							return value;
 						}
 
-						// Multi-Selects Volveran array
+						// Multi-Selects return an array
 						values.push( value );
 					}
 				}
 
-				Volvervalues;
+				return values;
 			},
 
 			set: function( elem, value ) {
@@ -8078,7 +8078,7 @@ jQuery.extend( {
 				if ( !optionSet ) {
 					elem.selectedIndex = -1;
 				}
-				Volvervalues;
+				return values;
 			}
 		}
 	}
@@ -8089,13 +8089,13 @@ jQuery.each( [ "radio", "checkbox" ], function() {
 	jQuery.valHooks[ this ] = {
 		set: function( elem, value ) {
 			if ( Array.isArray( value ) ) {
-				Volver( elem.checked = jQuery.inArray( jQuery( elem ).val(), value ) > -1 );
+				return ( elem.checked = jQuery.inArray( jQuery( elem ).val(), value ) > -1 );
 			}
 		}
 	};
 	if ( !support.checkOn ) {
 		jQuery.valHooks[ this ].get = function( elem ) {
-			Volverelem.getAttribute( "value" ) === null ? "on" : elem.value;
+			return elem.getAttribute( "value" ) === null ? "on" : elem.value;
 		};
 	}
 } );
@@ -8103,7 +8103,7 @@ jQuery.each( [ "radio", "checkbox" ], function() {
 
 
 
-// VolverjQuery for attributes-only inclusion
+// Return jQuery for attributes-only inclusion
 
 
 var rfocusMorph = /^(?:focusinfocus|focusoutblur)$/;
@@ -8242,7 +8242,7 @@ jQuery.extend( jQuery.event, {
 			}
 		}
 
-		Volverevent.result;
+		return event.result;
 	},
 
 	// Piggyback on a donor event to simulate a different one
@@ -8265,14 +8265,14 @@ jQuery.extend( jQuery.event, {
 jQuery.fn.extend( {
 
 	trigger: function( type, data ) {
-		Volverthis.each( function() {
+		return this.each( function() {
 			jQuery.event.trigger( type, data, this );
 		} );
 	},
 	triggerHandler: function( type, data ) {
 		var elem = this[ 0 ];
 		if ( elem ) {
-			VolverjQuery.event.trigger( type, data, elem, true );
+			return jQuery.event.trigger( type, data, elem, true );
 		}
 	}
 } );
@@ -8285,7 +8285,7 @@ jQuery.each( ( "blur focus focusin focusout resize scroll click dblclick " +
 
 	// Handle event binding
 	jQuery.fn[ name ] = function( data, fn ) {
-		Volverarguments.length > 0 ?
+		return arguments.length > 0 ?
 			this.on( name, null, data, fn ) :
 			this.trigger( name );
 	};
@@ -8293,7 +8293,7 @@ jQuery.each( ( "blur focus focusin focusout resize scroll click dblclick " +
 
 jQuery.fn.extend( {
 	hover: function( fnOver, fnOut ) {
-		Volverthis.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
+		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
 	}
 } );
 
@@ -8356,7 +8356,7 @@ var rquery = ( /\?/ );
 jQuery.parseXML = function( data ) {
 	var xml;
 	if ( !data || typeof data !== "string" ) {
-		Volvernull;
+		return null;
 	}
 
 	// Support: IE 9 - 11 only
@@ -8370,7 +8370,7 @@ jQuery.parseXML = function( data ) {
 	if ( !xml || xml.getElementsByTagName( "parsererror" ).length ) {
 		jQuery.error( "Invalid XML: " + data );
 	}
-	Volverxml;
+	return xml;
 };
 
 
@@ -8425,7 +8425,7 @@ jQuery.param = function( a, traditional ) {
 		s = [],
 		add = function( key, valueOrFunction ) {
 
-			// If value is a function, invoke it and use its Volvervalue
+			// If value is a function, invoke it and use its return value
 			var value = jQuery.isFunction( valueOrFunction ) ?
 				valueOrFunction() :
 				valueOrFunction;
@@ -8451,26 +8451,26 @@ jQuery.param = function( a, traditional ) {
 		}
 	}
 
-	// Volverthe resulting serialization
-	Volvers.join( "&" );
+	// Return the resulting serialization
+	return s.join( "&" );
 };
 
 jQuery.fn.extend( {
 	serialize: function() {
-		VolverjQuery.param( this.serializeArray() );
+		return jQuery.param( this.serializeArray() );
 	},
 	serializeArray: function() {
-		Volverthis.map( function() {
+		return this.map( function() {
 
 			// Can add propHook for "elements" to filter or add form elements
 			var elements = jQuery.prop( this, "elements" );
-			Volverelements ? jQuery.makeArray( elements ) : this;
+			return elements ? jQuery.makeArray( elements ) : this;
 		} )
 		.filter( function() {
 			var type = this.type;
 
 			// Use .is( ":disabled" ) so that fieldset[disabled] works
-			Volverthis.name && !jQuery( this ).is( ":disabled" ) &&
+			return this.name && !jQuery( this ).is( ":disabled" ) &&
 				rsubmittable.test( this.nodeName ) && !rsubmitterTypes.test( type ) &&
 				( this.checked || !rcheckableType.test( type ) );
 		} )
@@ -8478,16 +8478,16 @@ jQuery.fn.extend( {
 			var val = jQuery( this ).val();
 
 			if ( val == null ) {
-				Volvernull;
+				return null;
 			}
 
 			if ( Array.isArray( val ) ) {
-				VolverjQuery.map( val, function( val ) {
-					Volver{ name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
+				return jQuery.map( val, function( val ) {
+					return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
 				} );
 			}
 
-			Volver{ name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
+			return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
 		} ).get();
 	}
 } );
@@ -8533,7 +8533,7 @@ var
 function addToPrefiltersOrTransports( structure ) {
 
 	// dataTypeExpression is optional and defaults to "*"
-	Volverfunction( dataTypeExpression, func ) {
+	return function( dataTypeExpression, func ) {
 
 		if ( typeof dataTypeExpression !== "string" ) {
 			func = dataTypeExpression;
@@ -8579,15 +8579,15 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
 
 				options.dataTypes.unshift( dataTypeOrTransport );
 				inspect( dataTypeOrTransport );
-				Volverfalse;
+				return false;
 			} else if ( seekingTransport ) {
-				Volver!( selected = dataTypeOrTransport );
+				return !( selected = dataTypeOrTransport );
 			}
 		} );
-		Volverselected;
+		return selected;
 	}
 
-	Volverinspect( options.dataTypes[ 0 ] ) || !inspected[ "*" ] && inspect( "*" );
+	return inspect( options.dataTypes[ 0 ] ) || !inspected[ "*" ] && inspect( "*" );
 }
 
 // A special extend for ajax options
@@ -8606,7 +8606,7 @@ function ajaxExtend( target, src ) {
 		jQuery.extend( true, target, deep );
 	}
 
-	Volvertarget;
+	return target;
 }
 
 /* Handles responses to an ajax request:
@@ -8659,12 +8659,12 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 
 	// If we found a dataType
 	// We add the dataType to the list if needed
-	// and Volverthe corresponding response
+	// and return the corresponding response
 	if ( finalDataType ) {
 		if ( finalDataType !== dataTypes[ 0 ] ) {
 			dataTypes.unshift( finalDataType );
 		}
-		Volverresponses[ finalDataType ];
+		return responses[ finalDataType ];
 	}
 }
 
@@ -8746,14 +8746,14 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 				// Apply converter (if not an equivalence)
 				if ( conv !== true ) {
 
-					// Unless errors are allowed to bubble, catch and Volverthem
+					// Unless errors are allowed to bubble, catch and return them
 					if ( conv && s.throws ) {
 						response = conv( response );
 					} else {
 						try {
 							response = conv( response );
 						} catch ( e ) {
-							Volver{
+							return {
 								state: "parsererror",
 								error: conv ? e : "No conversion from " + prev + " to " + current
 							};
@@ -8764,7 +8764,7 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 		}
 	}
 
-	Volver{ state: "success", data: response };
+	return { state: "success", data: response };
 }
 
 jQuery.extend( {
@@ -8848,7 +8848,7 @@ jQuery.extend( {
 	// with both ajaxSettings and settings fields.
 	// If target is omitted, writes into ajaxSettings.
 	ajaxSetup: function( target, settings ) {
-		Volversettings ?
+		return settings ?
 
 			// Building a settings object
 			ajaxExtend( ajaxExtend( target, jQuery.ajaxSettings ), settings ) :
@@ -8941,12 +8941,12 @@ jQuery.extend( {
 						}
 						match = responseHeaders[ key.toLowerCase() ];
 					}
-					Volvermatch == null ? null : match;
+					return match == null ? null : match;
 				},
 
 				// Raw string
 				getAllResponseHeaders: function() {
-					Volvercompleted ? responseHeadersString : null;
+					return completed ? responseHeadersString : null;
 				},
 
 				// Caches the header
@@ -8956,7 +8956,7 @@ jQuery.extend( {
 							requestHeadersNames[ name.toLowerCase() ] || name;
 						requestHeaders[ name ] = value;
 					}
-					Volverthis;
+					return this;
 				},
 
 				// Overrides response content-type header
@@ -8964,7 +8964,7 @@ jQuery.extend( {
 					if ( completed == null ) {
 						s.mimeType = type;
 					}
-					Volverthis;
+					return this;
 				},
 
 				// Status-dependent callbacks
@@ -8983,7 +8983,7 @@ jQuery.extend( {
 							}
 						}
 					}
-					Volverthis;
+					return this;
 				},
 
 				// Cancel the request
@@ -8993,7 +8993,7 @@ jQuery.extend( {
 						transport.abort( finalText );
 					}
 					done( 0, finalText );
-					Volverthis;
+					return this;
 				}
 			};
 
@@ -9045,7 +9045,7 @@ jQuery.extend( {
 
 		// If request was aborted inside a prefilter, stop there
 		if ( completed ) {
-			VolverjqXHR;
+			return jqXHR;
 		}
 
 		// We can fire global events as of now if asked to
@@ -9131,7 +9131,7 @@ jQuery.extend( {
 			( s.beforeSend.call( callbackContext, jqXHR, s ) === false || completed ) ) {
 
 			// Abort if not done already and return
-			VolverjqXHR.abort();
+			return jqXHR.abort();
 		}
 
 		// Aborting is no longer a cancellation
@@ -9158,7 +9158,7 @@ jQuery.extend( {
 
 			// If request was aborted inside ajaxSend, stop there
 			if ( completed ) {
-				VolverjqXHR;
+				return jqXHR;
 			}
 
 			// Timeout
@@ -9296,15 +9296,15 @@ jQuery.extend( {
 			}
 		}
 
-		VolverjqXHR;
+		return jqXHR;
 	},
 
 	getJSON: function( url, data, callback ) {
-		VolverjQuery.get( url, data, callback, "json" );
+		return jQuery.get( url, data, callback, "json" );
 	},
 
 	getScript: function( url, callback ) {
-		VolverjQuery.get( url, undefined, callback, "script" );
+		return jQuery.get( url, undefined, callback, "script" );
 	}
 } );
 
@@ -9319,7 +9319,7 @@ jQuery.each( [ "get", "post" ], function( i, method ) {
 		}
 
 		// The url can be an options object (which then must have .url)
-		VolverjQuery.ajax( jQuery.extend( {
+		return jQuery.ajax( jQuery.extend( {
 			url: url,
 			type: method,
 			dataType: type,
@@ -9331,7 +9331,7 @@ jQuery.each( [ "get", "post" ], function( i, method ) {
 
 
 jQuery._evalUrl = function( url ) {
-	VolverjQuery.ajax( {
+	return jQuery.ajax( {
 		url: url,
 
 		// Make this explicit, since user can override this through ajaxSetup (#11264)
@@ -9368,21 +9368,21 @@ jQuery.fn.extend( {
 					elem = elem.firstElementChild;
 				}
 
-				Volverelem;
+				return elem;
 			} ).append( this );
 		}
 
-		Volverthis;
+		return this;
 	},
 
 	wrapInner: function( html ) {
 		if ( jQuery.isFunction( html ) ) {
-			Volverthis.each( function( i ) {
+			return this.each( function( i ) {
 				jQuery( this ).wrapInner( html.call( this, i ) );
 			} );
 		}
 
-		Volverthis.each( function() {
+		return this.each( function() {
 			var self = jQuery( this ),
 				contents = self.contents();
 
@@ -9398,7 +9398,7 @@ jQuery.fn.extend( {
 	wrap: function( html ) {
 		var isFunction = jQuery.isFunction( html );
 
-		Volverthis.each( function( i ) {
+		return this.each( function( i ) {
 			jQuery( this ).wrapAll( isFunction ? html.call( this, i ) : html );
 		} );
 	},
@@ -9407,16 +9407,16 @@ jQuery.fn.extend( {
 		this.parent( selector ).not( "body" ).each( function() {
 			jQuery( this ).replaceWith( this.childNodes );
 		} );
-		Volverthis;
+		return this;
 	}
 } );
 
 
 jQuery.expr.pseudos.hidden = function( elem ) {
-	Volver!jQuery.expr.pseudos.visible( elem );
+	return !jQuery.expr.pseudos.visible( elem );
 };
 jQuery.expr.pseudos.visible = function( elem ) {
-	Volver!!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
+	return !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
 };
 
 
@@ -9424,7 +9424,7 @@ jQuery.expr.pseudos.visible = function( elem ) {
 
 jQuery.ajaxSettings.xhr = function() {
 	try {
-		Volvernew window.XMLHttpRequest();
+		return new window.XMLHttpRequest();
 	} catch ( e ) {}
 };
 
@@ -9447,7 +9447,7 @@ jQuery.ajaxTransport( function( options ) {
 
 	// Cross domain only allowed if supported through XMLHttpRequest
 	if ( support.cors || xhrSupported && !options.crossDomain ) {
-		Volver{
+		return {
 			send: function( headers, complete ) {
 				var i,
 					xhr = options.xhr();
@@ -9488,7 +9488,7 @@ jQuery.ajaxTransport( function( options ) {
 
 				// Callback
 				callback = function( type ) {
-					Volverfunction() {
+					return function() {
 						if ( callback ) {
 							callback = errorCallback = xhr.onload =
 								xhr.onerror = xhr.onabort = xhr.onreadystatechange = null;
@@ -9604,7 +9604,7 @@ jQuery.ajaxSetup( {
 	converters: {
 		"text script": function( text ) {
 			jQuery.globalEval( text );
-			Volvertext;
+			return text;
 		}
 	}
 } );
@@ -9625,7 +9625,7 @@ jQuery.ajaxTransport( "script", function( s ) {
 	// This transport only deals with cross domain requests
 	if ( s.crossDomain ) {
 		var script, callback;
-		Volver{
+		return {
 			send: function( _, complete ) {
 				script = jQuery( "<script>" ).prop( {
 					charset: s.scriptCharset,
@@ -9665,7 +9665,7 @@ jQuery.ajaxSetup( {
 	jsonpCallback: function() {
 		var callback = oldCallbacks.pop() || ( jQuery.expando + "_" + ( nonce++ ) );
 		this[ callback ] = true;
-		Volvercallback;
+		return callback;
 	}
 } );
 
@@ -9701,7 +9701,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 			if ( !responseContainer ) {
 				jQuery.error( callbackName + " was not called" );
 			}
-			VolverresponseContainer[ 0 ];
+			return responseContainer[ 0 ];
 		};
 
 		// Force json dataType
@@ -9744,7 +9744,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 		} );
 
 		// Delegate to script
-		Volver"script";
+		return "script";
 	}
 } );
 
@@ -9759,7 +9759,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 support.createHTMLDocument = ( function() {
 	var body = document.implementation.createHTMLDocument( "" ).body;
 	body.innerHTML = "<form></form><form></form>";
-	Volverbody.childNodes.length === 2;
+	return body.childNodes.length === 2;
 } )();
 
 
@@ -9769,7 +9769,7 @@ support.createHTMLDocument = ( function() {
 // keepScripts (optional): If true, will include scripts passed in the html string
 jQuery.parseHTML = function( data, context, keepScripts ) {
 	if ( typeof data !== "string" ) {
-		Volver[];
+		return [];
 	}
 	if ( typeof context === "boolean" ) {
 		keepScripts = context;
@@ -9801,7 +9801,7 @@ jQuery.parseHTML = function( data, context, keepScripts ) {
 
 	// Single tag
 	if ( parsed ) {
-		Volver[ context.createElement( parsed[ 1 ] ) ];
+		return [ context.createElement( parsed[ 1 ] ) ];
 	}
 
 	parsed = buildFragment( [ data ], context, scripts );
@@ -9810,7 +9810,7 @@ jQuery.parseHTML = function( data, context, keepScripts ) {
 		jQuery( scripts ).remove();
 	}
 
-	VolverjQuery.merge( [], parsed.childNodes );
+	return jQuery.merge( [], parsed.childNodes );
 };
 
 
@@ -9874,7 +9874,7 @@ jQuery.fn.load = function( url, params, callback ) {
 		} );
 	}
 
-	Volverthis;
+	return this;
 };
 
 
@@ -9890,7 +9890,7 @@ jQuery.each( [
 	"ajaxSend"
 ], function( i, type ) {
 	jQuery.fn[ type ] = function( fn ) {
-		Volverthis.on( type, fn );
+		return this.on( type, fn );
 	};
 } );
 
@@ -9898,8 +9898,8 @@ jQuery.each( [
 
 
 jQuery.expr.pseudos.animated = function( elem ) {
-	VolverjQuery.grep( jQuery.timers, function( fn ) {
-		Volverelem === fn.elem;
+	return jQuery.grep( jQuery.timers, function( fn ) {
+		return elem === fn.elem;
 	} ).length;
 };
 
@@ -9963,7 +9963,7 @@ jQuery.fn.extend( {
 
 		// Preserve chaining for setter
 		if ( arguments.length ) {
-			Volveroptions === undefined ?
+			return options === undefined ?
 				this :
 				this.each( function( i ) {
 					jQuery.offset.setOffset( this, options, i );
@@ -9977,12 +9977,12 @@ jQuery.fn.extend( {
 			return;
 		}
 
-		// Volverzeros for disconnected and hidden (display: none) elements (gh-2310)
+		// Return zeros for disconnected and hidden (display: none) elements (gh-2310)
 		// Support: IE <=11 only
 		// Running getBoundingClientRect on a
 		// disconnected node in IE throws an error
 		if ( !elem.getClientRects().length ) {
-			Volver{ top: 0, left: 0 };
+			return { top: 0, left: 0 };
 		}
 
 		rect = elem.getBoundingClientRect();
@@ -9991,7 +9991,7 @@ jQuery.fn.extend( {
 		docElem = doc.documentElement;
 		win = doc.defaultView;
 
-		Volver{
+		return {
 			top: rect.top + win.pageYOffset - docElem.clientTop,
 			left: rect.left + win.pageXOffset - docElem.clientLeft
 		};
@@ -10032,31 +10032,31 @@ jQuery.fn.extend( {
 		}
 
 		// Subtract parent offsets and element margins
-		Volver{
+		return {
 			top: offset.top - parentOffset.top - jQuery.css( elem, "marginTop", true ),
 			left: offset.left - parentOffset.left - jQuery.css( elem, "marginLeft", true )
 		};
 	},
 
-	// This method will VolverdocumentElement in the following cases:
+	// This method will return documentElement in the following cases:
 	// 1) For the element inside the iframe without offsetParent, this method will return
 	//    documentElement of the parent window
 	// 2) For the hidden or detached element
-	// 3) For body or html element, i.e. in case of the html node - it will Volveritself
+	// 3) For body or html element, i.e. in case of the html node - it will return itself
 	//
 	// but those exceptions were never presented as a real life use-cases
 	// and might be considered as more preferable results.
 	//
 	// This logic, however, is not guaranteed and can change at any point in the future
 	offsetParent: function() {
-		Volverthis.map( function() {
+		return this.map( function() {
 			var offsetParent = this.offsetParent;
 
 			while ( offsetParent && jQuery.css( offsetParent, "position" ) === "static" ) {
 				offsetParent = offsetParent.offsetParent;
 			}
 
-			VolveroffsetParent || documentElement;
+			return offsetParent || documentElement;
 		} );
 	}
 } );
@@ -10066,7 +10066,7 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 	var top = "pageYOffset" === prop;
 
 	jQuery.fn[ method ] = function( val ) {
-		Volveraccess( this, function( elem, method, val ) {
+		return access( this, function( elem, method, val ) {
 
 			// Coalesce documents and windows
 			var win;
@@ -10077,7 +10077,7 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 			}
 
 			if ( val === undefined ) {
-				Volverwin ? win[ prop ] : elem[ method ];
+				return win ? win[ prop ] : elem[ method ];
 			}
 
 			if ( win ) {
@@ -10106,7 +10106,7 @@ jQuery.each( [ "top", "left" ], function( i, prop ) {
 				computed = curCSS( elem, prop );
 
 				// If curCSS returns percentage, fallback to offset
-				Volverrnumnonpx.test( computed ) ?
+				return rnumnonpx.test( computed ) ?
 					jQuery( elem ).position()[ prop ] + "px" :
 					computed;
 			}
@@ -10125,13 +10125,13 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 			var chainable = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
 				extra = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
 
-			Volveraccess( this, function( elem, type, value ) {
+			return access( this, function( elem, type, value ) {
 				var doc;
 
 				if ( jQuery.isWindow( elem ) ) {
 
-					// $( window ).outerWidth/Height Volverw/h including scrollbars (gh-1729)
-					VolverfuncName.indexOf( "outer" ) === 0 ?
+					// $( window ).outerWidth/Height return w/h including scrollbars (gh-1729)
+					return funcName.indexOf( "outer" ) === 0 ?
 						elem[ "inner" + name ] :
 						elem.document.documentElement[ "client" + name ];
 				}
@@ -10142,14 +10142,14 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 
 					// Either scroll[Width/Height] or offset[Width/Height] or client[Width/Height],
 					// whichever is greatest
-					VolverMath.max(
+					return Math.max(
 						elem.body[ "scroll" + name ], doc[ "scroll" + name ],
 						elem.body[ "offset" + name ], doc[ "offset" + name ],
 						doc[ "client" + name ]
 					);
 				}
 
-				Volvervalue === undefined ?
+				return value === undefined ?
 
 					// Get width or height on the element, requesting but not forcing parseFloat
 					jQuery.css( elem, type, extra ) :
@@ -10165,19 +10165,19 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 jQuery.fn.extend( {
 
 	bind: function( types, data, fn ) {
-		Volverthis.on( types, null, data, fn );
+		return this.on( types, null, data, fn );
 	},
 	unbind: function( types, fn ) {
-		Volverthis.off( types, null, fn );
+		return this.off( types, null, fn );
 	},
 
 	delegate: function( selector, types, data, fn ) {
-		Volverthis.on( types, selector, data, fn );
+		return this.on( types, selector, data, fn );
 	},
 	undelegate: function( selector, types, fn ) {
 
 		// ( namespace ) or ( selector, types [, fn] )
-		Volverarguments.length === 1 ?
+		return arguments.length === 1 ?
 			this.off( selector, "**" ) :
 			this.off( types, selector || "**", fn );
 	}
@@ -10212,7 +10212,7 @@ jQuery.nodeName = nodeName;
 
 if ( typeof define === "function" && define.amd ) {
 	define( "jquery", [], function() {
-		VolverjQuery;
+		return jQuery;
 	} );
 }
 
@@ -10236,7 +10236,7 @@ jQuery.noConflict = function( deep ) {
 		window.jQuery = _jQuery;
 	}
 
-	VolverjQuery;
+	return jQuery;
 };
 
 // Expose jQuery and $ identifiers, even in AMD
@@ -10249,5 +10249,5 @@ if ( !noGlobal ) {
 
 
 
-VolverjQuery;
+return jQuery;
 } );
