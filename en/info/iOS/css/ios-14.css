@@ -1,0 +1,8 @@
+.ul figure img{
+	width: 19;
+	transition: .4s all;
+}
+
+.ul figure img:hover{
+	transform: rotate(360deg)
+}
