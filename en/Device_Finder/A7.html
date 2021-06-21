@@ -1,498 +1,524 @@
 <!Doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Device finder | JBU</title>
+    <title>Device finder | JBU</title>
 
-<link rel="shortcut icon" href="img/logo.png">
-<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="stylesheet" type="text/css" href="/css/animate.css" />
 
     <link rel="stylesheet" href="css/estilos.css">
-    
+    <link rel="stylesheet" href="/css/estilo.css">
+
+
     <script src="js/jquery.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
 
-<script src="js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
-<link rel="stylesheet" href="css/v2.css">
-<meta keep-classes="cydia-body sileo-body">
-
-<style type="text/css">
-			
-			* {
-				margin:0px;
-				padding:0px;
-			}
-			
-			#header {
-				margin:auto;
-				width:500px;
-				font-family:Arial, Helvetica, sans-serif;
-			}
-			
-			ul, ol {
-				list-style:none;
-			}
-			
-			.nav > li {
-				float:left;
-			}
-			
-			.nav li a {
-				background-color:#424242;
-				color:#fff;
-				text-decoration:none;
-				padding:10px 12px;
-				display:block;
-			}
-			
-			.nav li a:hover {
-				background-color:#424242;
-			}
-			
-			.nav li ul {
-				display:none;
-				position:absolute;
-				min-width:140px;
-			}
-			
-			.nav li:hover > ul {
-				display:block;
-			}
-			
-			.nav li ul li {
-				position:relative;
-			}
-			
-			.nav li ul li ul {
-				right:-140px;
-				top:0px;
-			}
-			
-		</style>
+    <script src="/js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
+    <link rel="stylesheet" href="/css/v2.css">
+    <meta keep-classes="cydia-body sileo-body">
 
 
-<style>
-		ins {
-    	background-color: transparent !important;
-		}
-	</style>
-	
+    <style>
+        ins {
+            background-color: transparent !important;
+        }
+    </style>
 
-  <link rel="stylesheet" href="css/v5.7.1.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-</head>
-<body class="min-h-screen flex flex-col CYDIA_IS_PRESENT_CLASS SILEO_IS_PRESENT_CLASS">
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
 
-<div class="animated fadeInDown" id="topnavbar">
-<div id="supporticons">
-</div>
-   </div>
+        #header {
+            margin: auto;
+            width: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-   <!--div aria-label="Controles multimedia" class="web-chrome" data-test-web-chrome=""-->
-<header role="banner">
-<div class="container">
+        ul,
+        ol {
+            list-style: none;
+        }
 
-    <input type="search" id="input-search" placeholder="Ej: iPhone 12">    
-    <img src="img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
-<span class="text-white">Jailbreak-Updates</span>
-<ul class="nav">
-    <li><a href="">Home</a>
-		<ul>
-			<li><a href="/en/index.html">Pagina Principal </a></li>
-			<li><a href="/en/Con-Computadora-ipa/index.html">With Computer </a></li>
-			<li><a href="/en/Sin-computadora/index.html">With the iPhone  </a></li>
-			<!--li><a href="">Submenu3</a></li>
-			<li><a href="">Submenu4</a>
-				<ul>
-					<li><a href="">Submenu1</a></li>
-					<li><a href="">Submenu2</a></li>
-					<li><a href="">Submenu3</a></li>
-					<li><a href="">Submenu4</a></li>
-				</ul>
-			</li-->
-		</ul>
-	</li>
-	<li><a href="">About </a>
-		<ul>
-			<!--li><a href="/en/Reci-n-a-adidas/index.html">What's new? </a></li-->
-			<li><a href="/en/iPhone/index.html">About iPhone</a></li>
-			<!--li><a href="https://arirub850.github.io/en/buscador-de-dispositivos/"> Device Finder </a></li-->
-			<li><a href="/en/Acerca-del-Jailbreak/index.html">About Jailbreak </a></li>
-			
-		</ul>
-	</li>
-				</ul>
-				
-    <div class="content-search">
-        <div class="content-table">
-            <table id="table">
-                <thead>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    <tr>
-                        <td><a href="A9.html">iPhone 6s</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A9.html">iPhone 6s+</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A9.html">iPad Pro 9.7</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A9.html">iPad Pro 12.9</a></td>
-                    </tr>
-					
-                    <tr>
-                        <td><a href="A9.html">iPhone SE</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A7.html">iPhone 5s</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A7.html">iPad Air</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A7.html">iPad Mini 2</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A7.html">iPad Mini 3</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPhone 6</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPhone 6+</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPod Touch 6</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPad Air 2</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPad Mini 4</a></td>
-					
-					<tr>
-                        <td><a href="A10.html">iPhone 7</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A10.html">iPhone 7+</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A10.html">iPad Pro 10.5</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A10.html">iPad Pro 12.9</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A12.html">iPhone XR</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A12.html">iPhone XS</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A12.html">iPhone XS Max</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A13.html">iPhone SE 2020</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A13.html">iPhone 11</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A13.html">iPhone 11 Pro </a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A13.html">iPhone 11 Pro Max </a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A14.html">iPhone 12 Pro </a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A14.html">iPhone 12 Pro Max </a></td>
-                    </tr>
-					<tr>
-                        <td><a href="A14.html">iPhone 12 </a></td>
-                    </tr>
-					<tr>
-                        <td><a href="A14.html">iPhone 12 Mini </a></td>
-                    </tr>
-                    
-                </tbody>
-            </table>
+        .nav>li {
+            float: left;
+        }
+
+        .nav li a {
+            background-color: #424242;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 12px;
+            display: block;
+        }
+
+        .nav li a:hover {
+            background-color: #424242;
+        }
+
+        .nav li ul {
+            display: none;
+            position: absolute;
+            min-width: 140px;
+        }
+
+        .nav li:hover>ul {
+            display: block;
+        }
+
+        .nav li ul li {
+            position: relative;
+        }
+
+        .nav li ul li ul {
+            right: -140px;
+            top: 0px;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="/css/v5.7.1.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+
+    <body class="min-h-screen flex flex-col CYDIA_IS_PRESENT_CLASS SILEO_IS_PRESENT_CLASS">
+        <div class="animated fadeInDown" id="topnavbar">
+            <div id="supporticons">
+            </div>
         </div>
-    </div>
-</div>
-</header>
+        <header role="banner">
+            <div class="container">
+
+                <input type="search" id="input-search" placeholder="Ej: iPhone 12">
+                <a href="/en/index.html" title="Pagina de inicio de Jailbreak-Update"><img src="/img/logo.png"
+                        style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></a>
+                <span class="text-white">Jailbreak-Updates</span>
+                <nav>
+                    <ul>
+                        <li><a href="/en/Banner/Home/Home.html"><span class="icon-home"></span>Home</a></li>
+                        <li><a href="/en/Banner/About/About.html"><span class="icon-info"></span>Acerca de</a></li>
+                    </ul>
+                </nav>
+
+                <div class="content-search">
+                    <div class="content-table">
+                        <table id="table">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><a href="A9.html">iPhone 6s</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A9.html">iPhone 6s+</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A9.html">iPad Pro 9.7</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A9.html">iPad Pro 12.9</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A9.html">iPhone SE</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A7.html">iPhone 5s</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A7.html">iPad Air</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A7.html">iPad Mini 2</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A7.html">iPad Mini 3</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A8.html">iPhone 6</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A8.html">iPhone 6+</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A8.html">iPod Touch 6</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A8.html">iPad Air 2</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A8.html">iPad Mini 4</a></td>
+
+                                <tr>
+                                    <td><a href="A10.html">iPhone 7</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A10.html">iPhone 7+</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A10.html">iPad Pro 10.5</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A10.html">iPad Pro 12.9</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A12.html">iPhone XR</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A12.html">iPhone XS</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A12.html">iPhone XS Max</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A13.html">iPhone SE 2020</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A13.html">iPhone 11</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A13.html">iPhone 11 Pro </a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A13.html">iPhone 11 Pro Max </a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A14.html">iPhone 12 Pro </a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="A14.html">iPhone 12 Pro Max </a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="A14.html">iPhone 12 </a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="A14.html">iPhone 12 Mini </a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </header>
 
 
-<h2 class="text-3xl">Iphone 6s iPhone 6s+</h2>
-<section class="card mb-2">
-<div class="section-header">
-</div>
+        <h2 class="text-3xl">Iphone 6s iPhone 6s+</h2>
+        <section class="card mb-2">
+            <div class="section-header">
+            </div>
 
-<center><h2 class="text-3xl">Processor A7</h2>
-<section class="card mb-2">
-<div class="section-header">
-<label>iPhone</label>
-</div>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone9,1.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 5s (Global) = iPhone6,2
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+            <center>
+                <h2 class="text-3xl">Processor A7</h2>
+                <section class="card mb-2">
+                    <div class="section-header">
+                        <label>iPhone</label>
+                    </div>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="https://ipsw.me/assets/devices/iPhone9,1.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPhone 5s (Global) = iPhone6,2
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="https://ipsw.me/assets/devices/iPhone9,2.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPhone 5s (GSM) = iPhone6,1
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
 
-</div>
-</div>
-</a>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="https://ipsw.me/assets/devices/iPhone9,2.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPhone 5s (GSM) = iPhone6,1
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
 
-</section>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
 
-<section class="card mb-2">
-<div class="section-header">
-<label>iPad</label>
-</div>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,1.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Air (WiFi) = iPad4,1
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                            </div>
+                        </div>
+                    </a>
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,2.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Air (Cellular) = iPad4,2
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                </section>
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,1.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Air (China) = iPad4,3
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                <section class="card mb-2">
+                    <div class="section-header">
+                        <label>iPad</label>
+                    </div>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,1.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Air (WiFi) = iPad4,1
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,2.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Mini 2 (WiFi) = iPad4,4
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,2.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Mini 2 (Cellular) = iPad4,5
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,2.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Air (Cellular) = iPad4,2
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,2.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Mini 2 (China) = iPad4,6
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,7.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Mini 3 (WiFi) = iPad4,7
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,1.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Air (China) = iPad4,3
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,8.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Mini 3 (Cellular) = iPad4,8
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
 
-</div>
-</div>
-</a>
-<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<img src="img/iPad4,9.png" style="border-radius: 0%;" class="bg-transparent h-9 w-10 overflow-hidden">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iPad Mini 3 (China) = iPad4,9
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
- 
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,2.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Mini 2 (WiFi) = iPad4,4
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
 
-</div>
-</div>
-</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
 
-<script src="js/search.js"></script>
-</body>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,2.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Mini 2 (Cellular) = iPad4,5
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
+
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,2.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Mini 2 (China) = iPad4,6
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
+
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,7.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Mini 3 (WiFi) = iPad4,7
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
+
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,8.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Mini 3 (Cellular) = iPad4,8
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
+
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
+                        <div class="w-full flex items-center justify-between p-3 alternate-background">
+                            <div class="items-center justify-start content-center align-center flex flex-grow"
+                                style="width: calc(100% - 3rem);">
+                                <img src="img/iPad4,9.png" style="border-radius: 0%;"
+                                    class="bg-transparent h-9 w-10 overflow-hidden">
+                                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                </div>
+                                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                        iPad Mini 3 (China) = iPad4,9
+                                    </div>
+                                    <div class="text-xs font-medium text-grey leading-tight truncate">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                                style="letter-spacing: .5px;">
+
+                            </div>
+                        </div>
+                    </a>
+
+                    <script src="js/search.js"></script>
+    </body>
+
 </html>

@@ -1,89 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title> Device finder | JBU </title>
     <link rel="stylesheet" href="/css/estilo.css">
-<link rel="shortcut icon" href="/img/logo.png">
-<link rel="stylesheet" type="text/css" href="/css/animate.css"/>
-    
+    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="stylesheet" type="text/css" href="/css/animate.css" />
+
     <script src="js/jquery.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
 
-<script src="/js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
-<link rel="stylesheet" href="/css/v2.css">
-<meta keep-classes="cydia-body sileo-body">
-<style type="text/css">
-			
-			* {
-				margin:0px;
-				padding:0px;
-			}
-			
-			#header {
-				margin:auto;
-				width:500px;
-				font-family:Arial, Helvetica, sans-serif;
-			}
-			
-			ul, ol {
-				list-style:none;
-			}
-			
-			.nav > li {
-				float:left;
-			}
-			
-			.nav li a {
-				background-color:#424242;
-				color:#fff;
-				text-decoration:none;
-				padding:10px 12px;
-				display:block;
-			}
-			
-			.nav li a:hover {
-				background-color:#424242;
-			}
-			
-			.nav li ul {
-				display:none;
-				position:absolute;
-				min-width:140px;
-			}
-			
-			.nav li:hover > ul {
-				display:block;
-			}
-			
-			.nav li ul li {
-				position:relative;
-			}
-			
-			.nav li ul li ul {
-				right:-140px;
-				top:0px;
-			}
-			
-		</style>
+    <script src="/js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
+    <link rel="stylesheet" href="/css/v2.css">
+    <meta keep-classes="cydia-body sileo-body">
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #header {
+            margin: auto;
+            width: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .nav>li {
+            float: left;
+        }
+
+        .nav li a {
+            background-color: #424242;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 12px;
+            display: block;
+        }
+
+        .nav li a:hover {
+            background-color: #424242;
+        }
+
+        .nav li ul {
+            display: none;
+            position: absolute;
+            min-width: 140px;
+        }
+
+        .nav li:hover>ul {
+            display: block;
+        }
+
+        .nav li ul li {
+            position: relative;
+        }
+
+        .nav li ul li ul {
+            right: -140px;
+            top: 0px;
+        }
+    </style>
 
 
-<style>
-		ins {
-    	background-color: transparent !important;
-		}
-		
-		a {
-		  color: blue;
-		  
-		}
-	</style>
-  <link rel="stylesheet" href="/css/v5.7.1.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        ins {
+            background-color: transparent !important;
+        }
+
+        a {
+            color: blue;
+
+        }
+    </style>
+    <link rel="stylesheet" href="/css/v5.7.1.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <!--body>
@@ -96,171 +97,182 @@
 <center><p>VUELVE PRONTO</p></center-->
 
 <body class="min-h-screen flex flex-col CYDIA_IS_PRESENT_CLASS SILEO_IS_PRESENT_CLASS">
-<div class="animated fadeInDown" id="topnavbar">
-<div id="supporticons">
-</div>
-   </div>
-<header role="banner">
-<div class="container">
-
-        <input type="search" id="input-search" placeholder="Ej: iPhone 12">
-        <a href="/en/index.html" title="Pagina de inicio de Jailbreak-Update"><img src="/img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></a>
-<span class="text-white">Jailbreak-Updates</span>
-<nav>
-    <ul>
-        <li><a href="/en/Banner/Home/Home.html"><span class="icon-home"></span>Home</a></li>
-        <li><a href="/en/Banner/About/About.html"><span class="icon-info"></span>Acerca de</a></li>
-    </ul>
-</nav>
-    
-    <div class="content-search">
-        <div class="content-table">
-            <table id="table">
-                <thead>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    <tr>
-                        <td><a href="A9.html">iPhone 6s</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A9.html">iPhone 6s+</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A9.html">iPad Pro 9.7</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A9.html">iPad Pro 12.9</a></td>
-                    </tr>
-					
-                    <tr>
-                        <td><a href="A9.html">iPhone SE</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A7.html">iPhone 5s</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A7.html">iPad Air</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A7.html">iPad Mini 2</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A7.html">iPad Mini 3</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPhone 6</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPhone 6+</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPod Touch 6</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPad Air 2</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="A8.html">iPad Mini 4</a></td>
-					
-					<tr>
-                        <td><a href="A10.html">iPhone 7</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A10.html">iPhone 7+</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A10.html">iPad Pro 10.5</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A10.html">iPad Pro 12.9</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A12.html">iPhone XR</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A12.html">iPhone XS</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A12.html">iPhone XS Max</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A13.html">iPhone SE 2020</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A13.html">iPhone 11</a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A13.html">iPhone 11 Pro </a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A13.html">iPhone 11 Pro Max </a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A14.html">iPhone 12 Pro </a></td>
-                    </tr>
-					
-					<tr>
-                        <td><a href="A14.html">iPhone 12 Pro Max </a></td>
-                    </tr>
-					<tr>
-                        <td><a href="A14.html">iPhone 12 </a></td>
-                    </tr>
-					<tr>
-                        <td><a href="A14.html">iPhone 12 Mini </a></td>
-                    </tr>
-                    
-                </tbody>
-            </table>
+    <div class="animated fadeInDown" id="topnavbar">
+        <div id="supporticons">
         </div>
     </div>
-</header>
+    <header role="banner">
+        <div class="container">
 
-<h2 class="text-3xl">Iphone 6s iPhone 6s+</h2>
-<section class="card mb-2">
-<div class="section-header">
-</div>
-<div style="width:100%; display: block; text-align: center; height: auto;">
-</div>
-<section class="card mb-2">
-<div class="section-header">
-</div>
-<center><big><strong>PUT THE NAME OF YOUR IPHONE IN THE SEARCH ENGINE ABOVE </strong></big></center> 
-<p><CENTER><BIG>IF YOUR IPHONE IS NOT FOUND PLEASE ENTER HERE <a class="su" href="mailto:jailbreak14update@gmail.com" style="text-decoration:none"> SUGGESTIONS</a></BIG></CENTER></P>
-<p></P>
-<P></P>
-<P><H1><CENTER>Jailbreak-Updates</CENTER></H1></P>
-<CENTER><img src="/img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></CENTER>
+            <input type="search" id="input-search" placeholder="Ej: iPhone 12">
+            <a href="/en/index.html" title="Pagina de inicio de Jailbreak-Update"><img src="/img/logo.png"
+                    style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></a>
+            <span class="text-white">Jailbreak-Updates</span>
+            <nav>
+                <ul>
+                    <li><a href="/en/Banner/Home/Home.html"><span class="icon-home"></span>Home</a></li>
+                    <li><a href="/en/Banner/About/About.html"><span class="icon-info"></span>Acerca de</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-search">
+                <div class="content-table">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><a href="A9.html">iPhone 6s</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A9.html">iPhone 6s+</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A9.html">iPad Pro 9.7</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A9.html">iPad Pro 12.9</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A9.html">iPhone SE</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A7.html">iPhone 5s</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A7.html">iPad Air</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A7.html">iPad Mini 2</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A7.html">iPad Mini 3</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A8.html">iPhone 6</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A8.html">iPhone 6+</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A8.html">iPod Touch 6</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A8.html">iPad Air 2</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A8.html">iPad Mini 4</a></td>
+
+                            <tr>
+                                <td><a href="A10.html">iPhone 7</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A10.html">iPhone 7+</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A10.html">iPad Pro 10.5</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A10.html">iPad Pro 12.9</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A12.html">iPhone XR</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A12.html">iPhone XS</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A12.html">iPhone XS Max</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A13.html">iPhone SE 2020</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A13.html">iPhone 11</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A13.html">iPhone 11 Pro </a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A13.html">iPhone 11 Pro Max </a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A14.html">iPhone 12 Pro </a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="A14.html">iPhone 12 Pro Max </a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="A14.html">iPhone 12 </a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="A14.html">iPhone 12 Mini </a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
-				</div>
-                    <div></div>
+            </div>
+    </header>
 
-<script src="js/search.js"></script>
+    <h2 class="text-3xl">Iphone 6s iPhone 6s+</h2>
+    <section class="card mb-2">
+        <div class="section-header">
+        </div>
+        <div style="width:100%; display: block; text-align: center; height: auto;">
+        </div>
+        <section class="card mb-2">
+            <div class="section-header">
+            </div>
+            <center><big><strong>PUT THE NAME OF YOUR IPHONE IN THE SEARCH ENGINE ABOVE </strong></big></center>
+            <p>
+                <CENTER><BIG>IF YOUR IPHONE IS NOT FOUND PLEASE ENTER HERE <a class="su"
+                            href="mailto:jailbreak14update@gmail.com" style="text-decoration:none">
+                            SUGGESTIONS</a></BIG></CENTER>
+            </P>
+            <p></P>
+            <P></P>
+            <P>
+            <H1>
+                <CENTER>Jailbreak-Updates</CENTER>
+            </H1>
+            </P>
+            <CENTER><img src="/img/logo.png" style="border-radius: 20%;"
+                    class="bg-transparent h-10 w-10 overflow-hidden"></CENTER>
+            </div>
+            </div>
+            <div></div>
+
+            <script src="js/search.js"></script>
 </body>
+
 </html>
