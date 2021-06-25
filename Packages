@@ -1,0 +1,15 @@
+Package: com.Jailbreak-Update.tweakio
+Name: Tweakrepo
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 12.1.2), preferenceloader
+Architecture: iphoneos-arm
+Description: A global package search tab for Cydia, Installer, Sileo and Zebra!
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: Jailbreak-Update <jailbreak14update@gmail.com>
+Depiction: https://jailbreak-update.github.io/repo%20cydia/tweakrepo/tweakrepo.html 
+Section: Tweaks
+Version:  0.0.6
+Filename: /deb/com.Jailbreak-Update.tweakio_0.0.6_iphoneos-arm.deb
+Size: 339150
+MD5Sum: 5d7567c69899430f92f3c8c7e369771d
+SHA1: e5d6f9a09228d45c70c1a4256506d8b0b7158525
+SHA256: 696c5987ac6443987ccc7f26da0cdd98ddb54e704fda37d955885a154ad910e4
