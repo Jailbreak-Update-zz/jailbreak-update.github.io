@@ -6,10 +6,3 @@ Codename: Jailbreak-Update
 Architectures: iphoneos-arm
 Components: main
 Description: Repository Jailbreak-Update
-MD5Sum:
- d41d8cd98f00b204e9800998ecf8427e 725 Packages
- 4059d198768f9f8dc9372dc1c54bc3c3 522 Packages.bz2
- SHA256:
- 8a27df8d2a2966ab3dc0d7b294b6d92b896e8991f370d83241bd29c7f5657630 725 Packages
- 64cb992268353c68e110d6dcea73538542eb3d8e0a40485ee509614f85df0730 522 Packages.bz2
- 
