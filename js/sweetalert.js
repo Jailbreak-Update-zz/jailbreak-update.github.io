@@ -1,4 +1,4 @@
-Swal.fire({
+/*Swal.fire({
 	text: "La versión en inglés está en proceso de renovación. (The English version is under renovation)",
 	icon: "info",
 	timer: 6000,
@@ -14,7 +14,7 @@ Swal.fire({
 	hideClass: {
 	  popup: 'animate__animated animate__fadeOutUp'
 	}
-  });
+  });*/
 
 
   $("#btn0").click(function(){
