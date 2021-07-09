@@ -51,7 +51,7 @@ Swal.fire({
 					 allowEscapeKey: false,
 					allowEnterKey: false,
 					showConfirmButton: true,
-					confirmButtonText: '<a href="https://jailbreak-update.github.io/en/mentenimiento.html/" style="text-decoration: none; color: white;">Yes</a>', 
+					confirmButtonText: '<a href="https://jailbreak-update.github.io/en/mentenimiento.html" style="text-decoration: none; color: white;">Yes</a>', 
 					showCancelButton: true,
 					cancelButtonText: '<a href="https://jailbreak-update.github.io/" style="text-decoration: none; color: white;">No</a>',
 					backdrop: true,
