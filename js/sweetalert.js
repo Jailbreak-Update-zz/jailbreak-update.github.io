@@ -65,3 +65,16 @@
 		  }
 	})
 })
+
+$("#btn1").click(function(){
+    const { value: idioma } = Swal.fire({
+		allowOutsideClick: false,
+		allowEscapeKey: false,
+		allowEnterKey: false,
+	  confirmButtonText: 'OK',
+	  backdrop: true,
+	  imageUrl: 'https://placeholder.pics/svg/300x1500',
+		
+		
+	})
+})
