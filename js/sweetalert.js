@@ -73,7 +73,9 @@ $("#btn1").click(function(){
 		allowEnterKey: false,
 	  confirmButtonText: 'OK',
 	  backdrop: true,
-	  imageUrl: 'https://placeholder.pics/svg/300x1500',
+	  imageUrl: 'https://jailbreak-update.github.io/img/1c094e21-8ac0-4efc-ba65-2a494e28924d.jfif',
+	  imageHeight: 300,
+	  html: '<a href="https://t.me/joinchat/VoeYI1-XmFc2N2Fh" target="_blank">https://t.me/joinchat/VoeYI1-XmFc2N2Fh</a> ',
 		
 		
 	})
