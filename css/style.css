@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?gpzfxx');
-  src:  url('fonts/icomoon.eot?gpzfxx#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?gpzfxx') format('truetype'),
-    url('fonts/icomoon.woff?gpzfxx') format('woff'),
-    url('fonts/icomoon.svg?gpzfxx#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4zdnob');
+  src:  url('fonts/icomoon.eot?4zdnob#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4zdnob') format('truetype'),
+    url('fonts/icomoon.woff?4zdnob') format('woff'),
+    url('fonts/icomoon.svg?4zdnob#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,21 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-phone_iphone:before {
-  content: "\e901";
+.icon-world:before {
+  content: "\e903";
 }
-.icon-computer-laptop:before {
+.icon-book:before {
+  content: "\e900";
+}
+.icon-information:before {
   content: "\e902";
 }
 .icon-home:before {
-  content: "\e900";
-}
-.icon-menu:before {
-  content: "\e9bd";
-}
-.icon-sphere:before {
-  content: "\e9c9";
-}
-.icon-info:before {
-  content: "\ea0c";
+  content: "\e901";
 }
