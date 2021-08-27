@@ -1,23 +1,6 @@
-$(document).ready(main);
+document.getElementById("icon-menu").addEventListener("click", mostrar_menu)
 
-var contador = 1 ;
-
-function main (){
-$('.menu_bar').click(function(){
-//$('nav').toggle();
-
-if(contador == 1){
-    $('nav').animate({
-        left: '0'
-    });
-    contador = 0;
-} else {
-    contador = 1;
-    $('nav').animate({
-        left: '-100%'
-    });
+function mostrar_menu(){
+    document.getElementById("move-content").classList.toggle('move-container-all')
+    document.getElementById("show-menu").classList.toggle('show-lateral')
 }
-
-});
-
-};
