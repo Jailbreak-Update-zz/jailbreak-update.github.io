@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="/css/estilo.css">
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/baners.css">
+	<link rel="stylesheet" href="css/pantallas.css">
+	<script src="https://kit.fontawesome.com/d30eafd107.js" crossorigin="anonymous"></script>
 	<style type="text/css">
 		* {
 			margin: 0px;
@@ -74,11 +76,13 @@
 		<div class="container">
 			<a href="/index.html" title="Pagina principal de Jailbreak-Update"><img src="/img/logo.png"
 					style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></a>
-			<span class="text-white2">Inicio | Jailbreak-Update</span>
+			<span class="text-white2 LB1">Inicio | Jailbreak-Update</span>
+			<span class="text-white2 LB2">Inicio | JBU</span>
+			<span class="text-white2 LB3">JBU</span>
 			<div class="menu_bar">
 				<a href="#" class="bt-menu"><span class="icon-menu"></span>Menu</a>
 			</div>
-			<nav>
+			<nav class="menu" id="show-menu">
 				<ul>
 					<!--li><a href="/Banner/Inicio/Inicio.html"><span class="icon-home"></span>Inicio</a></li-->
 					<li><a href="/Banner/Acerca de/Acerca de.html"><button class="text-white2"><span class="icon-information"></span>Acerca de</button></a></li>
@@ -87,7 +91,11 @@
 				</ul>
 			</nav>
 		</div>
+		<div id="icon-menu">
+			<i class="fas fa-bars"></i>
+		</div>
 	</header>
+	<div class="container-all" id="move-content">
 	<h2 class="text-3xl">Iphone 6s iPhone 6s</h2>
 	<h2 class="text-3xl"></h2>
 	<h2 class="text-3xl"></h2>
@@ -181,9 +189,11 @@
 						</div>
 					</a>
 				</div>
-
+			</div>
 				<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 				<script src="/jquery/jquery-3.3.1.min.js"></script>	
 				<script src="js/sweetalert.js"></script>
+
+				<script src="js/pantallas.js"></script>
 </body>
 </html>
