@@ -10,13 +10,13 @@
 
     <link rel="shortcut icon" href="/img/logo.png">
     <link rel="stylesheet" type="text/css" href="/css/animate.css" />
-
+    <link rel="stylesheet" href="css/pantallas.css">
     <link rel="stylesheet" href="css/estilos2.css">
     <link rel="stylesheet" href="/css/estilo.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
-
+    <script src="https://kit.fontawesome.com/d30eafd107.js" crossorigin="anonymous"></script>
     <script src="/js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
     <link rel="stylesheet" href="/css/v2.css">
     <meta keep-classes="cydia-body sileo-body">
@@ -101,13 +101,14 @@
         <div class="container">
 
             <input type="search" id="input-search" placeholder="Ej: iPhone 12">
-            <a href="/index.html" title="Pagina de inicio de Jailbreak-Update"><img src="/img/logo.png"
-                    style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></a>
-                    <span class="text-white2">Jailbreak-Update</span>
+            <a href="/index.html" title="Pagina de inicio de Jailbreak-Update"><img src="/img/logo.png" 
+                    style="border-radius: 20%;" class="logo bg-transparent h-10 w-10 overflow-hidden"></a>
+                    <span class="text-white2 LB1">Jailbreak-Update</span>
+                    
             <div class="menu_bar">
 				<a href="#" class="bt-menu"><span class="icon-menu"></span>Menu</a>
 			</div>
-			<nav>
+			<nav class="menu" id="show-menu">
 				<ul>
 					<li><a href="/Banner/Inicio/Inicio.html"><span class="icon-home"></span>Inicio</a></li>
 					<li><a href="/Banner/Acerca de/Acerca de.html"><button class="text-white2"><span class="icon-information"></span>Acerca de</button></a></li>
@@ -257,10 +258,15 @@
                 </div>
             </div>
         </div>
+
+        <div id="icon-menu">
+			<i class="fas fa-bars"></i>
+		</div>
+
     </header>
 
 
-
+    <div class="container-all" id="move-content">
     <h2 class="text-3xl">Iphone 6s iPhone 6s+</h2>
     <section class="card mb-2">
         <div class="section-header">
@@ -285,8 +291,9 @@
             <CENTER><a href="/index.html" title="Pagina de inicio de Jailbreak-Update"><img src="/img/logo.png" style="border-radius: 20%;"
                     class="bg-transparent h-10 w-10 overflow-hidden"></a></CENTER>
 
-
+            </div>
             <script src="js/search.js"></script>
+            <script src="js/pantallas.js"></script>
 </body>
 
 </html>

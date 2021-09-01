@@ -12,12 +12,13 @@ header{
     padding: 10px;
 }
 
-#input-search{
+/*#input-search{
     width: 300px;
     height: 40px;
     font-size: 20px;
     text-indent: 10px;
-}
+    position:relative;
+}*/
 
 .content-search{
     width: 100%;
