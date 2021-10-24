@@ -1,9 +1,8 @@
-/*Swal.fire({
-	text: "La versión en inglés está en proceso de renovación. (The English version is under renovation)",
-	icon: "info",
+Swal.fire({
+	html: '<strong><h3>Lets make it trending <a href="https://twitter.com/hashtag/UntetherDay?src=hashtag_click" target="_blank">#UntetherDay</a></h3> <br> <h4>Vamos a hacerlo tendencia <a href="https://twitter.com/hashtag/UntetherDay?src=hashtag_click" target="_blank">#UntetherDay</a></h4>',
+	position: "top",
 	timer: 6000,
 	timerProgressBar: true,
-	position: "top",
 	allowOutsideClick: false,
 	allowEscapeKey: false,
 	allowEnterKey: false,
@@ -14,7 +13,7 @@
 	hideClass: {
 	  popup: 'animate__animated animate__fadeOutUp'
 	}
-  });*/
+  })
 
 
   $("#btn0").click(function(){
