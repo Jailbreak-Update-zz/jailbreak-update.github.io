@@ -1,4 +1,4 @@
-Swal.fire({
+/*Swal.fire({
 	html: '<strong><h3>Lets make it trending <a href="https://twitter.com/hashtag/UntetherDay?src=hashtag_click" target="_blank">#UntetherDay</a></h3> <br> <h4>Vamos a hacerlo tendencia <a href="https://twitter.com/hashtag/UntetherDay?src=hashtag_click" target="_blank">#UntetherDay</a></h4>',
 	position: "top",
 	timer: 6000,
@@ -13,7 +13,7 @@ Swal.fire({
 	hideClass: {
 	  popup: 'animate__animated animate__fadeOutUp'
 	}
-  })
+  })*/
 
 
   $("#btn0").click(function(){
