@@ -46,3 +46,20 @@ Size: 1947990
 MD5Sum: d84e8694a66680431c6841f834bd9fd3
 SHA1: cb05bf20dafb8385daaea96713472908975ab786
 SHA256: 6c5d11a385ddf0fed43efc8ac6e8f624c4ac13904465a5ba665b70562dd802da
+
+Package: com.Jailbreak-Update.libtitand3vuniversal
+Name: libTitanD3vUniversal
+Architecture: iphoneos-arm
+Description: TitanD3v universal library!
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: TitanD3v
+Depiction:  https://titand3v.github.io/depictions/titand3vlib/index.html
+Icon: https://titand3v.github.io/depictions/titand3vlib/assets/icon.png
+Section: System
+Tag: role::developer
+Version: 1.9
+Filename: /deb/com.Jailbreak-Update.libtitand3vuniversal_1.9_iphoneos-arm.deb
+Size: 10095122
+MD5Sum: 8135a12f497cdc31afcba831f1ddcb25
+SHA1: c0d6530de10816fc5720957ffa818f9639cfeff2
+SHA256: 8881a2783763700b38915846468b1ba306b04e0bd9369b65d6aa9e012f43af51
