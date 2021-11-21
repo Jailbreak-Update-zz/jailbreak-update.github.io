@@ -32,7 +32,7 @@ SHA256: 3024130fa07857b1798202d7f71403f8a1bea148e263523ca7cd036c6ad9d3d7
 
 Package: com.Jailbreak-Update.phoenix
 Name: Phoenix
-Depends: mobilesubstrate, com.titand3v.libtitand3vuniversal (>= 1.8)
+Depends: mobilesubstrate, com.Jailbreak-Update.libtitand3vuniversal (>= 1.8)
 Architecture: iphoneos-arm
 Description: A redesign of the contact list for the Phone app
 Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
