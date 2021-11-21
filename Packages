@@ -63,3 +63,19 @@ Size: 10095122
 MD5Sum: 8135a12f497cdc31afcba831f1ddcb25
 SHA1: c0d6530de10816fc5720957ffa818f9639cfeff2
 SHA256: 8881a2783763700b38915846468b1ba306b04e0bd9369b65d6aa9e012f43af51
+
+Package: com.Jailbreak-Update.breezy
+Name: Breezy
+Architecture: iphoneos-arm
+Description: Fake notifications
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: TitanD3v
+Depiction: https://titand3v.github.io/depictions/breezy/index.html
+Icon: https://titand3v.github.io/depictions/breezy/assets/icon.png
+Section: Tweaks
+Version: 1.0
+Filename: /deb/com.Jailbreak-Update.breezy_1.0_iphoneos-arm.deb
+Size: 179518
+MD5Sum: 72afd407690f6f2dd80bcfa029382227
+SHA1: 0565a3dad2d32d68bbca71ee0e2b56d521b1d8d7
+SHA256: 5e3ab8f11c53ce097a0bad025f14498f242b739209973ead6ee26c7121f5d004
