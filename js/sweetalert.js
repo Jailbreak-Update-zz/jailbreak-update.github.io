@@ -1,5 +1,5 @@
-/*Swal.fire({
-	html: '<strong><h3>Lets make it trending <a href="https://twitter.com/hashtag/UntetherDay?src=hashtag_click" target="_blank">#UntetherDay</a></h3> <br> <h4>Vamos a hacerlo tendencia <a href="https://twitter.com/hashtag/UntetherDay?src=hashtag_click" target="_blank">#UntetherDay</a></h4>',
+Swal.fire({
+	html: '<strong><h3>Añade la repo de <a href="https://jailbreak-update.github.io/repo%20cydia/add%20repo.html" target="_blank">Jailbreak-Update</a></h3>',
 	position: "top",
 	timer: 6000,
 	timerProgressBar: true,
@@ -13,7 +13,7 @@
 	hideClass: {
 	  popup: 'animate__animated animate__fadeOutUp'
 	}
-  })*/
+  })
 
 
   $("#btn0").click(function(){
