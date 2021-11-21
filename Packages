@@ -29,3 +29,20 @@ Size: 11232
 MD5Sum: 7fdb03009ec4d274eba0fd7a6ed08a77
 SHA1: 24f90aa3f7ebacbab84c03ac05fb6d6c3ae986dd
 SHA256: 3024130fa07857b1798202d7f71403f8a1bea148e263523ca7cd036c6ad9d3d7
+
+Package: com.Jailbreak-Update.phoenix
+Name: Phoenix
+Depends: mobilesubstrate, com.titand3v.libtitand3vuniversal (>= 1.8)
+Architecture: iphoneos-arm
+Description: A redesign of the contact list for the Phone app
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: TitanD3v
+Depiction: https://titand3v.github.io/depictions/phoenix/index.html
+Icon: https://titand3v.github.io/depictions/phoenix/assets/icon.png
+Section: Tweaks
+Version:  1.1
+Filename: /deb/com.Jailbreak-Update.phoenix_1.1_iphoneos-arm.deb
+Size: 1947990 
+MD5Sum: d84e8694a66680431c6841f834bd9fd3
+SHA1: cb05bf20dafb8385daaea96713472908975ab786
+SHA256: 6c5d11a385ddf0fed43efc8ac6e8f624c4ac13904465a5ba665b70562dd802da
