@@ -13,3 +13,19 @@ Size: 339150
 MD5Sum: 5d7567c69899430f92f3c8c7e369771d
 SHA1: e5d6f9a09228d45c70c1a4256506d8b0b7158525
 SHA256: 696c5987ac6443987ccc7f26da0cdd98ddb54e704fda37d955885a154ad910e4
+
+Package: com.Jailbreak-Update.colourmydock
+Name: ColourMyDock
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Colour your dock with iOS 14 colour picker
+Maintainer: Jailbreak-Update <jailbreak14update@gmail.com>
+Author: TitanD3v
+Depiction: https://jailbreak-update.github.io/repo%20cydia/ColourMyDock/colourmydock.html
+Section: Tweaks
+Version:  1.0
+Filename: /deb/com.Jailbreak-Update.colourmydock_1.0_iphoneos-arm.deb
+Size: 11232
+MD5Sum: 7fdb03009ec4d274eba0fd7a6ed08a77
+SHA1: 24f90aa3f7ebacbab84c03ac05fb6d6c3ae986dd
+SHA256: 3024130fa07857b1798202d7f71403f8a1bea148e263523ca7cd036c6ad9d3d7
