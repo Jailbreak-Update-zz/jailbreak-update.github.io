@@ -79,3 +79,18 @@ Size: 179518
 MD5Sum: 72afd407690f6f2dd80bcfa029382227
 SHA1: 0565a3dad2d32d68bbca71ee0e2b56d521b1d8d7
 SHA256: 5e3ab8f11c53ce097a0bad025f14498f242b739209973ead6ee26c7121f5d004
+
+Package: com.Jailbreak-Update.android-4x-pattern-lock
+Name: Android 4.x Pattern Lock for AndroidLockXT
+Architecture: iphoneos-arm
+Description: Android 4.x pattern lock theme for AndroidLock XT.
+Maintainer: Karen/ã‚ã‘ã¿ (angelXwind) <angelXwind@angelxwind.net>
+Author: Karen/ã‚ã‘ã¿ (angelXwind) <angelXwind@angelxwind.net>
+Depiction: https://cydia.angelxwind.net/?page/net.angelxwind.android-4x-pattern-lock
+Section: Themes
+Version: 1.3.2
+Filename: /deb/com.Jailbreak-Update.android-4x-pattern-lock_1.3.2_iphoneos-arm.deb
+Size: 532596
+MD5Sum: f52ed61536b63275cb0303fed3375a7d
+SHA1: 1e25c41b2a1c5d63f8015cfacb97a51668c9f851
+SHA256: 2961f5c63d5923db1b15343ba64c5c61fc380b56ec8237cad61e6d17a34fd8ee
