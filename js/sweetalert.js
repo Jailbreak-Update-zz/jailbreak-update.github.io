@@ -1,7 +1,7 @@
 Swal.fire({
 	html: '<strong><h3>Añade la repo de <a href="https://jailbreak-update.github.io/repo%20cydia/add%20repo.html" target="_blank">Jailbreak-Update</a></h3>',
 	position: "top",
-	timer: 6000,
+	timer: 3000,
 	timerProgressBar: true,
 	allowOutsideClick: false,
 	allowEscapeKey: false,
@@ -62,20 +62,5 @@ Swal.fire({
 			  
 			})
 		  }
-	})
-})
-
-$("#btn1").click(function(){
-    const { value: idioma } = Swal.fire({
-		allowOutsideClick: false,
-		allowEscapeKey: false,
-		allowEnterKey: false,
-	  confirmButtonText: 'OK',
-	  backdrop: true,
-	  imageUrl: '//jailbreak-update.github.io/img/1c094e21-8ac0-4efc-ba65-2a494e28924d.jfif',
-	  imageHeight: 300,
-	  html: '<a href="//t.me/joinchat/VoeYI1-XmFc2N2Fh" target="_blank">//t.me/joinchat/VoeYI1-XmFc2N2Fh</a> ',
-		
-		
 	})
 })
