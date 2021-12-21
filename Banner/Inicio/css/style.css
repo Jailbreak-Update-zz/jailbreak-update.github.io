@@ -1,0 +1,47 @@
+nav>div{
+    text-align:left;
+}
+
+.fixed-top{
+    position: relative;
+   
+}
+
+nav{
+    min-height: 70px;
+    padding: 15px 0;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+}
+
+nav > div a{
+    color: black;
+}
+
+a:hover{
+    color:#FF0000;
+}
+
+a{
+    color: black;
+}
+
+.accordion-button:not(.collapsed){
+    color: rgb(255, 0, 0);
+}
+
+.btn{
+    border: none;
+    color: white;
+    
+}
+
+.btn:hover{
+ color: red;
+
+}
+
+
