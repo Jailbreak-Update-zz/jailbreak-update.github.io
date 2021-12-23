@@ -1,0 +1,14 @@
+.table2{
+        border: #ffffff 1px solid;
+        border-collapse: collapse;
+}
+
+.tbody2{
+    border: rgb(0, 0, 0) 1px solid;
+}
+
+.td2{
+    border: rgb(0, 0, 0) 1px solid;
+    margin: 17px;
+    padding: 15px;
+}
