@@ -1,0 +1,129 @@
+
+
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    padding: 10px;
+    font-size: 20px;
+    background: #404040;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
+#input-search{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    text-indent: 10px;
+    position:relative;
+}
+
+@media screen and (max-width: 989px){
+    .LB1{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 477px){
+    .LB3{
+        display: flex;
+    }
+
+    .LB2 {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 771px){
+    #input-search{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 670px){
+    #input-search{
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    #input-search{
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 618px){
+    #input-search{
+        width: 150px;
+    }
+
+    .logo{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 572px){
+
+    #input-search{
+        width: 170px;
+    }
+
+   /* #icon-logo{
+        display:flex;
+        left: 20px;
+        
+    }*/
+
+    .container-all{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+    
+    .move-container-all{
+        transform: translateX(187px);
+    }
+
+    .menu{
+        width: 0px;
+        height: 99vh;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        background: #404040;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+        
+    }
+
+
+    .show-lateral{
+        width: 201px;
+        transform: translateX(0px);
+    }
+
+    .menu nav ul{
+        flex-direction: column;
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: center;
+    }
+
+    #icon-menu{
+      display: initial;
+    }
+    
+}
