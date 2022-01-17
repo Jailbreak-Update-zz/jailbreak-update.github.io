@@ -1,5 +1,5 @@
-# jailbreak-update.github.io
+# Jailbreak-Update
 This repository was created on April 21, 2021
 
 ## What is this?
-This is a dedicated repository for jailbreak and other iPhone related projects.
+All about Jailbreak and iOS and much more
