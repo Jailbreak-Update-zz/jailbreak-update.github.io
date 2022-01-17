@@ -1,4 +1,4 @@
-Swal.fire({
+/*Swal.fire({
 	html: '<strong><h3>Añade la repo de <a href="https://jailbreak-update.github.io/repo%20cydia/add%20repo.html" target="_blank">Jailbreak-Update</a></h3>',
 	position: "top",
 	timer: 3000,
@@ -13,7 +13,7 @@ Swal.fire({
 	hideClass: {
 	  popup: 'animate__animated animate__fadeOutUp'
 	}
-  })
+  })*/
 
 
   $("#btn0").click(function(){

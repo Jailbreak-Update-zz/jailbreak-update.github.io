@@ -1,4 +1,4 @@
-/*Swal.fire({
+Swal.fire({
 	html: '<strong><h4>Para ir mas rapido a las fuentes consultadas puedes dar un click en cada uno de los links</h4>',
 	position: "top",
 	timerProgressBar: false,
@@ -12,4 +12,4 @@
 	hideClass: {
 	  popup: 'animate__animated animate__fadeOutUp'
 	}
-  })*/
+  })
