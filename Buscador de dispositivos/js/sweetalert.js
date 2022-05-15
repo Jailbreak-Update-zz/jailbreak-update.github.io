@@ -1,82 +1,16 @@
-/*Swal.fire({
-	text: "La versión en inglés está en proceso de renovación. (The English version is under renovation)",
-	icon: "info",
-	timer: 6000,
-	timerProgressBar: true,
+Swal.fire({
+	html:'<center><big><strong>PON EL NOMBRE DE TU DISPOSITIVO EN EL BUSCADOR QUE ESTA EN LA PARTE DE ARRIBA</strong></big></center><p><CENTER><BIG>SI TU DISPOSITIVO NO SE ENCUENTRA FAVOR DE IR A SUGERENCIAS</BIG></CENTER></P><p></P><P></P><P><H1></H1></P><CENTER><a href="/index.html" title="Pagina de inicio de Jailbreak-Update"><img src="/img/logo.png"style="border-radius: 20%;"class="bg-transparent h-10 w-10 overflow-hidden"></a></CENTER>',
 	position: "top",
 	allowOutsideClick: false,
 	allowEscapeKey: false,
 	allowEnterKey: false,
-	showConfirmButton: false,
+	showConfirmButton: true,
+	confirmButtonText: 'Entendido',
 	showClass: {
 	  popup: 'animate__animated animate__fadeInDown'
 	},
 	hideClass: {
 	  popup: 'animate__animated animate__fadeOutUp'
 	}
-  });*/
+  });
 
-
-  $("#btn0").click(function(){
-    const { value: idioma } = Swal.fire({
-		allowOutsideClick: false,
-		allowEscapeKey: false,
-		allowEnterKey: false,
-	  confirmButtonText: 'Seleccionar',
-	  backdrop: true,
-		html: '<h2>Seleciona tu idioma</h2> <h3><p>(Select your language)</p></h3>',
-		input: 'select',
-		inputOptions: {
-			/*Español: 'Español (Spanish)',*/
-			Ingles: 'Ingles (English)'
-		},
-		inputValidator: (value) => {
-			return new Promise((resolve) => {
-			  if (value === 'Español') {
-				Swal.fire({
-				  allowOutsideClick: false,
-					 allowEscapeKey: false,
-					allowEnterKey: false,
-				  showConfirmButton: true,
-				  confirmButtonText: '<a href="//jailbreak-update.github.io/Banner/Inicio/Inicio.html" style="text-decoration: none; color: white;">Si</a>',
-				  showCancelButton: true,
-				  cancelButtonText: '<a href="//jailbreak-update.github.io/Banner/Inicio/Inicio.html" style="text-decoration: none; color: white;">No</a>', 
-				  backdrop: true, 
-				  html: '<h2>Seleccionaste idioma Español es correcto</h2>',
-				})
-			  } 
-			  if (value === 'Ingles') {
-				Swal.fire({
-				  allowOutsideClick: false,
-					 allowEscapeKey: false,
-					allowEnterKey: false,
-					showConfirmButton: true,
-					confirmButtonText: '<a href="//jailbreak-update.github.io/en/Banner/Home/Home.html" style="text-decoration: none; color: white;">Yes</a>', 
-					showCancelButton: true,
-					cancelButtonText: '<a href="//jailbreak-update.github.io/Banner/Inicio/Inicio.html" style="text-decoration: none; color: white;">No</a>',
-					backdrop: true,
-				  html: '<h2>You selected language English is correct</h2>',
-				})
-			  } else {
-				resolve('Necesitas seleccionar un idioma')
-			  }
-			  
-			})
-		  }
-	})
-})
-
-$("#btn1").click(function(){
-    const { value: idioma } = Swal.fire({
-		allowOutsideClick: false,
-		allowEscapeKey: false,
-		allowEnterKey: false,
-	  confirmButtonText: 'OK',
-	  backdrop: true,
-	  imageUrl: 'https://jailbreak-update.github.io/img/1c094e21-8ac0-4efc-ba65-2a494e28924d.jfif',
-	  imageHeight: 300,
-	  html: '<a href="https://t.me/joinchat/VoeYI1-XmFc2N2Fh" target="_blank">https://t.me/joinchat/VoeYI1-XmFc2N2Fh</a> ',
-		
-		
-	})
-})

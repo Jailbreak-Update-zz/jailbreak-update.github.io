@@ -1,9 +1,9 @@
-*{
+/**{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: arial;
-}
+}*/
 
 header{
     width: 100%;
@@ -20,7 +20,7 @@ header{
     position:relative;
 }*/
 
-.content-search{
+/*.content-search{
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -57,7 +57,24 @@ tbody tr td a:hover{
 
 #table_length, #table_filter, #table_info, #table_paginate{
     display: none;
+}*/
+
+.form-control {
+    background: #9494945e;
+    margin: 10px;
+    padding: 9.5px;
+    left: 0px;
+    border-radius: 20px;
+    width: 30%;
+    margin-bottom: 0px;
+    margin-top: 15px;
 }
+
+.form-search{
+    margin: 10px auto;
+}
+
+::placeholder { color: rgb(0, 0, 0); }
 
 
 
