@@ -76,6 +76,18 @@ tbody tr td a:hover{
 
 ::placeholder { color: rgb(0, 0, 0); }
 
+/* Scroll */
+body::-webkit-scrollbar{
+    width: 7px;
+  
+  }
+  
+  body::-webkit-scrollbar-thumb{
+    background: #f72b00;
+  border-radius: 5px;
+  
+  }
+
 
 
 
