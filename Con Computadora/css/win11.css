@@ -1,0 +1,50 @@
+.decrip, .decrip2{
+    margin: 10px;
+}
+
+.decrip2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.foto{
+    width: 595px;
+
+}
+
+.kilo{
+    margin-right: 15px;
+}
+
+.kil, .kil2{
+    padding: 1px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.kil3{
+    padding: 1px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.kil{
+    margin-bottom: 1px;
+
+}
+
+.list{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.ulti{
+    float: right;
+}
