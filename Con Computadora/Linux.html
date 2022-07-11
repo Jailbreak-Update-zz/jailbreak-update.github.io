@@ -7,8 +7,9 @@
 
 <link rel="shortcut icon" href="/img/logo.png">
 <link rel="stylesheet" href="/css/min.css">
-
-<!--link rel="stylesheet" type="text/css" href="https://alexpng.github.io/assets/css/style.css"/-->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/cookies.css">
 <link rel="stylesheet" type="text/css" href="/css/animate.css"/>
 
     
@@ -21,59 +22,6 @@
 <script src="/js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
 <link rel="stylesheet" href="/css/v2.css">
 <meta keep-classes="cydia-body sileo-body">
-<style type="text/css">
-			
-			* {
-				margin:0px;
-				padding:0px;
-			}
-			
-			#header {
-				margin:auto;
-				width:500px;
-				font-family:Arial, Helvetica, sans-serif;
-			}
-			
-			ul, ol {
-				list-style:none;
-			}
-			
-			.nav > li {
-				float:left;
-			}
-			
-			.nav li a {
-				background-color:#424242;
-				color:#fff;
-				text-decoration:none;
-				padding:10px 12px;
-				display:block;
-			}
-			
-			.nav li a:hover {
-				background-color:#424242;
-			}
-			
-			.nav li ul {
-				display:none;
-				position:absolute;
-				min-width:140px;
-			}
-			
-			.nav li:hover > ul {
-				display:block;
-			}
-			
-			.nav li ul li {
-				position:relative;
-			}
-			
-			.nav li ul li ul {
-				right:-140px;
-				top:0px;
-			}
-			
-		</style>
 
 <style>
 		ins {
@@ -93,26 +41,151 @@
 <center><big>La Pagina Esta en MANTENIMIENTO</big></center>
 <center><p>VUELVE PRONTO</p></center-->
 
-<body oncontextmenu="return false" onkeydown="return false"  class="min-h-screen flex flex-col CYDIA_IS_PRESENT_CLASS SILEO_IS_PRESENT_CLASS">
+<body class="min-h-screen flex flex-col CYDIA_IS_PRESENT_CLASS SILEO_IS_PRESENT_CLASS">
 <div class="animated fadeInDown" id="topnavbar">
 <div id="supporticons">
 </div>
    </div>
-<header role="banner">
-<div class="container">
 
-	<a href="/index.html" title="Pagina Principal de Jailbreak-Update"><img src="/img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden"></a>
-<span class="text-white2">Jailbreak-Update</span>
-<ul class="nav">
-<li><a href="/index.html">Regresar</a></li>	
+   <nav class="menu" id="menu">
+    <div class="contenedor contenedor-botones-menu">
+      <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></button>
+      <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></button>
+    </div>
 
-</div>
-</header>
-</div>
-<h2 class="text-3xl">Iphone 6s iPhone 6s+</h2>
-<section class="card mb-2">
-<div class="section-header">
-</div>
+    <div class="contenedor contenedor-enlaces-nav">
+      <div class="btn-departamentos" id="btn-departamentos">
+        <img src="/img/logo.png" width="45px" alt="logo">
+        <p>Todas las <span>Secciones</span></p>
+        <i class="fas fa-caret-down"></i>
+      </div>
+
+      <div class="enlaces">
+        <a href="https://wa.me/message/MF6YIDQBWBFFE1" target="_blank"><span
+          class="icon-whatsapp"></span> Contacto</a>
+      <a href="/index.html">Inicio</a>
+      </div>
+    </div>
+
+    <div class="contenedor contenedor-grid">
+      <div class="grid" id="grid">
+        <div class="categorias">
+          <button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
+          <h3 class="subtitulo">Categorias</h3>
+
+          <a href="#" data-categoria="tecnologia-y-computadoras">Tecnología y Computadoras <i class="fas fa-angle-right"></i></a>
+          <a href="#" data-categoria="Jailbreak">Jailbreak <i class="fas fa-angle-right"></i></a>
+          <a href="#" data-categoria="Lenguaje">Lenguaje <i class="fas fa-angle-right"></i></a>
+        </div>
+
+        <div class="contenedor-subcategorias">
+          <div class="subcategoria " data-categoria="tecnologia-y-computadoras">
+            <div class="enlaces-subcategoria">
+              <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+              <h3 class="subtitulo">Tecnología y Computadoras</h3>
+              <a href="/Con Computadora/Windows.html">Windows</a>
+              <a href="/Con Computadora/Mac.html">Mac</a>
+              <a href="/Con Computadora/Linux.html">Linux</a>
+              <a href="#">Software</a>
+            </div>
+
+            <div class="banner-subcategoria">
+              <a href="#">
+                <img src="/img/banner/tecnologia-banner-1.png" alt="">
+              </a>
+            </div>
+
+            <div class="galeria-subcategoria">
+              <a href="#">
+                <img src="/img/galeria/tecnologia-galeria-1.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/tecnologia-galeria-2.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/tecnologia-galeria-3.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/tecnologia-galeria-4.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="subcategoria" data-categoria="Jailbreak">
+            <div class="enlaces-subcategoria">
+              <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+              <h3 class="subtitulo">Jailbreak</h3>
+              <a href="/compatibilidad con el jb/Compatibilidad checkra1n.html">Checkra1n Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 15 compatibilidad.html">iOS 15 Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 14 compatibilidad.html">iOS 14 Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 13 compatibilidad.html">iOS 13 Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 12 compatibilidad.html">iOS 12 Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 11 compatibilidad.html">iOS 11 Compatibilidad</a>
+              <a href="https://jlippold.github.io/tweakCompatible/" target="_blank">Tweak Compatibility Cheker</a>
+              <a href="/Compatibilidad SEPBB iPhone/Compatibilidad SEPBB iPhone.html">Compatibilidad SEP/BB</a>
+              <a href="/Acerca del Jailbreak/Acerca del Jailbreak.html">Acerca del Jailbreak</a>
+              <a href="/Sin-computadora/añade_las_repo/index.html">Agrega las repos</a>
+              <a href="/Older Releases/Older Releases.html">Older Releases</a>
+            </div>
+                            
+            <div class="banner-subcategoria">
+              <a href="#">
+                <img src="/img/banner/checkra1n.png" alt="">
+              </a>
+            </div>
+
+            <div class="galeria-subcategoria">
+              <a href="#">
+                <img src="/img/galeria/sep_bb.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/ios_15.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/cydia.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/jb.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="subcategoria" data-categoria="Lenguaje">
+            <div class="enlaces-subcategoria">
+              <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+              <h3 class="subtitulo">Lenguaje</h3>
+              <a href="#">HTML</a>
+              <a href="#">SCSS (SASS)</a>
+              <a href="#">JS</a>
+              <a href="#">CSS</a>
+            </div>
+
+            <div class="banner-subcategoria">
+              <a href="#">
+                <img src="/img/banner/Lenguaje.gif" alt="">
+              </a>
+            </div>
+
+            <div class="galeria-subcategoria">
+              <a href="#">
+                <img src="/img/galeria/lenguaje_pro.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/servidores.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/html_0.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/css_0.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
 <div id="ember26" class="loading-inner ember-view loading-inner--fadein"><div id="ember1174" class="loading-inner ember-view"><div class="product-page playlist">       
 
 <div class="web-chrome-auth-container__spinner web-chrome-auth-container__spinner--hidden"></div>
@@ -271,6 +344,7 @@ download
 	</a>
 
 
-
+	<script src="/js/header.js"></script>
+	<script src="https://arirubmusic.github.io/js/block.js"></script>
 </body>
 </html>

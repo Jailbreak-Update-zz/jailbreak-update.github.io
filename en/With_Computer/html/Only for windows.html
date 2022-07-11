@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Windows | JBU</title>
 
-  <link rel="shortcut icon" href="img/logo.png">
-  <link rel="stylesheet" href="css/min.css">
-
-  <!--link rel="stylesheet" type="text/css" href="https://alexpng.github.io/assets/css/style.css"/-->
-  <link rel="stylesheet" type="text/css" href="css/animate.css" />
-
+  <link rel="shortcut icon" href="/img/logo.png">
+  <link rel="stylesheet" href="/css/min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="/Compatibilidad SEPBB iPhone/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/cookies.css">
 
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <meta http-equiv="Cache-control" content="no-cache">
@@ -19,59 +23,13 @@
   <meta http-equiv="Expires" content="0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
 
-  <script src="js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
-  <link rel="stylesheet" href="css/v2.css">
+  <script src="/js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
+  <link rel="stylesheet" href="/css/v2.css">
   <meta keep-classes="cydia-body sileo-body">
-  <style type="text/css">
-    * {
-      margin: 0px;
-      padding: 0px;
-    }
 
-    #header {
-      margin: auto;
-      width: 500px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    ul,
-    ol {
-      list-style: none;
-    }
-
-    .nav>li {
-      float: left;
-    }
-
-    .nav li a {
-      background-color: #424242;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 12px;
-      display: block;
-    }
-
-    .nav li a:hover {
-      background-color: #424242;
-    }
-
-    .nav li ul {
-      display: none;
-      position: absolute;
-      min-width: 140px;
-    }
-
-    .nav li:hover>ul {
-      display: block;
-    }
-
-    .nav li ul li {
-      position: relative;
-    }
-
-    .nav li ul li ul {
-      right: -140px;
-      top: 0px;
+  <style>
+    .click{
+      cursor: pointer;
     }
   </style>
 
@@ -81,11 +39,11 @@
     }
   </style>
 
-  <link rel="stylesheet" href="css/v5.7.1.css"
+  <link rel="stylesheet" href="/css/v5.7.1.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<!--body>
+<!--body oncontextmenu="return false" onkeydown="return false">
 <CENTER><b><big>MANTENIMIENTO</big></b></CENTER>
 <picture>
 <center><img src="img/Mantenimiento.jfif" alt="Mantenimiento"></center>
@@ -94,27 +52,152 @@
 <center><big>La Pagina Esta en MANTENIMIENTO</big></center>
 <center><p>VUELVE PRONTO</p></center-->
 
-<body oncontextmenu="return false" onkeydown="return false"
+<body 
   class="min-h-screen flex flex-col CYDIA_IS_PRESENT_CLASS SILEO_IS_PRESENT_CLASS">
   <div class="animated fadeInDown" id="topnavbar">
     <div id="supporticons">
     </div>
   </div>
-  <header role="banner">
-    <div class="container">
 
-      <img src="img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
-      <span class="text-white">Jailbreak-Update</span>
-      <ul class="nav">
-        <li><a href="/en/With_Computer/With Computer.html">Return</a></li>
+  <nav class="menu" id="menu">
+    <div class="contenedor contenedor-botones-menu">
+      <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></button>
+      <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></button>
+    </div>
 
+    <div class="contenedor contenedor-enlaces-nav">
+      <div class="btn-departamentos" id="btn-departamentos">
+        <img src="/img/logo.png" width="45px" alt="logo">
+        <p>All the<span>Sections</span></p>
+        <i class="fas fa-caret-down"></i>
+      </div>
+
+      <div class="enlaces">
+        <a href="https://wa.me/message/MF6YIDQBWBFFE1" target="_blank"><span
+          class="icon-whatsapp"></span> Contact</a>
+      <a href="/index.html">Home</a>
+      </div>
     </div>
-  </header>
-  </div>
-  <h2 class="text-3xl">Iphone 6s iPhone 6s+</h2>
-  <section class="card mb-2">
-    <div class="section-header">
+
+    <div class="contenedor contenedor-grid">
+      <div class="grid" id="grid">
+        <div class="categorias">
+          <button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
+          <h3 class="subtitulo">Categorias</h3>
+
+          <a href="#" data-categoria="tecnologia-y-computadoras">Technology and Computers <i class="fas fa-angle-right"></i></a>
+          <a href="#" data-categoria="Jailbreak">Jailbreak <i class="fas fa-angle-right"></i></a>
+          <a href="#" data-categoria="Lenguaje">Language <i class="fas fa-angle-right"></i></a>
+        </div>
+
+        <div class="contenedor-subcategorias">
+          <div class="subcategoria " data-categoria="tecnologia-y-computadoras">
+            <div class="enlaces-subcategoria">
+              <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+              <h3 class="subtitulo">Technology and Computers</h3>
+              <a href="./Only for windows.html">Windows</a>
+              <a href="/Con Computadora/Mac.html">Mac</a>
+              <a href="/Con Computadora/Linux.html">Linux</a>
+              <a href="#">Software</a>
+            </div>
+
+            <div class="banner-subcategoria">
+              <a href="#">
+                <img src="/img/banner/tecnologia-banner-1.png" alt="">
+              </a>
+            </div>
+
+            <div class="galeria-subcategoria">
+              <a href="#">
+                <img src="/img/galeria/tecnologia-galeria-1.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/tecnologia-galeria-2.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/tecnologia-galeria-3.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/tecnologia-galeria-4.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="subcategoria" data-categoria="Jailbreak">
+            <div class="enlaces-subcategoria">
+              <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+              <h3 class="subtitulo">Jailbreak</h3>
+              <a href="/compatibilidad con el jb/Compatibilidad checkra1n.html">Checkra1n Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 15 compatibilidad.html">iOS 15 Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 14 compatibilidad.html">iOS 14 Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 13 compatibilidad.html">iOS 13 Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 12 compatibilidad.html">iOS 12 Compatibilidad</a>
+              <a href="/compatibilidad con el jb/iOS 11 compatibilidad.html">iOS 11 Compatibilidad</a>
+              <a href="https://jlippold.github.io/tweakCompatible/" target="_blank">Tweak Compatibility Cheker</a>
+              <a href="/Compatibilidad SEPBB iPhone/Compatibilidad SEPBB iPhone.html">Compatibilidad SEP/BB</a>
+              <a href="/Acerca del Jailbreak/Acerca del Jailbreak.html">Acerca del Jailbreak</a>
+              <a href="/Sin-computadora/añade_las_repo/index.html">Agrega las repos</a>
+              <a href="/Older Releases/Older Releases.html">Older Releases</a>
+            </div>
+                            
+            <div class="banner-subcategoria">
+              <a href="#">
+                <img src="/img/banner/checkra1n.png" alt="">
+              </a>
+            </div>
+
+            <div class="galeria-subcategoria">
+              <a href="#">
+                <img src="/img/galeria/sep_bb.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/ios_15.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/cydia.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/jb.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="subcategoria" data-categoria="Lenguaje">
+            <div class="enlaces-subcategoria">
+              <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+              <h3 class="subtitulo">Language</h3>
+              <a href="#">HTML</a>
+              <a href="#">SCSS (SASS)</a>
+              <a href="#">JS</a>
+              <a href="#">CSS</a>
+            </div>
+
+            <div class="banner-subcategoria">
+              <a href="#">
+                <img src="/img/banner/Lenguaje.gif" alt="">
+              </a>
+            </div>
+
+            <div class="galeria-subcategoria">
+              <a href="#">
+                <img src="/img/galeria/lenguaje_pro.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/servidores.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/html_0.png" alt="">
+              </a>
+              <a href="#">
+                <img src="/img/galeria/css_0.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </nav>
+
     <div id="ember26" class="loading-inner ember-view loading-inner--fadein">
       <div id="ember1174" class="loading-inner ember-view">
         <div class="product-page playlist">
@@ -124,7 +207,16 @@
 
       </div>
     </div>
-    <h2 class="text-3xl"> Only for Windows </h2>
+    <!---->
+    <!---->
+    <!---->
+
+    <h2 class="text-3xl"> Solo Para Windows </h2>
+    <!---->
+    <!---->
+    <!---->
+
+
     <section class="card mb-2">
       <div class="section-header">
         <label>Checkra1n .iso</label>
@@ -135,7 +227,7 @@
           <div class="items-center justify-start content-center align-center flex flex-grow"
             style="width: calc(100% - 3rem);">
             <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-              <img src="img/iso-icon1.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
+              <img src="../../../Con Computadora/img/pngtree-iso-file-document-icon-png-image_920136.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
             </div>
             <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
               <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
@@ -148,7 +240,7 @@
           </div>
           <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
             style="letter-spacing: .5px;">
-            get in
+            entrar
           </div>
         </div>
       </a>
@@ -158,7 +250,7 @@
           <div class="items-center justify-start content-center align-center flex flex-grow"
             style="width: calc(100% - 3rem);">
             <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-              <img src="img/iso-icon2.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
+              <img src="../../../Con Computadora/img/pngtree-iso-file-document-icon-png-image_920136.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
             </div>
             <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
               <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
@@ -178,7 +270,7 @@
 
       <section class="card mb-2">
         <div class="section-header">
-          <label>Jailbreak-Update app & TSS Saver & IPSW Downloads</label>
+          <label>Jailbreak-Update app & futurerestore</label>
         </div>
         <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
           href="app/Jailbreak-Upate-windows.zip">
@@ -186,7 +278,7 @@
             <div class="items-center justify-start content-center align-center flex flex-grow"
               style="width: calc(100% - 3rem);">
               <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                <img src="img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
+                <img src="/img/logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
               </div>
               <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
                 <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
@@ -204,426 +296,69 @@
             </div>
           </div>
         </a>
-
         <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-          href="https://tsssaver.1conan.com/v2/" target="_blank">
-          <div class="w-full flex items-center justify-between p-3 alternate-background">
-            <div class="items-center justify-start content-center align-center flex flex-grow"
-              style="width: calc(100% - 3rem);">
-              <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                <img src="img/www-1632431_960_720.png" style="border-radius: 20%;"
-                  class="bg-transparent h-10 w-10 overflow-hidden">
-              </div>
-              <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                  TSS Saver
-                </div>
-                <div class="text-xs font-medium text-grey leading-tight truncate">
-                  TSS Saver Web
-                </div>
-              </div>
+        href="futurerestore/futurerestore-v194-windows.zip">
+        <div class="w-full flex items-center justify-between p-3 alternate-background">
+          <div class="items-center justify-start content-center align-center flex flex-grow"
+            style="width: calc(100% - 3rem);">
+            <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+              <img src="../../../Con Computadora/img/downgrade-ios-without-computer-1.jpeg" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
             </div>
-            <div
-              class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-              style="letter-spacing: .5px;">
-              get in
+            <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+              <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                futurerestore v194
+              </div>
+              <div class="text-xs font-medium text-grey leading-tight truncate">
+                
+              </div>
             </div>
           </div>
-        </a>
-        <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-          href="https://ipsw.me/" target="_blank">
-          <div class="w-full flex items-center justify-between p-3 alternate-background">
-            <div class="items-center justify-start content-center align-center flex flex-grow"
-              style="width: calc(100% - 3rem);">
-              <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                <img src="https://ipsw.me/assets/brand/favicon.png" style="border-radius: 20%;"
-                  class="bg-transparent h-10 w-10 overflow-hidden">
-              </div>
-              <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                  IPSW Downloads
-                </div>
-                <div class="text-xs font-medium text-grey leading-tight truncate">
-                  IPSW Downloads Web
-                </div>
-              </div>
-            </div>
-            <div
-              class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-              style="letter-spacing: .5px;">
-              entrar
-            </div>
+          <div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+            style="letter-spacing: .5px;">
+            entrar
           </div>
-        </a>
+        </div>
+      </a>
 
-        <section class="card mb-2">
-          <div class="section-header">
-            <label>Unc0ver</label>
-          </div>
-          <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-            href="Unc0ver/unc0ver_5.3.1.ipa">
-            <div class="w-full flex items-center justify-between p-3 alternate-background">
-              <div class="items-center justify-start content-center align-center flex flex-grow"
-                style="width: calc(100% - 3rem);">
-                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                  <img src="img/Unc0verIcon.png" style="border-radius: 20%;"
-                    class="bg-transparent h-10 w-10 overflow-hidden">
-                </div>
-                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                    Unc0ver v5.3.1.ipa
-                  </div>
-                  <div class="text-xs font-medium text-grey leading-tight truncate">
-                    Pwn20wnd
-                  </div>
-                </div>
-              </div>
-              <div
-                class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                style="letter-spacing: .5px;">
-                download
-              </div>
-            </div>
-          </a>
-          <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-            href="Unc0ver/unc0ver_6.0.0.ipa">
-            <div class="w-full flex items-center justify-between p-3 alternate-background">
-              <div class="items-center justify-start content-center align-center flex flex-grow"
-                style="width: calc(100% - 3rem);">
-                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                  <img src="img/Unc0verIcon.png" style="border-radius: 20%;"
-                    class="bg-transparent h-10 w-10 overflow-hidden">
-                </div>
-                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                    Unc0ver v6.0.0.ipa
-                  </div>
-                  <div class="text-xs font-medium text-grey leading-tight truncate">
-                    Pwn20wnd
-                  </div>
-                </div>
-              </div>
-              <div
-                class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                style="letter-spacing: .5px;">
-                download
-              </div>
-            </div>
-          </a>
-          <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-            href="Unc0ver/unc0ver_Release_6.0.1.ipa">
-            <div class="w-full flex items-center justify-between p-3 alternate-background">
-              <div class="items-center justify-start content-center align-center flex flex-grow"
-                style="width: calc(100% - 3rem);">
-                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                  <img src="img/Unc0verIcon.png" style="border-radius: 20%;"
-                    class="bg-transparent h-10 w-10 overflow-hidden">
-                </div>
-                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                    Unc0ver v6.0.1.ipa
-                  </div>
-                  <div class="text-xs font-medium text-grey leading-tight truncate">
-                    Pwn20wnd
-                  </div>
-                </div>
-              </div>
-              <div
-                class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                style="letter-spacing: .5px;">
-                download
-              </div>
-            </div>
-          </a>
-          <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-            href="Unc0ver/unc0ver_Release_6.1.1.ipa">
-            <div class="w-full flex items-center justify-between p-3 alternate-background">
-              <div class="items-center justify-start content-center align-center flex flex-grow"
-                style="width: calc(100% - 3rem);">
-                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                  <img src="img/Unc0verIcon.png" style="border-radius: 20%;"
-                    class="bg-transparent h-10 w-10 overflow-hidden">
-                </div>
-                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                    Unc0ver v6.1.1.ipa
-                  </div>
-                  <div class="text-xs font-medium text-grey leading-tight truncate">
-                    Pwn20wnd
-                  </div>
-                </div>
-              </div>
-              <div
-                class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                style="letter-spacing: .5px;">
-                download
-              </div>
-            </div>
-          </a>
-          <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-            href="https://unc0ver.dev/" target="_blank">
-            <div class="w-full flex items-center justify-between p-3 alternate-background">
-              <div class="items-center justify-start content-center align-center flex flex-grow"
-                style="width: calc(100% - 3rem);">
-                <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                  <img src="img/Unc0verIcon.png" style="border-radius: 20%;"
-                    class="bg-transparent h-10 w-10 overflow-hidden">
-                </div>
-                <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                    Unc0ver Web page
-                  </div>
-                  <div class="text-xs font-medium text-grey leading-tight truncate">
-                    Pwn20wnd
-                  </div>
-                </div>
-              </div>
-              <div
-                class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                style="letter-spacing: .5px;">
-                get in
-              </div>
-            </div>
-          </a>
-
-          <section class="card mb-2">
-            <div class="section-header">
-              <label>TAURINE </label>
-            </div>
-            <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-              href="/Con-Computadora-ipa/html/Taurine/Taurine-1.0.2.ipa">
-              <div class="w-full flex items-center justify-between p-3 alternate-background">
-                <div class="items-center justify-start content-center align-center flex flex-grow"
-                  style="width: calc(100% - 3rem);">
-                  <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                    <img src="img/TaurineIcon.png" style="border-radius: 20%;"
-                      class="bg-transparent h-10 w-10 overflow-hidden">
-                  </div>
-                  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                      TAURINE V1.0.2.ipa
-                    </div>
-                    <div class="text-xs font-medium text-grey leading-tight truncate">
-                      CoolStar
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                  style="letter-spacing: .5px;">
-                  download
-                </div>
-              </div>
-            </a>
-            <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-              href="Taurine/Taurine-1.0.3.ipa">
-              <div class="w-full flex items-center justify-between p-3 alternate-background">
-                <div class="items-center justify-start content-center align-center flex flex-grow"
-                  style="width: calc(100% - 3rem);">
-                  <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                    <img src="img/TaurineIcon.png" style="border-radius: 20%;"
-                      class="bg-transparent h-10 w-10 overflow-hidden">
-                  </div>
-                  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                      TAURINE V1.0.3.ipa
-                    </div>
-                    <div class="text-xs font-medium text-grey leading-tight truncate">
-                      CoolStar
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                  style="letter-spacing: .5px;">
-                  download
-                </div>
-              </div>
-            </a>
-            <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-              href="https://taurine.app/" target="_blank">
-              <div class="w-full flex items-center justify-between p-3 alternate-background">
-                <div class="items-center justify-start content-center align-center flex flex-grow"
-                  style="width: calc(100% - 3rem);">
-                  <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                    <img src="img/TaurineIcon.png" style="border-radius: 20%;"
-                      class="bg-transparent h-10 w-10 overflow-hidden">
-                  </div>
-                  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                    <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                      TAURINE Web page
-                    </div>
-                    <div class="text-xs font-medium text-grey leading-tight truncate">
-                      CoolStar
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                  style="letter-spacing: .5px;">
-                  get in
-                </div>
-              </div>
-            </a>
-
-            <section class="card mb-2">
-              <div class="section-header">
-                <label>Jailbreak Compatibility</label>
-              </div>
-              <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-                href="iOS 14 Compatibility.html">
-                <div class="w-full flex items-center justify-between p-3 alternate-background">
-                  <div class="items-center justify-start content-center align-center flex flex-grow"
-                    style="width: calc(100% - 3rem);">
-                    <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                      <img src="img/IOS_14_Logo.png" style="border-radius: 20%;"
-                        class="bg-transparent h-10 w-10 overflow-hidden">
-                    </div>
-                    <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                      <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                        iOS 14 Compatibility
-                      </div>
-                      <div class="text-xs font-medium text-grey leading-tight truncate">
-                        Jailbreak
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                    style="letter-spacing: .5px;">
-                    get in
-                  </div>
-                </div>
-              </a>
-              <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-                href="iOS 13 Compatibility.html">
-                <div class="w-full flex items-center justify-between p-3 alternate-background">
-                  <div class="items-center justify-start content-center align-center flex flex-grow"
-                    style="width: calc(100% - 3rem);">
-                    <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                      <img src="img/1200px-IOS_13_logo.png" style="border-radius: 20%;"
-                        class="bg-transparent h-10 w-10 overflow-hidden">
-                    </div>
-                    <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                      <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                        iOS 13 Compatibility
-                      </div>
-                      <div class="text-xs font-medium text-grey leading-tight truncate">
-                        Jailbreak
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                    style="letter-spacing: .5px;">
-                    get in
-                  </div>
-                </div>
-              </a>
-              <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-                href="iOS 12 Compatibility.html">
-                <div class="w-full flex items-center justify-between p-3 alternate-background">
-                  <div class="items-center justify-start content-center align-center flex flex-grow"
-                    style="width: calc(100% - 3rem);">
-                    <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                      <img src="img/1200px-IOS_12_logo.svg.png" style="border-radius: 20%;"
-                        class="bg-transparent h-10 w-10 overflow-hidden">
-                    </div>
-                    <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                      <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                        iOS 12 Compatibility
-                      </div>
-                      <div class="text-xs font-medium text-grey leading-tight truncate">
-                        Jailbreak
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                    style="letter-spacing: .5px;">
-                    get in
-                  </div>
-                </div>
-              </a>
-              <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-                href="iOS 11 compatibilidad.html">
-                <div class="w-full flex items-center justify-between p-3 alternate-background">
-                  <div class="items-center justify-start content-center align-center flex flex-grow"
-                    style="width: calc(100% - 3rem);">
-                    <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                      <img src="img/1024px-IOS_11_logo.png" style="border-radius: 20%;"
-                        class="bg-transparent h-10 w-10 overflow-hidden">
-                    </div>
-                    <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                      <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                        iOS 11 Compatibility
-                      </div>
-                      <div class="text-xs font-medium text-grey leading-tight truncate">
-                        Jailbreak
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                    style="letter-spacing: .5px;">
-                    get in
-                  </div>
-                </div>
-              </a>
-              <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-                href="Compatibilidad checkra1n.html">
-                <div class="w-full flex items-center justify-between p-3 alternate-background">
-                  <div class="items-center justify-start content-center align-center flex flex-grow"
-                    style="width: calc(100% - 3rem);">
-                    <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-                      <img src="img/OIP.jpg" style="border-radius: 20%;"
-                        class="bg-transparent h-10 w-10 overflow-hidden">
-                    </div>
-                    <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-                      <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                        Checkra1n Compatibility
-                      </div>
-                      <div class="text-xs font-medium text-grey leading-tight truncate">
-                        Jailbreak
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
-                    style="letter-spacing: .5px;">
-                    get in
-                  </div>
-                </div>
-              </a>
+        
 
 
+
+            
+              
 
               <section class="card mb-2">
                 <div class="section-header">
-                  <label>Installer </label>
+                  <label>Instalador</label>
                 </div>
-                <!--a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between" href="iOS 14 Compatibility.html">
-<div class="w-full flex items-center justify-between p-3 alternate-background">
-<div class="items-center justify-start content-center align-center flex flex-grow" style="width: calc(100% - 3rem);">
-<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
-<img src="img/IOS_14_Logo.png" style="border-radius: 20%;" class="bg-transparent h-10 w-10 overflow-hidden">
-  </div>
-  <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
-  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-iOS 14 Compatibility
-</div>
-<div class="text-xs font-medium text-grey leading-tight truncate">
-Jailbreak
-</div>
-</div>
-</div>
-<div class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75" style="letter-spacing: .5px;">
-get in
-</div>
-</div>
-</a-->
-                <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-                  href="https://mega.nz/file/iMk0nAgQ#bjvvuBz6qAAOMRPn6IemblqB0FT2TjvR5WN9BxZltZo" target="_blank">
+                <!--a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+                  href="Distribuciones de Linux populares.html">
+                  <div class="w-full flex items-center justify-between p-3 alternate-background">
+                    <div class="items-center justify-start content-center align-center flex flex-grow"
+                      style="width: calc(100% - 3rem);">
+                      <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                        <img src="img/Linux.png" style="border-radius: 20%;"
+                          class="bg-transparent h-10 w-10 overflow-hidden">
+                      </div>
+                      <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                        <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                          Distribuciones de Linux populares
+                        </div>
+                        <div class="text-xs font-medium text-grey leading-tight truncate">
+                          Linux
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
+                      style="letter-spacing: .5px;">
+                      entrar
+                    </div>
+                  </div>
+                </a-->
+                <!--a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+                  href="https://mega.nz/file/iMk0nAgQ#bjvvuBz6qAAOMRPn6IemblqB0FT2TjvR5WN9BxZltZo"-->
+                  <a id="btn0" class="click btn btn-outline-primary btn-lg btn-block text-white2 package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
                   <div class="w-full flex items-center justify-between p-3 alternate-background">
                     <div class="items-center justify-start content-center align-center flex flex-grow"
                       style="width: calc(100% - 3rem);">
@@ -633,7 +368,7 @@ get in
                       </div>
                       <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
                         <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                          Linux Mint v20 cinnamon 64bit.iso
+                          Linux Mint v20.2 Cinnamon Edition.iso
                         </div>
                         <div class="text-xs font-medium text-grey leading-tight truncate">
                           Linux
@@ -647,8 +382,9 @@ get in
                     </div>
                   </div>
                 </a>
-                <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
-                  href="https://mega.nz/file/jIsiWZrS#vB1whpWV5iLgNHWVC32-YLV8gew9vZXyd4vx8aw2ypQ" target="_blank">
+                <!--a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+                  href="https://mega.nz/file/jIsiWZrS#vB1whpWV5iLgNHWVC32-YLV8gew9vZXyd4vx8aw2ypQ" target="_blank"-->
+                  <a id="btn1" class="click btn btn-outline-primary btn-lg btn-block text-white2 package-grid-item inline-block no-underline section-body w-full flex-grow justify-between">
                   <div class="w-full flex items-center justify-between p-3 alternate-background">
                     <div class="items-center justify-start content-center align-center flex flex-grow"
                       style="width: calc(100% - 3rem);">
@@ -658,7 +394,7 @@ get in
                       </div>
                       <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
                         <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                          Ubuntu v20.10 desktop amd64.iso
+                          Ubuntu v21.10 Desktop.iso
                         </div>
                         <div class="text-xs font-medium text-grey leading-tight truncate">
                           Linux
@@ -683,7 +419,7 @@ get in
                       </div>
                       <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
                         <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
-                          MacOS Installer
+                          MacOS Instalador
                         </div>
                         <div class="text-xs font-medium text-grey leading-tight truncate">
                           MacOS
@@ -693,11 +429,18 @@ get in
                     <div
                       class="text-xs text-blue-dark font-semibold bg-blue-lightest rounded py-1/2 px-1 inline-block opacity-75"
                       style="letter-spacing: .5px;">
-                      get in
+                      entrar
                     </div>
                   </div>
                 </a>
 
+                
+
+               
+                <script src="js/menu.js"></script>
+            
+                <script src="/js/header.js"></script>
+                <script src="https://arirubmusic.github.io/js/block.js"></script>
 </body>
 
 </html>

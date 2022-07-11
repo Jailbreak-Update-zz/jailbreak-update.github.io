@@ -101,3 +101,8 @@
         display: initial; 
     }*/
 }
+
+.iheader{
+    width: 100% !important;
+    height: 100px !important;
+}
