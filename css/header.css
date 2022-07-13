@@ -122,3 +122,7 @@ float: left;
   p {
 	padding-block: 1.5em;
   }
+
+  .navigation__item{
+    cursor: pointer;
+}

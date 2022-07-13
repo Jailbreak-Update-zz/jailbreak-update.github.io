@@ -1,13 +1,21 @@
-import throttle from "https://cdn.skypack.dev/lodash@4/throttle";
+const home = document.querySelector('#home');
+const instagram = document.querySelector('#instagram');
+const twitter = document.querySelector('#twitter');
+const tiktok = document.querySelector('#tiktok');
 
-function onScroll() {
-  if (window.pageYOffset) {
-    $$header.classList.add("is-active");
-  } else {
-    $$header.classList.remove("is-active");
-  }
-}
 
-const $$header = document.querySelector(".js-header");
+home.addEventListener('click', () => {
+  window.open("/index.html", "_self"); 
+});
 
-window.addEventListener("scroll", throttle(onScroll, 300));
+instagram.addEventListener('click', () => {
+window.open("https://www.instagram.com/arirub_music/", '_blank')
+});
+
+twitter.addEventListener('click', () => {
+window.open("https://twitter.com/ArirubMusic", '_blank')
+});
+
+tiktok.addEventListener('click', () => {
+window.open("https://www.tiktok.com/@arirubmusic", '_blank')
+});
