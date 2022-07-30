@@ -1,8 +1,0 @@
-Origin: Jailbreak-Update
-Label: Jailbreak-Update
-Suite: stable
-Version: 1.0
-Codename: Jailbreak-Update
-Architectures: iphoneos-arm
-Components: main
-Description: Repository Jailbreak-Update
