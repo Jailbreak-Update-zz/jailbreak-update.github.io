@@ -1,90 +1,423 @@
-<!DOCTYPE html>
-<html>
+<!Doctype html>
+<html Cache-Control: max-age=31536000 lang="es">
+
 <head>
-    <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <style>
-        body { margin: 0; padding: 0; }
-        html { height: 100%; cursor: default; }
-        body {
-            font-family: "Roboto", sans-serif; /* Default font */
-            width: 100%; height: 100%;
-            text-align: center;
-            display: table;
-            opacity: 1;
-            animation: fadein 3s forwards;
-        }
-        h2 {
-            font-weight: 300;
-            margin-bottom: 25px;
-        }
-        img {
-            width: 100px; /* Image width */
-            border: 0; /* For IE */
-            /* Aspect ratio of image, gives initial dimension to prevent text moving down once image is loaded */
-            /* When changing logo, change this also */
-        }
-        #main {
-            vertical-align: middle;
-            display: table-cell;
-        }
-        /* Progress bar */
-        #progress {
-            width: 45%; /* Bar width */
-            margin: 0 auto;
-            border-radius: 10px; /* Roundness */
-            background-color: #a8a8a8; /* Background colour */
-            padding: 7px 5px;
-            /* border: 5px solid #a8a8a8; Border */
-        }
-        #fill {
-            padding: 2px 0;
-            background-color: #b90600; /* Fill colour */
-            width: 80%; /* Bar percentage, change text below also */
-            border-radius: 25px; /* Roundness */
-            animation: proanimate 2s;
-        }
-        #barpercent h3 {
-            color: white; /* Bar percentage text colour */
-            margin: 0; padding: 0;
-            opacity: 1;
-            animation: fadein 3s forwards;
-        }
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<title>▷ Jailbreak-Update </title>
+	<meta name="description"
+		content="Sabras que es el Jailbreak, y aprenderas a hacer el Jailbreak en cualquier disposito de iOS, y tambien vas a saber quardar tus SHSH de cualquier dispositivo iOS.">
+	<meta name="author" content="Jailbreak Update">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://jailbreak-update.github.io/" />
+	<link rel="shortcut icon" href="img/logo.png">
+	<link rel="stylesheet" href="css/min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="css/cookies.css">
+	<script src="https://kit.fontawesome.com/d30eafd107.js" crossorigin="anonymous"></script>
+	<meta name="google-site-verification" content="V7eWHw7VP0TwbGwgrBxR2kWeq1zGg0Wm_SpBviV99rA" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/css/iheader.css">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
 
-        /* Fades in animation */
-        @keyframes fadein  {
-            from { opacity: 0; }
-        }
-        /* Animates bar on page load */
-        @keyframes proanimate {
-            from { width: 0%; }
-        }
+	<script src="js/d8o44pYfcbQdfEC7lNlLKoa4lVw.js"></script>
+	<link rel="stylesheet" href="css/v2.css">
+	<meta keep-classes="cydia-body sileo-body">
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
 
-        @media screen and (max-width:600px) {
-            img {
-                width: 60%;
-            }
-            h1 {
-                font-size: 1.3em;
-            }
-            h2 {
-                margin: 1.1em;
-                font-size: 1.1em;
-            }
-            #progress {
-                width: 80%; /* Bar width */
-            }
-        }
-    </style>
-    <title>Jailbreak-Update</title>
+		#header {
+			margin: auto;
+			width: 500px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		ul,
+		ol {
+			list-style: none;
+		}
+
+		.nav>li {
+			float: left;
+		}
+
+		.nav li a {
+			background-color: #424242;
+			color: #fff;
+			text-decoration: none;
+			padding: 10px 12px;
+			display: block;
+		}
+
+		.nav li a:hover {
+			background-color: #424242;
+		}
+
+		.nav li ul {
+			display: none;
+			position: absolute;
+		/*	min-width: 140px;*/
+		}
+
+		.nav li:hover>ul {
+			display: block;
+		}
+
+		.nav li ul li {
+			position: relative;
+		}
+
+		.nav li ul li ul {
+			/*right: -140px;*/
+			top: 0px;
+		}
+	</style>
+
+	<style>
+		ins {
+			background-color: transparent !important;
+		}
+	</style>
+
+	<!--script language="javascript">
+		step = 0;
+		function autoImgFlip() {
+			if (step < 2) { step++; }
+			else { step = 0; }
+			if (step == 0) { a.src = "/img/cambio constante img/Arian.png"; }
+			if (step == 1) { a.src = "/img/cambio constante img/AMU.png"; }
+			setTimeout("autoImgFlip()", 7000);
+			if (step == 2) { a.src = "/img/cambio constante img/AMO.png"; }
+
+		}
+
+	</!script-->
+
+
+
+<link rel="stylesheet" href="css/v5.7.1.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
-<body>
-    <div id="main">
-        <img src="img/logo.png" alt="Logo Image">
-        <h1>Jailbreak-Update</h1>
-        <h2>Sitio en construccion.. </h2>
-        <div id="progress"><div id="fill"><div id="barpercent"><h3>80%</h3></div></div></div>
-    </div>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+<body class="min-h-screen flex flex-col CYDIA_IS_PRESENT_CLASS SILEO_IS_PRESENT_CLASS">
+
+    <header class="header sticky sticky--top js-header">
+
+
+        <div class="grid">
+            
+          <nav class="navigation">
+
+            <ul class="navigation__list navigation__list--inline">
+                <img src="/img/logo.png" rel="noopener" class="logo-header" alt="">
+              <li class="navigation__item"><a href="/index.html" rel="noopener" class="navigation__link navigation__link--is-active"><span class="icon-home"></span> Home</a></li>
+			  <li class="navigation__item"><a href="https://twitter.com/JBUPDATE15" rel="noopener" target="_blank" class="navigation__link"><span class="icon-twitter"></span> Twitter</a></li> 
+			  <!--li class="navigation__item"><a id="JB" class="navigation__link">Jailbreak</a></!--li>
+              <li-- class="navigation__item"><a id="" class="navigation__link">Contact</a></li-->
+            </ul>
+          </nav>
+      
+        </div>
+      
+      </header>
+
+		</div>
+		<div id="ember26" class="loading-inner ember-view loading-inner--fadein">
+			<div id="ember1174" class="loading-inner ember-view">
+				<div class="product-page playlist">
+					<main class="container flex-grow flex-no-shrink">
+						<section id="homepage-hero" class="card md:mb-3">
+							<div class="section-body p-5 md:px-6 md:py-6">
+								<h2 class="font-semibold text-2xl mb-2 md:mb-3 text-white"><center><span class="element"></span></center></h2>
+                  <div id="cadenas-texto">
+                    <p>Bienvenid@ a Jailbreak-Update</p>
+                    <p>Bienvenid@ a JBU</p>
+                    <p>Bienvenid@ a JBUpdate</p>
+                    <p>Bienvenid@ a Jailbreak-Update</p>
+                  </div>
+                
+								
+								<p class="text-base font-medium text-white pb-1 opacity-95 leading-normal">
+								</p>
+									
+							</div>
+						</section>
+					</main>
+					<div class="web-chrome-auth-container__spinner web-chrome-auth-container__spinner--hidden"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<center>
+			<div id="animacion">
+				<div class="flip">
+					<div style="margin-top: 25px; margin-bottom: 25px; margin-left: 40px; margin-right: 40px"
+						class="row zoom animated swirlsileo">
+						<div class="sileoblur zoom">
+							<div class="sileoblur-inside">
+								<div id="imagen">
+									<img src="img/logo.png"  width="200" height="200">
+									<img src="img/Arian.png" id="a" width="150" height="150">
+								</div>
+							</div>
+						</div>
+						<div class="filter animated fadesileo" id="caption"></div>
+					</div>
+				</div>
+			</div>
+		</center>
+		<section class="card mb-2">
+			<div class="section-header">
+			  <label></label>
+			</div>
+
+
+
+			<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+			href="https://arianoso.github.io/" rel="noopener" target="_blank">
+			<div class="w-full flex items-center justify-between p-3 alternate-background">
+				<div class="items-center justify-start content-center align-center flex flex-grow"
+					style="width: calc(100% - 3rem);">
+					<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+						<img src="img/Arian.png" style="border-radius: 20%;"
+							class="bg-transparent h-10 w-10 overflow-hidden">
+					</div>
+					<div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+						<div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+							<div align="left">Arian 🇲🇽</div>
+						</div>
+						<div class="text-xs font-medium text-grey leading-tight truncate">
+						  @_arianoso_ (Fundador)
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</a>
+
+
+
+			<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+			href="https://arianoso.github.io/Las-Pelicualas-mas-Populares/" rel="noopener" target="_blank">
+			<div class="w-full flex items-center justify-between p-3 alternate-background">
+				<div class="items-center justify-start content-center align-center flex flex-grow"
+					style="width: calc(100% - 3rem);">
+					<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+						<img src="img/cambio constante img/AMO.png" style="border-radius: 20%;"
+							class="bg-transparent h-10 w-10 overflow-hidden">
+					</div>
+					<div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+						<div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+							<div align="left">Arirub Movies</div>
+						</div>
+						<div class="text-xs font-medium text-grey leading-tight truncate">
+						  @ArirubMovies
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</a>
+
+			<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+			href="https://arirubmusic.github.io/" rel="noopener" target="_blank">
+			<div class="w-full flex items-center justify-between p-3 alternate-background">
+				<div class="items-center justify-start content-center align-center flex flex-grow"
+					style="width: calc(100% - 3rem);">
+					<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+						<img src="img/cambio constante img/AMU.png" style="border-radius: 20%;"
+							class="bg-transparent h-10 w-10 overflow-hidden">
+					</div>
+					<div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+						<div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+							<div align="left">Arirub Music</div>
+						</div>
+						<div class="text-xs font-medium text-grey leading-tight truncate">
+						  @ArirubMusic
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</a>
+
+
+		<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+		href="https://www.youtube.com/channel/UCMmgpB1Z6nlXQAU2yP_JtGw" rel="noopener" target="_blank">
+		<div class="w-full flex items-center justify-between p-3 alternate-background">
+			<div class="items-center justify-start content-center align-center flex flex-grow"
+				style="width: calc(100% - 3rem);">
+				<div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+					<img src="img/cambio constante img/AGM.png" style="border-radius: 20%;"
+						class="bg-transparent h-10 w-10 overflow-hidden">
+				</div>
+				<div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+					<div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+						<div align="left">Arirub Games</div>
+					</div>
+					<div class="text-xs font-medium text-grey leading-tight truncate">
+					  @Arirub Games
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</a>
+
+
+      <a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+      href="https://jailbreak-update.github.io/password-generator/" rel="noopener" target="_blank">
+      <div class="w-full flex items-center justify-between p-3 alternate-background">
+          <div class="items-center justify-start content-center align-center flex flex-grow"
+              style="width: calc(100% - 3rem);">
+              <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                  <img src="img/6778194714_2b120ace-425c-4ea6-bead-f2726cd2f242.png" style="border-radius: 20%;"
+                      class="bg-transparent h-10 w-10 overflow-hidden">
+              </div>
+              <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                  <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                      <div align="left">Password Generator</div>
+                  </div>
+                  <div class="text-xs font-medium text-grey leading-tight truncate">
+                    Jailbreak-Update
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </a>
+
+				<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+                    href="/iOS/Versiones de iOS.html" rel="noopener">
+                    <div class="w-full flex items-center justify-between p-3 alternate-background">
+                        <div class="items-center justify-start content-center align-center flex flex-grow"
+                            style="width: calc(100% - 3rem);">
+                            <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                <img src="img/ios-logo.png" style="border-radius: 20%;"
+                                    class="bg-transparent h-10 w-10 overflow-hidden">
+                            </div>
+                            <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                    <div align="left">Versiones de iOS Firmadas</div>
+                                </div>
+                                <div class="text-xs font-medium text-grey leading-tight truncate">
+                                    Jailbreak-Update
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </a>
+
+				<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+                    href="/CuántotiempoadmiteApplelosmodelosdeiPhone/CuántotiempoadmiteApplelosmodelosdeiPhone.html" rel="noopener">
+                    <div class="w-full flex items-center justify-between p-3 alternate-background">
+                        <div class="items-center justify-start content-center align-center flex flex-grow"
+                            style="width: calc(100% - 3rem);">
+                            <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                <img src="img/iphone_12_PNG23.png" style="border-radius: 20%;"
+                                    class="bg-transparent h-10 w-10 overflow-hidden">
+                            </div>
+                            <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                    <div align="left">Tiempo del iPhone</div>
+                                </div>
+                                <div class="text-xs font-medium text-grey leading-tight truncate">
+                                    Jailbreak-Update
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </a>
+
+				<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+                    href="/WhatsApp/Compatibilidad con whatsapp/Compatibilidad con whatsapp.html" rel="noopener">
+                    <div class="w-full flex items-center justify-between p-3 alternate-background">
+                        <div class="items-center justify-start content-center align-center flex flex-grow"
+                            style="width: calc(100% - 3rem);">
+                            <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                <img src="img/WhatsApp_logo-color-vertical.svg.png" style="border-radius: 20%;"
+                                    class="bg-transparent h-10 w-10 overflow-hidden">
+                            </div>
+                            <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                    <div align="left">Compatiblidad con Whatsapp </div>
+                                </div>
+                                <div class="text-xs font-medium text-grey leading-tight truncate">
+                                    Jailbreak-Update
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </a>
+
+				<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+                    href="/Buscador de dispositivos/Buscador de dispositivos.html" rel="noopener">
+                    <div class="w-full flex items-center justify-between p-3 alternate-background">
+                        <div class="items-center justify-start content-center align-center flex flex-grow"
+                            style="width: calc(100% - 3rem);">
+                            <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                <img src="img/search-logo.png" style="border-radius: 20%;"
+                                    class="bg-transparent h-10 w-10 overflow-hidden">
+                            </div>
+                            <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                    <div align="left">Buscador de dispositivos </div>
+                                </div>
+                                <div class="text-xs font-medium text-grey leading-tight truncate">
+                                    Jailbreak-Update
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </a>
+
+				<a class="package-grid-item inline-block no-underline section-body w-full flex-grow justify-between"
+                    href="/iOS/16/16.html" rel="noopener">
+                    <div class="w-full flex items-center justify-between p-3 alternate-background">
+                        <div class="items-center justify-start content-center align-center flex flex-grow"
+                            style="width: calc(100% - 3rem);">
+                            <div class="text-2xl text-grey-dark inline-flex w-auto mr-2 self-auto">
+                                <img src="img/ios-16-apple-roundup-header.png" style="border-radius: 20%;"
+                                    class="bg-transparent h-10 w-10 overflow-hidden">
+                            </div>
+                            <div style="max-width: calc(100% - 3.5rem);" class="flex-grow mr-2">
+                                <div class="text-base font-semibold text-grey-dark truncate pb-1/2">
+                                    <div align="left">Compatibilidad Con iOS & iPadOS 16 </div>
+                                </div>
+                                <div class="text-xs font-medium text-grey leading-tight truncate">
+                                    Jailbreak-Update
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </a>
+
+				
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="https://jailbreak-update.github.io/jquery/jquery-3.3.1.min.js"></script>	
+		<script src="js/sweetalert.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/particulas.js"></script>
+
+		<script src="js/menu.js"></script>
+
+</body>
+
 </html>

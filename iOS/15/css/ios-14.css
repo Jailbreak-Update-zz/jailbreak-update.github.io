@@ -1,0 +1,20 @@
+.ul figure img{
+	width: 19;
+	transition: .4s all;
+}
+
+.ul figure img:hover{
+	transform: rotate(360deg)
+}
+
+/* Scroll */
+body::-webkit-scrollbar{
+    width: 5.5px;
+  
+  }
+  
+  body::-webkit-scrollbar-thumb{
+    background: #f72b00;
+  border-radius: 5px;
+  
+  }
