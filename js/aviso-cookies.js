@@ -1,24 +1,17 @@
-const botonAceptarCookies = document.getElementById('btn-aceptar-cookies');
-const avisoCookies = document.getElementById('aviso-cookies');
-const fondoAvisoCookies = document.getElementById('fondo-aviso-cookies');
-
-dataLayer = [];
-
-if(!localStorage.getItem('cookies-aceptadas')){
-	avisoCookies.classList.add('activo');
-	fondoAvisoCookies.classList.add('activo');
-	document.body.classList.toggle('no_scroll')
-}  else {
-	dataLayer.push({'event': 'cookies-aceptadas'});
+var _0xb552=["\x62\x74\x6E\x2D\x61\x63\x65\x70\x74\x61\x72\x2D\x63\x6F\x6F\x6B\x69\x65\x73","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x61\x76\x69\x73\x6F\x2D\x63\x6F\x6F\x6B\x69\x65\x73","\x66\x6F\x6E\x64\x6F\x2D\x61\x76\x69\x73\x6F\x2D\x63\x6F\x6F\x6B\x69\x65\x73","\x63\x6F\x6F\x6B\x69\x65\x73\x2D\x61\x63\x65\x70\x74\x61\x64\x61\x73","\x67\x65\x74\x49\x74\x65\x6D","\x61\x63\x74\x69\x76\x6F","\x61\x64\x64","\x63\x6C\x61\x73\x73\x4C\x69\x73\x74","\x6E\x6F\x5F\x73\x63\x72\x6F\x6C\x6C","\x74\x6F\x67\x67\x6C\x65","\x62\x6F\x64\x79","\x70\x75\x73\x68","\x63\x6C\x69\x63\x6B","\x72\x65\x6D\x6F\x76\x65","\x73\x65\x74\x49\x74\x65\x6D","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72"];
+const botonAceptarCookies=document[_0xb552[1]](_0xb552[0]);
+const avisoCookies=document[_0xb552[1]](_0xb552[2]);
+const fondoAvisoCookies=document[_0xb552[1]](_0xb552[3]);
+dataLayer= [];if(!localStorage[_0xb552[5]](_0xb552[4]))
+{
+	avisoCookies[_0xb552[8]][_0xb552[7]](_0xb552[6]);fondoAvisoCookies[_0xb552[8]][_0xb552[7]](_0xb552[6]);document[_0xb552[11]][_0xb552[8]][_0xb552[10]](_0xb552[9])
 }
-
-
-botonAceptarCookies.addEventListener('click', () => {
-	avisoCookies.classList.remove('activo');
-	fondoAvisoCookies.classList.remove('activo');
-	document.body.classList.remove('no_scroll')
-
-	localStorage.setItem('cookies-aceptadas', true);
-
-	dataLayer.push({'event': 'cookies-aceptadas'});
-});
+else 
+{
+	dataLayer[_0xb552[12]]({'\x65\x76\x65\x6E\x74':_0xb552[4]})
+}
+botonAceptarCookies[_0xb552[16]](_0xb552[13],()=>
+{
+	avisoCookies[_0xb552[8]][_0xb552[14]](_0xb552[6]);fondoAvisoCookies[_0xb552[8]][_0xb552[14]](_0xb552[6]);document[_0xb552[11]][_0xb552[8]][_0xb552[14]](_0xb552[9]);localStorage[_0xb552[15]](_0xb552[4],true);dataLayer[_0xb552[12]]({'\x65\x76\x65\x6E\x74':_0xb552[4]})
+}
+)
